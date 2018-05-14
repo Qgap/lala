@@ -131,6 +131,8 @@
 #import "CookBook_ServerAPIManager.h"
 #import "UIAlertView+Blocks.h"
 #import "UIViewController+CPViewControllerExtension.h"
+#import "GQContactHeader.h"
+
 
 #pragma mark - !!!!!!!!
 #import "DWExtensionUtils.h"

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EF3265808CC51AB8FE04EC4 /* libPods-ContactsTool.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72C593C77BB034C93620D54C /* libPods-ContactsTool.a */; };
+		3A09FCB420A99F89008628AD /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A09FCB320A99F89008628AD /* LocalAuthentication.framework */; };
 		3A0C9BCF20A58E92008B7FA1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C9BB020A58E92008B7FA1 /* Localizable.strings */; };
 		3A0C9BD020A58E92008B7FA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A0C9BB220A58E92008B7FA1 /* InfoPlist.strings */; };
 		3A0C9BD120A58E92008B7FA1 /* MergeSamePhoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BB820A58E92008B7FA1 /* MergeSamePhoneViewController.m */; };
@@ -240,6 +241,7 @@
 
 /* Begin PBXFileReference section */
 		2894DA38C651AA2F94C1F6EB /* Pods-ReconstructureLottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReconstructureLottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReconstructureLottery/Pods-ReconstructureLottery.release.xcconfig"; sourceTree = "<group>"; };
+		3A09FCB320A99F89008628AD /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		3A0C9BB120A58E92008B7FA1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		3A0C9BB320A58E92008B7FA1 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		3A0C9BB420A58E92008B7FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -639,6 +641,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A09FCB420A99F89008628AD /* LocalAuthentication.framework in Frameworks */,
 				3A6C294320A6BCB10010C34A /* libWeChatSDK.a in Frameworks */,
 				3A6C294220A6BCA70010C34A /* libUMessage_Sdk_1.5.0a.a in Frameworks */,
 				683792E02090A05A0092AB54 /* AVFoundation.framework in Frameworks */,
@@ -709,6 +712,7 @@
 		49B950252AFC8840E01AF099 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A09FCB320A99F89008628AD /* LocalAuthentication.framework */,
 				683792DF2090A05A0092AB54 /* AVFoundation.framework */,
 				683792DD2090A0470092AB54 /* libsqlite3.0.tbd */,
 				683792DB2090A0380092AB54 /* libz.tbd */,

@@ -42,7 +42,6 @@
 
 @property (nonatomic, strong)UILabel *countLabel;
 
-@property (nonatomic, assign)BOOL lock;
 
 @end
 
@@ -67,13 +66,7 @@
     [SVProgressHUD showWithStatus:@"Loading"];
     [self setUpUI];
     
-    self.lock = [[NSUserDefaults standardUserDefaults] boolForKey:kPrivateContact];
     
-    if (self.lock) {
-     
-    } else {
-     
-    }
 
 }
 

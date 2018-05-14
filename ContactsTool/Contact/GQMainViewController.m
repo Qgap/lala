@@ -9,8 +9,11 @@
 #import "GQMainViewController.h"
 #import "GQContactViewController.h"
 #import "GQManagerViewController.h"
+#import <LocalAuthentication/LAContext.h>
 
 @interface GQMainViewController ()
+
+@property (nonatomic, assign)BOOL lock;
 
 @end
 
@@ -33,6 +36,28 @@
     manageVC.tabBarItem.selectedImage = [[UIImage imageNamed:@"manage_select"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     manageVC.tabBarItem.image = [[UIImage imageNamed:@"manage_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.viewControllers = @[contactVC,manageVC];
+    
+    self.lock = [[NSUserDefaults standardUserDefaults] boolForKey:kPrivateContact];
+    
+    if (self.lock) {
+        LAContext *context = [[LAContext alloc] init];
+        NSError *error;
+        
+        if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+            [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Touch Id Test" reply:^(BOOL success, NSError * _Nullable error) {
+                if (success) {
+                    NSLog(@"success to evaluate");
+                }
+                if (error) {
+                    NSLog(@"---failed to evaluate---error: %@---", error.description);
+                }
+            }];
+        } else {
+            NSLog(@"Not support :%@",error.description);
+        }
+    } else {
+        
+    }
     
 }
 
