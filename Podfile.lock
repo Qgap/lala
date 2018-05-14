@@ -31,7 +31,7 @@ PODS:
   - TOWebViewController (2.2.6):
     - TOWebViewController/Core (= 2.2.6)
   - TOWebViewController/Core (2.2.6)
-  - UIAlertView+Blocks (0.9)
+  - "UIAlertView+Blocks (0.9)"
   - UMengAnalytics (4.2.4)
   - WSProgressHUD (1.1.1):
     - Shimmer
@@ -49,10 +49,30 @@ DEPENDENCIES:
   - SDWebImage (= 3.8.2)
   - SVProgressHUD (= 2.1.2)
   - TOWebViewController (= 2.2.6)
-  - UIAlertView+Blocks (= 0.9)
+  - "UIAlertView+Blocks (= 0.9)"
   - UMengAnalytics (= 4.2.4)
   - WSProgressHUD (= 1.1.1)
   - YTKNetwork (= 2.0.1)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
+    - AJNotificationView
+    - IQKeyboardManager
+    - JCore
+    - JPush
+    - Masonry
+    - MJRefresh
+    - Reachability
+    - RTLabel
+    - SDWebImage
+    - Shimmer
+    - SVProgressHUD
+    - TOWebViewController
+    - "UIAlertView+Blocks"
+    - UMengAnalytics
+    - WSProgressHUD
+    - YTKNetwork
 
 SPEC CHECKSUMS:
   AFNetworking: 8ac6017b94ea105479f7776e5288e48ae9c59bb4
@@ -68,11 +88,11 @@ SPEC CHECKSUMS:
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   TOWebViewController: a29908019f7e0e0f8eccfab8a1ee8dcdf4fc5aac
-  UIAlertView+Blocks: a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
+  "UIAlertView+Blocks": a46c99c5144f6c5dbc7d62fd2a0678daceec89a3
   UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
   WSProgressHUD: 0ebb8dd846f7fb4715d42c87584456480cb7fbf0
   YTKNetwork: f21ad2073b3353a11d257593a2859f2904bbec75
 
-PODFILE CHECKSUM: cedd61f76267d1f2f433cae0812bcaaace0f80ce
+PODFILE CHECKSUM: b8454e126fc8337b2694217da184d4c72d85ce8d
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0
