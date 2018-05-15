@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -62,7 +58,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lzv-pY-Jva">
                             <rect key="frame" x="0.0" y="68.5" width="106.5" height="55.5"/>
                             <subviews>
-                                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-B8-BIq" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q8f-B8-BIq" customClass="VoiceButton">
                                     <rect key="frame" x="0.0" y="0.0" width="106.5" height="55.5"/>
                                     <connections>
                                         <action selector="buttonActions:" destination="-1" eventType="touchUpInside" id="3Xx-hy-4XF"/>
@@ -98,7 +94,7 @@
                                 <constraint firstItem="iaE-uH-pJR" firstAttribute="top" secondItem="lzv-pY-Jva" secondAttribute="top" constant="7" id="ydc-OT-Oow"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-7g-StM" customClass="CPVoiceButton">
+                        <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vGT-7g-StM" customClass="VoiceButton">
                             <rect key="frame" x="213.5" y="68.5" width="106.5" height="55.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="vGT-7g-StM" secondAttribute="height" multiplier="106:55" id="DFF-DU-2jo"/>
@@ -133,7 +129,7 @@
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         </button>
-                        <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Dr-2Ib" customClass="CPVoiceButton">
+                        <button opaque="NO" tag="122" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Krb-Dr-2Ib" customClass="VoiceButton">
                             <rect key="frame" x="107" y="68" width="106.5" height="55.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" secondItem="Krb-Dr-2Ib" secondAttribute="height" multiplier="106:55" id="LAG-Bp-XCV"/>
@@ -178,7 +174,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="30z-eU-2vd">
                             <rect key="frame" x="0.0" y="0.0" width="106.5" height="46"/>
                             <subviews>
-                                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqt-0S-zxx" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oqt-0S-zxx" customClass="VoiceButton">
                                     <rect key="frame" x="0.0" y="0.0" width="106.5" height="46"/>
                                     <state key="normal" backgroundImage="goucai_geren_cz_01"/>
                                     <connections>
@@ -197,7 +193,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hti-tB-g9r">
                             <rect key="frame" x="106.5" y="0.0" width="107" height="46"/>
                             <subviews>
-                                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTo-8L-gAk" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTo-8L-gAk" customClass="VoiceButton">
                                     <rect key="frame" x="0.0" y="0.0" width="107" height="46"/>
                                     <state key="normal" backgroundImage="goucai_geren_tixian_01"/>
                                     <connections>
@@ -216,7 +212,7 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="npb-TJ-uv0">
                             <rect key="frame" x="213.5" y="0.0" width="106.5" height="46"/>
                             <subviews>
-                                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErB-wU-42N" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErB-wU-42N" customClass="VoiceButton">
                                     <rect key="frame" x="0.0" y="0.0" width="106.5" height="46"/>
                                     <state key="normal" backgroundImage="goucai_geren_qd_01"/>
                                     <connections>

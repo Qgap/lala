@@ -6,9 +6,9 @@
 //  Copyright © 2017年 施冬伟. All rights reserved.
 //
 
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
-@interface CPPersonalMessageDetailVC : CookBook_BaseViewController
+@interface CPPersonalMessageDetailVC : GQBaseViewController
 
 @property(nonatomic,copy)NSString *msgTitle;
 @property(nonatomic,copy)NSString *msgId;

@@ -111,7 +111,7 @@
     
     
     IBOutlet UIView *_noPayTypeAlertView;
-    IBOutlet CPVoiceButton *_nextStepActionButton;
+    IBOutlet VoiceButton *_nextStepActionButton;
 }
 
 @property(nonatomic,assign)CPRechargeType rechargeType;
@@ -284,7 +284,7 @@
 -(NSArray *)theSameRightBarButtonItems
 {
     UIImage *rightItemImage = [UIImage imageNamed:@"top_you_anniu"];
-    CPVoiceButton *btn = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+    VoiceButton *btn = [VoiceButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, rightItemImage.size.width, rightItemImage.size.height);
     [btn addTarget:self action:@selector(showSortViewAction) forControlEvents:UIControlEventTouchUpInside];
     [btn setImage:rightItemImage forState:UIControlStateNormal];
@@ -476,7 +476,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [CookBook_GlobalDataManager cookBook_playButtonClickVoice];
+    [DataCenter cookBook_playButtonClickVoice];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     _selectedPayIndex = indexPath.row;
     [tableView reloadData];
@@ -540,15 +540,15 @@
         [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     }
 
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRbankList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRbankList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -566,7 +566,7 @@
                }
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -576,15 +576,15 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRonlineList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRonlineList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -605,7 +605,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -617,15 +617,15 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRqqpayList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRqqpayList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -643,7 +643,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -653,15 +653,15 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRotherList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRotherList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -679,7 +679,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -690,15 +690,15 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRwechatList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRwechatList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -716,7 +716,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -727,15 +727,15 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRalipayList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRalipayList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -753,7 +753,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -762,15 +762,15 @@
 
 -(void)queryRechargeInfo
 {
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRecharge
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRecharge
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -793,7 +793,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -804,18 +804,18 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
 
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_bankList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"money"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"id"];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRbankNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRbankNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -850,7 +850,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -861,19 +861,19 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_qqPayList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
-    [paramsDic setObject:[CookBook_GlobalDataManager shareGlobalData].domainUrlString forKey:@"baseUrl"];
+    [paramsDic setObject:[DataCenter shareGlobalData].domainUrlString forKey:@"baseUrl"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRqqpayNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRqqpayNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -897,7 +897,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -908,19 +908,19 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_otherPayList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
-    [paramsDic setObject:[CookBook_GlobalDataManager shareGlobalData].domainUrlString forKey:@"baseUrl"];
+    [paramsDic setObject:[DataCenter shareGlobalData].domainUrlString forKey:@"baseUrl"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRotherNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRotherNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -946,7 +946,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -958,18 +958,18 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_wechatList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRwechatScanNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRwechatScanNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -988,7 +988,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -1002,19 +1002,19 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_wechatList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
-        [paramsDic setObject:[CookBook_GlobalDataManager shareGlobalData].domainUrlString forKey:@"baseUrl"];
+        [paramsDic setObject:[DataCenter shareGlobalData].domainUrlString forKey:@"baseUrl"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserWechatNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserWechatNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -1044,7 +1044,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -1055,19 +1055,19 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_alipayList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
-    [paramsDic setObject:[CookBook_GlobalDataManager shareGlobalData].domainUrlString forKey:@"baseUrl"];
+    [paramsDic setObject:[DataCenter shareGlobalData].domainUrlString forKey:@"baseUrl"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserAlipayNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserAlipayNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -1092,7 +1092,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -1102,18 +1102,18 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_alipayList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRalipayScanNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRalipayScanNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -1132,7 +1132,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -1145,18 +1145,18 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_wechatList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserWechatBankNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserWechatBankNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -1175,7 +1175,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -1186,18 +1186,18 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSDictionary *info = [_alipayList objectAtIndex:_selectedPayIndex];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:_rechargeAmountTf.text forKey:@"amount"];
     [paramsDic setObject:[info DWStringForKey:@"id"] forKey:@"payId"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserRalipayBankNext
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserRalipayBankNext
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -1216,7 +1216,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -1229,10 +1229,10 @@
                                               amount:(NSString *)amount
                                             bankName:(NSString *)bankName
 {
-    NSMutableString *domainString = [[NSMutableString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString];
+    NSMutableString *domainString = [[NSMutableString alloc]initWithString:[DataCenter shareGlobalData].domainUrlString];
     
-    NSString *urlString = [payUrl stringByAppendingString:[NSString stringWithFormat:@"/common/recharge/third?isH5=1&memberId=%@&type=%@&payId=%@&amount=%@%@%@&baseUrl=%@",[CookBook_User shareUser].tokenInfo.memberId,type,payId,amount,bankName.length>0?@"&bankName=":@"",bankName.length>0?bankName:@"",domainString]];
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+    NSString *urlString = [payUrl stringByAppendingString:[NSString stringWithFormat:@"/common/recharge/third?isH5=1&memberId=%@&type=%@&payId=%@&amount=%@%@%@&baseUrl=%@",[GQUser shareUser].tokenInfo.memberId,type,payId,amount,bankName.length>0?@"&bankName=":@"",bankName.length>0?bankName:@"",domainString]];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
     toWebVC.showActionButton = NO;
     toWebVC.navigationButtonsHidden = YES;
     toWebVC.hidesBottomBarWhenPushed = YES;
@@ -1245,9 +1245,9 @@
                          amount:(NSString *)amount
                        bankName:(NSString *)bankName
 {
-    NSMutableString *domainString = [[NSMutableString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString];
+    NSMutableString *domainString = [[NSMutableString alloc]initWithString:[DataCenter shareGlobalData].domainUrlString];
 
-    NSString *urlString = [payUrl stringByAppendingString:[NSString stringWithFormat:@"/common/recharge/third?isH5=1&memberId=%@&type=%@&payId=%@&amount=%@%@%@&baseUrl=%@",[CookBook_User shareUser].tokenInfo.memberId,type,payId,amount,bankName.length>0?@"&bankName=":@"",bankName.length>0?bankName:@"",domainString]];
+    NSString *urlString = [payUrl stringByAppendingString:[NSString stringWithFormat:@"/common/recharge/third?isH5=1&memberId=%@&type=%@&payId=%@&amount=%@%@%@&baseUrl=%@",[GQUser shareUser].tokenInfo.memberId,type,payId,amount,bankName.length>0?@"&bankName=":@"",bankName.length>0?bankName:@"",domainString]];
     
     [[UIApplication sharedApplication]openURL:[NSURL URLWithString:urlString]];
 
@@ -1479,7 +1479,7 @@
                                 
                                 CPAddFriendRechargeVC *vc = [CPAddFriendRechargeVC new];
                                 vc.type = 1;
-                                [vc addTitleText:[info DWStringForKey:@"payName"] detailText:[NSString stringWithFormat:@"微信账号:%@ 微信昵称:%@",[info DWStringForKey:@"code"],[info DWStringForKey:@"name"]] imageUrlString:[[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:[info DWStringForKey:@"payImg"]]];
+                                [vc addTitleText:[info DWStringForKey:@"payName"] detailText:[NSString stringWithFormat:@"微信账号:%@ 微信昵称:%@",[info DWStringForKey:@"code"],[info DWStringForKey:@"name"]] imageUrlString:[[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:[info DWStringForKey:@"payImg"]]];
                                 
                                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                                     vc.navigationItem.rightBarButtonItems = [self theSameRightBarButtonItems];
@@ -1528,7 +1528,7 @@
                                 
                                 CPAddFriendRechargeVC *vc = [CPAddFriendRechargeVC new];
                                 vc.type = 0;
-                                [vc addTitleText:[info DWStringForKey:@"payName"] detailText:[NSString stringWithFormat:@"支付宝账号:%@ 支付宝名称:%@",[info DWStringForKey:@"code"],[info DWStringForKey:@"name"]] imageUrlString:[[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:[info DWStringForKey:@"payImg"]]];
+                                [vc addTitleText:[info DWStringForKey:@"payName"] detailText:[NSString stringWithFormat:@"支付宝账号:%@ 支付宝名称:%@",[info DWStringForKey:@"code"],[info DWStringForKey:@"name"]] imageUrlString:[[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:[info DWStringForKey:@"payImg"]]];
                                 dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                                     vc.navigationItem.rightBarButtonItems = [self theSameRightBarButtonItems];
                                 });

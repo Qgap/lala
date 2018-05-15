@@ -38,7 +38,7 @@
     [super viewDidLoad];
     self.title = @"提款";
     
-    CPVoiceButton *finishedButton = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+    VoiceButton *finishedButton = [VoiceButton buttonWithType:UIButtonTypeCustom];
     finishedButton.frame = CGRectMake(0, 0, 65, 65);
     [finishedButton addTarget:self action:@selector(withdrawRecordAction) forControlEvents:UIControlEventTouchUpInside];
     [finishedButton setTitle:@"提款记录" forState:UIControlStateNormal];
@@ -119,18 +119,18 @@
 -(void)queryWithdraw
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     
     [paramsDic setObject:_withdrawAmountTf.text forKey:@"money"];
     [paramsDic setObject:_withdrawPasswordTf.text forKey:@"password"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserWithdrawSubmit
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserWithdrawSubmit
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -143,7 +143,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];

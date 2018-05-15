@@ -8,7 +8,7 @@
 
 #import "CPWithdrawRecordVC.h"
 #import "CPBetRecordCell.h"
-#import "CPSelectedOptionsAgoView.h"
+#import "SelectedOptionsAgoView.h"
 #import "CPWithdrawDetailVC.h"
 
 @interface CPWithdrawRecordVC ()
@@ -79,7 +79,7 @@
 #pragma mark-
 - (IBAction)titleButtonAction:(id)sender {
     
-    [CPSelectedOptionsAgoView showWithOnView:self.navigationController.view title:@"选择提款类型" options:_typeList selectedIndex:self.selectedType selected:^(NSInteger index) {
+    [SelectedOptionsAgoView showWithOnView:self.navigationController.view title:@"选择提款类型" options:_typeList selectedIndex:self.selectedType selected:^(NSInteger index) {
         
         if (index != self.selectedType) {
             self.selectedType = index;
@@ -117,7 +117,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [CookBook_GlobalDataManager cookBook_playButtonClickVoice];
+    [DataCenter cookBook_playButtonClickVoice];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSDictionary *info = _dataList[indexPath.row];
     [self queryDetailInfoWithId:[info DWStringForKey:@"id"]];
@@ -134,14 +134,14 @@
 -(void)queryDetailInfoWithId:(NSString *)infoId
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:infoId forKey:@"id"];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserWithdrawDetail
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserWithdrawDetail
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -157,7 +157,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                [self.navigationController popViewControllerAnimated:YES];
@@ -169,7 +169,7 @@
 -(void)queryDataForReferesh
 {
     _page = 1;
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:[NSString stringWithFormat:@"%d",_page] forKey:@"page"];
     
     // 空（null）全部  0待审核 1已存入 -1已取消
@@ -193,11 +193,11 @@
 
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserWithdrawList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserWithdrawList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                [_tableView.mj_header endRefreshing];
                NSString *alertMsg = @"";
@@ -232,7 +232,7 @@
                    [SVProgressHUD way_showInfoCanTouchAutoDismissWithStatus:alertMsg];
                }
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [_tableView.mj_header endRefreshing];
                [SVProgressHUD way_showInfoCanTouchAutoDismissWithStatus:@"网络异常"];
@@ -250,16 +250,16 @@
         return;
         
     }
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:[NSString stringWithFormat:@"%d",_page] forKey:@"page"];
     [paramsDic setObject:[NSString stringWithFormat:@"%ld",(long)_selectedType] forKey:@"type"];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserWithdrawList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserWithdrawList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -290,7 +290,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [_tableView.mj_footer endRefreshing];
                [SVProgressHUD way_showInfoCanTouchAutoDismissWithStatus:@"网络异常"];

@@ -6,7 +6,7 @@
 //  Copyright © 2017年 施冬伟. All rights reserved.
 //
 
-#import "CookBook_LookForPasswordVC.h"
+#import "GQLookForPasswordVC.h"
 #import "CPSetQAMessageVC.h"
 
 @interface CPSetQAMessageVC ()
@@ -55,15 +55,15 @@
 {
     
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"question":_tfUserName.text,@"answer":_tfQuestion.text,@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"question":_tfUserName.text,@"answer":_tfQuestion.text,@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPISettingQaSubmit
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPISettingQaSubmit
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -76,7 +76,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];

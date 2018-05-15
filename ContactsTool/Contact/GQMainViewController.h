@@ -10,4 +10,6 @@
 
 @interface GQMainViewController : UITabBarController
 
+- (void)checkLock;
+
 @end

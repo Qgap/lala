@@ -6,8 +6,8 @@
 //  Copyright © 2017年 施冬伟. All rights reserved.
 //
 
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
-@interface CPTryPlayViewController : CookBook_BaseViewController
+@interface CPTryPlayViewController : GQBaseViewController
 
 @end

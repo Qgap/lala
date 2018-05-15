@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CookBook_MainTabBarController.h"
+#import "CBMainTabBarController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic,retain)CookBook_MainTabBarController * maiTabBarController;
+@property (nonatomic,retain)CBMainTabBarController * maiTabBarController;
 
 @end
 

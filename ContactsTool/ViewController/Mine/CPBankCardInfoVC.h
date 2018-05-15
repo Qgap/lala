@@ -6,9 +6,9 @@
 //  Copyright © 2017年 施冬伟. All rights reserved.
 //
 
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
-@interface CPBankCardInfoVC : CookBook_BaseViewController
+@interface CPBankCardInfoVC : GQBaseViewController
 
 @property(nonatomic,retain)NSDictionary *bankInfo;
 

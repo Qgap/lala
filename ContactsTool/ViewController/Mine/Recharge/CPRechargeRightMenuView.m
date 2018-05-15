@@ -59,7 +59,7 @@
         case 102:
         {
             //在线客服
-            if ([CookBook_GlobalDataManager shareGlobalData].kefuUrlString) {
+            if ([DataCenter shareGlobalData].kefuUrlString) {
                 [self loadKefuWebView];
             }else{
                 [self queryKefuUrlString];
@@ -83,20 +83,20 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIKefu
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIKefu
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    
                    NSString *urlString = [request.resultInfo DWStringForKey:@"data"];
-                   [CookBook_GlobalDataManager shareGlobalData].kefuUrlString = urlString;
+                   [DataCenter shareGlobalData].kefuUrlString = urlString;
                    [self loadKefuWebView];
                    
                }else{
@@ -105,7 +105,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -115,7 +115,7 @@
 
 -(void)loadKefuWebView
 {
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].kefuUrlString]];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[DataCenter shareGlobalData].kefuUrlString]];
     toWebVC.title = @"客服";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;

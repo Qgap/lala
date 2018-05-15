@@ -110,29 +110,29 @@
 #pragma mark- -ViewController
 
 #import "AppDelegate.h"
-#import "CookBook_WebViewController.h"
-#import "CookBook_BuyLotteryManager.h"
+#import "GQWebViewController.h"
+#import "GQBuyLotteryManager.h"
 
 
 #pragma mark- -Model
 
-#import "CookBook_LotteryModel.h"
+#import "GQLotteryModel.h"
 
 #pragma mark- -View
 
-#import "CPVoiceButton.h"
-#import "CookBook_LotteryShowResultView.h"
+#import "VoiceButton.h"
+#import "GQLotteryShowResultView.h"
 
 #pragma mark- -Tool
 
-#import "CookBook_TimeManager.h"
-#import "CookBook_User.h"
-#import "CookBook_Request.h"
+#import "ShiJianManager.h"
+#import "GQUser.h"
+#import "GQRequest.h"
 #import "NSString+XDJEncrypt.h"
 #import "AJNotificationView.h"
-#import "CookBook_GlobalDataManager.h"
+#import "GQGlobalDataManager.h"
 #import "SVProgressHUD+WayExtension.h"
-#import "CookBook_ServerAPIManager.h"
+#import "GQServerAPIManager.h"
 #import "UIAlertView+Blocks.h"
 #import "UIViewController+CPViewControllerExtension.h"
 

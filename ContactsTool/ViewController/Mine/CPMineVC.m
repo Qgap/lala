@@ -7,7 +7,7 @@
 //
 
 #import "CPMineVC.h"
-#import "CookBook_MineActionModel.h"
+#import "GQMineActionModel.h"
 
 #import "CPMyRecommendVC.h"
 #import "CPSignVC.h"
@@ -18,7 +18,7 @@
 #import "CPRechargeRecordVC.h"
 #import "CPWithdrawRecordVC.h"
 #import "CPSettingVC.h"
-#import "CookBook_BusinessControllerManager.h"
+#import "GQBusinessControllerManager.h"
 #import "CPRechargeMainViewController.h"
 
 @interface CPMineVC ()<UITableViewDelegate,UITableViewDataSource>
@@ -66,12 +66,12 @@
     
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:NSStringFromClass([UITableViewCell class])];
     
-    if ([CookBook_GlobalDataManager shareGlobalData].isReviewVersion) {
+    if ([DataCenter shareGlobalData].isReviewVersion) {
         
         _modelList = @[
-                       [CookBook_MineActionModel cookBook_modelName:@"系统公告" icon:@"geren_tubiao_06_goucai_mine" identify:2],
-                       [CookBook_MineActionModel cookBook_modelName:@"签到记录" icon:@"geren_tubiao_hb_goucai_mine" identify:8],
-                       [CookBook_MineActionModel cookBook_modelName:@"个人消息" icon:@"geren_tubiao_06_goucai_mine" identify:9]
+                       [GQMineActionModel cookBook_modelName:@"系统公告" icon:@"geren_tubiao_06_goucai_mine" identify:2],
+                       [GQMineActionModel cookBook_modelName:@"签到记录" icon:@"geren_tubiao_hb_goucai_mine" identify:8],
+                       [GQMineActionModel cookBook_modelName:@"个人消息" icon:@"geren_tubiao_06_goucai_mine" identify:9]
                        ];
         _balanceView.hidden = YES;
         _withdrawView.hidden = YES;
@@ -84,16 +84,16 @@
 
     }else{
         
-        _modelList = @[[CookBook_MineActionModel cookBook_modelName:@"我的推荐[推荐好友获取收益]" icon:@"shezhi_04_goucai_mine" identify:1],
-                       [CookBook_MineActionModel cookBook_modelName:@"系统公告" icon:@"geren_tubiao_06_goucai_mine" identify:2],
-                       [CookBook_MineActionModel cookBook_modelName:@"投注记录" icon:@"geren_tubiao_13_goucai_mine" identify:3],
-                       [CookBook_MineActionModel cookBook_modelName:@"中奖记录" icon:@"geren_tubiao_24_goucai_mine" identify:4],
-                       [CookBook_MineActionModel cookBook_modelName:@"账户明细" icon:@"geren_tubiao_26_goucai_mine" identify:5],
-                       [CookBook_MineActionModel cookBook_modelName:@"充值记录" icon:@"geren_tubiao_04_goucai_mine" identify:6],
-                       [CookBook_MineActionModel cookBook_modelName:@"提款记录" icon:@"geren_tubiao_13_goucai_mine" identify:7],
-                       [CookBook_MineActionModel cookBook_modelName:@"签到记录" icon:@"user_qiandao" identify:8],
-                       [CookBook_MineActionModel cookBook_modelName:@"我的红包" icon:@"geren_tubiao_hb_goucai_mine" identify:10],
-                       [CookBook_MineActionModel cookBook_modelName:@"个人消息" icon:@"geren_tubiao_06_goucai_mine" identify:9]
+        _modelList = @[[GQMineActionModel cookBook_modelName:@"我的推荐[推荐好友获取收益]" icon:@"shezhi_04_goucai_mine" identify:1],
+                       [GQMineActionModel cookBook_modelName:@"系统公告" icon:@"geren_tubiao_06_goucai_mine" identify:2],
+                       [GQMineActionModel cookBook_modelName:@"投注记录" icon:@"geren_tubiao_13_goucai_mine" identify:3],
+                       [GQMineActionModel cookBook_modelName:@"中奖记录" icon:@"geren_tubiao_24_goucai_mine" identify:4],
+                       [GQMineActionModel cookBook_modelName:@"账户明细" icon:@"geren_tubiao_26_goucai_mine" identify:5],
+                       [GQMineActionModel cookBook_modelName:@"充值记录" icon:@"geren_tubiao_04_goucai_mine" identify:6],
+                       [GQMineActionModel cookBook_modelName:@"提款记录" icon:@"geren_tubiao_13_goucai_mine" identify:7],
+                       [GQMineActionModel cookBook_modelName:@"签到记录" icon:@"user_qiandao" identify:8],
+                       [GQMineActionModel cookBook_modelName:@"我的红包" icon:@"geren_tubiao_hb_goucai_mine" identify:10],
+                       [GQMineActionModel cookBook_modelName:@"个人消息" icon:@"geren_tubiao_06_goucai_mine" identify:9]
                        ];
         _tableView.tableHeaderView = _tableHeaderView;
 
@@ -119,13 +119,13 @@
     if (!_tableView.mj_header.isRefreshing) {
         [self queryMineInfo];
     }
-    _nameLabel.text = [CookBook_User shareUser].tokenInfo.memberName;
+    _nameLabel.text = [GQUser shareUser].tokenInfo.memberName;
    
 }
 
 -(void)settingAction
 {
-    [CookBook_GlobalDataManager cookBook_playButtonClickVoice];
+    [DataCenter cookBook_playButtonClickVoice];
     CPSettingVC *vc = [[CPSettingVC alloc]init];
     vc.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vc animated:YES];
@@ -136,7 +136,7 @@
 
 -(void)loadKefuWebView
 {
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].kefuUrlString]];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[DataCenter shareGlobalData].kefuUrlString]];
     toWebVC.title = @"客服";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;
@@ -190,20 +190,20 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIKefu
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIKefu
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    
                    NSString *urlString = [request.resultInfo DWStringForKey:@"data"];
-                   [CookBook_GlobalDataManager shareGlobalData].kefuUrlString = urlString;
+                   [DataCenter shareGlobalData].kefuUrlString = urlString;
                    [self loadKefuWebView];
                    
                }else{
@@ -212,7 +212,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -224,15 +224,15 @@
 {
     NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"type":@"0"}];
 
-    [paramsDic setObject:[CookBook_User shareUser].token forKey:@"token"];
+    [paramsDic setObject:[GQUser shareUser].token forKey:@"token"];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserAmount
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserAmount
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                if (_tableView.mj_header.isRefreshing) {
                    [_tableView.mj_header endRefreshing];
@@ -247,7 +247,7 @@
                }
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                if (_tableView.mj_header.isRefreshing) {
                    [_tableView.mj_header endRefreshing];
@@ -260,14 +260,14 @@
 {
     NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"type":@"0"}];
     
-    [paramsDic setObject:[CookBook_User shareUser].token forKey:@"token"];
+    [paramsDic setObject:[GQUser shareUser].token forKey:@"token"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserAmount
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserAmount
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                if (request.resultIsOk) {
                    
@@ -275,7 +275,7 @@
                    self.balance = [dataInfo DWStringForKey:@"balance"];
                    self.unReadCount = [[dataInfo DWStringForKey:@"unReadCount"]intValue];
                }
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
             
            }];
 }
@@ -305,7 +305,7 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    CookBook_MineActionModel *model = [_modelList objectAtIndex:indexPath.row];
+    GQMineActionModel *model = [_modelList objectAtIndex:indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([UITableViewCell class])];
     cell.textLabel.text = model.name;
@@ -330,14 +330,14 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [CookBook_GlobalDataManager cookBook_playButtonClickVoice];
+    [DataCenter cookBook_playButtonClickVoice];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    CookBook_MineActionModel *model = [_modelList objectAtIndex:indexPath.row];
+    GQMineActionModel *model = [_modelList objectAtIndex:indexPath.row];
     switch (model.identify) {
         case 1:
         {
             //我的推荐
-            if ([CookBook_User shareUser].isTryPlay) {
+            if ([GQUser shareUser].isTryPlay) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"抱歉，试玩账号不能进行存取款操作！" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 return;
@@ -349,8 +349,8 @@
         case 2:
         {
             //系统公告
-            NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/systemNotice"];
-            CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+            NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/systemNotice"];
+            GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
             toWebVC.title = @"公告";
             toWebVC.showPageTitles = NO;
             toWebVC.showActionButton = NO;
@@ -422,8 +422,8 @@
         case 10:
         {
             //我的红包
-            NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/user/hbList"];
-            CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+            NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/user/hbList"];
+            GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
             toWebVC.title = @"我的红包";
             toWebVC.showPageTitles = NO;
             toWebVC.showActionButton = NO;
@@ -452,7 +452,7 @@
         case 102:
         {
             //在线客服
-            if ([CookBook_GlobalDataManager shareGlobalData].kefuUrlString) {
+            if ([DataCenter shareGlobalData].kefuUrlString) {
                 [self loadKefuWebView];
             }else{
                 [self queryKefuUrlString];
@@ -461,7 +461,7 @@
         case 103:
         {
             //充值
-            if ([CookBook_User shareUser].isTryPlay) {
+            if ([GQUser shareUser].isTryPlay) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"抱歉，试玩账号不能进行存取款操作！" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 return;
@@ -474,17 +474,17 @@
         case 104:
         {
             //提现
-            if ([CookBook_User shareUser].isTryPlay) {
+            if ([GQUser shareUser].isTryPlay) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"抱歉，试玩账号不能进行存取款操作！" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 return;
             }
-            [CookBook_BusinessControllerManager cookBook_pushToWithdrawControllerOnViewController:self];
+            [GQBusinessControllerManager cookBook_pushToWithdrawControllerOnViewController:self];
         }break;
         case 105:
         {
             //签到
-            if ([CookBook_User shareUser].isTryPlay) {
+            if ([GQUser shareUser].isTryPlay) {
                 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"抱歉，试玩账号不能进行签到操作！" message:@"" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
                 [alert show];
                 return;
@@ -497,8 +497,8 @@
         case 122:
         {
             //手机购彩
-            NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/common/app/down1"];
-            CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+            NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/common/app/down1"];
+            GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
             toWebVC.title = @"手机APP下载";
             toWebVC.showPageTitles = NO;
             toWebVC.showActionButton = NO;

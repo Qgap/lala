@@ -9,20 +9,20 @@
 #import "CPHomePageVC.h"
 #import "LCLoadingHUD.h"
 #import "Reachability.h"
-#import "CookBook_PresentWebVC.h"
+#import "GQPresentWebVC.h"
 #import "CPMultiRowTextScrollView.h"
 #import "CPHomePageHotLotteryItem.h"
 #import "ORCycleLabel.h"
 #import "SDCycleScrollView.h"
 #import "CPBetRecordVC.h"
-#import "CookBook_LotteryResultDetailWebVC.h"
-#import "CPBuyLotteryDetailVC.h"
-#import "CookBook_BuyLotteryRoomVC.h"
-#import "CookBook_RegistViewController.h"
+#import "GQLotteryResultDetailWebVC.h"
+#import "BuyLyDetailVC.h"
+#import "GQBuyLotteryRoomVC.h"
+#import "GQRegistViewController.h"
 #import "CPSignVC.h"
 #import "CPHomeNoticeView.h"
 #import "WMDragView.h"
-#import "CookBook_HomepageCaijinVC.h"
+#import "GQHomepageCaijinVC.h"
 
 NSString *loadingBackgroundImageName(){
     
@@ -87,7 +87,7 @@ NSString *loadingBackgroundImageName(){
     IBOutlet UIView *_topNoticeView;
     IBOutlet UIView *_topItemView;
     
-    CookBook_Request * _buyLtyRequest;
+    GQRequest * _buyLtyRequest;
 }
 
 @property(nonatomic,retain)Reachability *reachability;
@@ -95,7 +95,7 @@ NSString *loadingBackgroundImageName(){
 @property(nonatomic,retain)WMDragView *caijinDragView;
 
 @property(nonatomic,retain)NSDictionary *hongBaoInfo;
-@property(nonatomic,retain)CookBook_HomepageActivityCaijin *caijinInfo;
+@property(nonatomic,retain)GQHomepageActivityCaijin *caijinInfo;
 
 
 @end
@@ -128,7 +128,7 @@ NSString *loadingBackgroundImageName(){
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    if ([CookBook_User shareUser].isLogin) {
+    if ([GQUser shareUser].isLogin) {
         
         
         UIButton *btnLeft = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -249,7 +249,7 @@ NSString *loadingBackgroundImageName(){
     self.navigationItem.titleView = imgView;
     NSString *logoString = [_homePageInfo DWStringForKey:@"logo"];
     if ([logoString rangeOfString:@"http"].location == NSNotFound ||[logoString rangeOfString:@"http"].length == 0) {
-        logoString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:logoString];
+        logoString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:logoString];
     }
     [imgView sd_setImageWithURL:[NSURL URLWithString:logoString] placeholderImage:nil options:SDWebImageRetryFailed];
     
@@ -264,7 +264,7 @@ NSString *loadingBackgroundImageName(){
         
         NSString *imgString = [_hongBaoInfo DWStringForKey:@"image"];
         if (![imgString hasPrefix:@"http"]) {
-            imgString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:imgString];
+            imgString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:imgString];
         }
         
         [self.dragView.imageView sd_setImageWithURL:[NSURL URLWithString:imgString] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -282,10 +282,10 @@ NSString *loadingBackgroundImageName(){
                 
                 NSString *urlString = [weakSelf.hongBaoInfo DWStringForKey:@"url"];
                 if (![urlString hasPrefix:@"http"]) {
-                    urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:urlString];
+                    urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:urlString];
                 }
                 NSString *title = [weakSelf.hongBaoInfo DWStringForKey:@"title"];
-                CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+                GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
                 toWebVC.showHongBaoList = 1;
                 toWebVC.title = title;
                 toWebVC.showPageTitles = NO;
@@ -311,7 +311,7 @@ NSString *loadingBackgroundImageName(){
         
         NSString *imgString = _caijinInfo.image;
         if (![imgString hasPrefix:@"http"]) {
-            imgString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:imgString];
+            imgString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:imgString];
         }
         
         [self.caijinDragView.imageView sd_setImageWithURL:[NSURL URLWithString:imgString] placeholderImage:[UIImage imageNamed:@""] options:SDWebImageRetryFailed completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
@@ -329,7 +329,7 @@ NSString *loadingBackgroundImageName(){
                 
                 if (weakSelf.caijinInfo.phone.length>0) {
                     
-                    CookBook_HomepageCaijinVC *caijinVC = [CookBook_HomepageCaijinVC new];
+                    GQHomepageCaijinVC *caijinVC = [GQHomepageCaijinVC new];
                     caijinVC.caijin = weakSelf.caijinInfo;
                     caijinVC.hidesBottomBarWhenPushed = YES;
                     [weakSelf.navigationController pushViewController:caijinVC animated:YES];
@@ -399,7 +399,7 @@ NSString *loadingBackgroundImageName(){
     for (int i = 0; i<scrollImages.count; i++) {
         NSString *urlString = scrollImages[i];
         if (![urlString hasPrefix:@"http"]) {
-            urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:urlString];
+            urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:urlString];
             scrollImages[i] = urlString;
         }
     }
@@ -429,13 +429,13 @@ NSString *loadingBackgroundImageName(){
 
 -(void)buildCenterView
 {
-    NSMutableArray *typeList = [[NSMutableArray alloc]initWithArray:[DWParsers getObjectListByName:@"CookBook_LotteryModel" fromArray:[_homePageInfo DWArrayForKey:@"typeList"]]];
+    NSMutableArray *typeList = [[NSMutableArray alloc]initWithArray:[DWParsers getObjectListByName:@"GQLotteryModel" fromArray:[_homePageInfo DWArrayForKey:@"typeList"]]];
     if (typeList.count == 0) {
         _centerView.height = 0;
         return;
     }
     
-    CookBook_LotteryModel *moreModel = [CookBook_LotteryModel new];
+    GQLotteryModel *moreModel = [GQLotteryModel new];
     moreModel.name = @"更多彩种";
     moreModel.num = @"0";
     moreModel.pic = @"logo_more_yellow";
@@ -455,10 +455,10 @@ NSString *loadingBackgroundImageName(){
             if (index>typeList.count-1) {
                 break;
             }
-            CookBook_LotteryModel *model = typeList[index];
+            GQLotteryModel *model = typeList[index];
             
             CGRect rect = CGRectMake(r*itemWidth, l*itemWidth+40, itemWidth, itemWidth);
-            CPHomePageHotLotteryItem *item = [[CPHomePageHotLotteryItem alloc]initWithFrame:rect lottery:model clickAction:^(CookBook_LotteryModel *lotteryModel) {
+            CPHomePageHotLotteryItem *item = [[CPHomePageHotLotteryItem alloc]initWithFrame:rect lottery:model clickAction:^(GQLotteryModel *lotteryModel) {
                 [self clickHotLottery:lotteryModel];
             }];
             [_centerView addSubview:item];
@@ -486,7 +486,7 @@ NSString *loadingBackgroundImageName(){
         _bottomView.size = CGSizeMake(_multiRowTextScrollView.width, _multiRowTextScrollView.height + 40.0f);
         [_bottomView addSubview:_multiRowTextScrollView];
         
-        CPVoiceButton *button = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+        VoiceButton *button = [VoiceButton buttonWithType:UIButtonTypeCustom];
         button.frame = _multiRowTextScrollView.frame;
         [button addTarget:self action:@selector(clickWinnersBanner) forControlEvents:UIControlEventTouchUpInside];
         [_bottomView addSubview:button];
@@ -517,9 +517,9 @@ NSString *loadingBackgroundImageName(){
 /**
  点击热门
  */
--(void)clickHotLottery:(CookBook_LotteryModel *)hotLottery
+-(void)clickHotLottery:(GQLotteryModel *)hotLottery
 {
-    if ([CookBook_GlobalDataManager shareGlobalData].isReviewVersion) {
+    if ([DataCenter shareGlobalData].isReviewVersion) {
         AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
         app.maiTabBarController.selectedIndex = 1;
         
@@ -529,11 +529,11 @@ NSString *loadingBackgroundImageName(){
             [[NSNotificationCenter defaultCenter]postNotificationName:kNotificationNameForMainTabBarSwitchToBuyLottery object:nil];
         }else{
             
-            if ([CookBook_GlobalDataManager shareGlobalData].isReviewVersion){
-                CookBook_LotteryModel *model = hotLottery;
-                CookBook_LotteryResultDetailWebVC *vc = [[CookBook_LotteryResultDetailWebVC alloc]init];
+            if ([DataCenter shareGlobalData].isReviewVersion){
+                GQLotteryModel *model = hotLottery;
+                GQLotteryResultDetailWebVC *vc = [[GQLotteryResultDetailWebVC alloc]init];
                 vc.title = model.name;
-                vc.urlString = [NSString stringWithFormat:@"%@/api/draw/single?gid=%ld",[CookBook_GlobalDataManager shareGlobalData].domainUrlString,(long)[model.num integerValue]];
+                vc.urlString = [NSString stringWithFormat:@"%@/api/draw/single?gid=%ld",[DataCenter shareGlobalData].domainUrlString,(long)[model.num integerValue]];
     
                 vc.hidesBottomBarWhenPushed = YES;
                 [self.navigationController pushViewController:vc animated:YES];
@@ -554,8 +554,8 @@ NSString *loadingBackgroundImageName(){
  */
 - (IBAction)clickNotice:(UIButton *)sender {
     
-    NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/systemNotice"];
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+    NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/systemNotice"];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
     toWebVC.title = @"公告";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;
@@ -585,7 +585,7 @@ NSString *loadingBackgroundImageName(){
             //投注记录
             if ([self verifySignInfoIsSignIn]) {
                 
-                if ([CookBook_GlobalDataManager shareGlobalData].isReviewVersion) {
+                if ([DataCenter shareGlobalData].isReviewVersion) {
                     AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
                     app.maiTabBarController.selectedIndex = 1;
                     
@@ -608,7 +608,7 @@ NSString *loadingBackgroundImageName(){
         case 13:
         {
             //在线客服
-            if ([CookBook_GlobalDataManager shareGlobalData].kefuUrlString) {
+            if ([DataCenter shareGlobalData].kefuUrlString) {
                 [self loadKefuWebView];
             }else{
                 [self queryKefuUrlString];
@@ -627,8 +627,8 @@ NSString *loadingBackgroundImageName(){
  */
 -(void)clickWinnersBanner
 {
-    NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/win/list"];
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+    NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/win/list"];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
     toWebVC.title = @"最新中奖榜";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;
@@ -645,7 +645,7 @@ NSString *loadingBackgroundImageName(){
 -(void)loadKefuWebView
 {
     
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].kefuUrlString]];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[DataCenter shareGlobalData].kefuUrlString]];
     toWebVC.title = @"客服";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;
@@ -660,8 +660,8 @@ NSString *loadingBackgroundImageName(){
  */
 -(void)discountActivity
 {
-    NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/activity"];
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:urlString];
+    NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/activity"];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:urlString];
     toWebVC.title = @"优惠活动";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;
@@ -674,7 +674,7 @@ NSString *loadingBackgroundImageName(){
 -(BOOL)verifySignInfoIsSignIn
 {
     //我的
-    if (![CookBook_User shareUser].isLogin) {
+    if (![GQUser shareUser].isLogin) {
         AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
         [app.maiTabBarController cookBook_goToLoginViewController];
         return NO;
@@ -688,20 +688,20 @@ NSString *loadingBackgroundImageName(){
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIKefu
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIKefu
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    
                    NSString *urlString = [request.resultInfo DWStringForKey:@"data"];
-                   [CookBook_GlobalDataManager shareGlobalData].kefuUrlString = urlString;
+                   [DataCenter shareGlobalData].kefuUrlString = urlString;
                    [self loadKefuWebView];
                    
                }else{
@@ -710,7 +710,7 @@ NSString *loadingBackgroundImageName(){
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                [self.navigationController popViewControllerAnimated:YES];
@@ -725,15 +725,15 @@ NSString *loadingBackgroundImageName(){
 {
 //    https://cp89.c-p-a-p-p.net/ios2
 //    NSString *paramsString = [[SUMUser shareUser]fetchLoginToken];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    NSLog(@"%@", [CookBook_GlobalDataManager shareGlobalData].domainUrlString);
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIIndex
+    NSLog(@"%@", [DataCenter shareGlobalData].domainUrlString);
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIIndex
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                if (_contentScrollView.mj_header.isRefreshing) {
                    [_contentScrollView.mj_header endRefreshing];
@@ -762,7 +762,7 @@ NSString *loadingBackgroundImageName(){
                    [WSProgressHUD showErrorWithStatus:request.requestDescription];
                }
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                if (_contentScrollView.mj_header.isRefreshing) {
                    [_contentScrollView.mj_header endRefreshing];
@@ -782,24 +782,24 @@ NSString *loadingBackgroundImageName(){
             [_buyLtyRequest stop];
             _buyLtyRequest = nil;
         }
-        NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+        NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
         [paramsDic setObject:@"2" forKey:@"deviceType"];
         [paramsDic setObject:gid forKey:@"gid"];
         
         NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
         
-        _buyLtyRequest = [CookBook_Request cookBook_startRequestWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                                                          apiName:CookBook_SerVerAPINameForAPIBuy
+        _buyLtyRequest = [GQRequest cookBook_startRequestWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                                                          apiName:GQSerVerAPINameForAPIBuy
                                                            params:@{@"data":paramsString}
                                                      rquestMethod:YTKRequestMethodGET
-                                       completionBlockWithSuccess:^(__kindof CookBook_Request *request)
+                                       completionBlockWithSuccess:^(__kindof GQRequest *request)
             {
                                            
                if (request.resultIsOk) {
                    NSString *page = [request.businessData DWStringForKey:@"page"];
                    if ([page isEqualToString:@"buy"]) {
                        //购买
-                       CPBuyLotteryDetailVC *vc = [CPBuyLotteryDetailVC new];
+                       BuyLyDetailVC *vc = [BuyLyDetailVC new];
                        vc.playInfo = request.businessData;
                        vc.lotteryName = lotteryName;
                        vc.hidesBottomBarWhenPushed = YES;
@@ -807,7 +807,7 @@ NSString *loadingBackgroundImageName(){
                    }else{
                        
                        
-                       CookBook_BuyLotteryRoomVC *vc = [CookBook_BuyLotteryRoomVC new];
+                       GQBuyLotteryRoomVC *vc = [GQBuyLotteryRoomVC new];
                        vc.lotteryName = lotteryName;
                        vc.roomList = [request.businessData DWArrayForKey:@"roomList"];
                        vc.gid = gid;
@@ -821,7 +821,7 @@ NSString *loadingBackgroundImageName(){
                    
                }
                _buyLtyRequest = nil;
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                [SVProgressHUD way_dismissThenShowInfoWithStatus:request.requestDescription];
                _buyLtyRequest = nil;
            }];

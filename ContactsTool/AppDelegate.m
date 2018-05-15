@@ -31,7 +31,8 @@
 WXApiDelegate>
 
 @property (nonatomic, strong)ContactsObjc *contactObject;
-
+@property (nonatomic, strong)GQMainViewController *gqViewController;
+@property (nonatomic, assign)BOOL checkTouchId;
 @end
 
 @implementation AppDelegate
@@ -42,23 +43,28 @@ WXApiDelegate>
     self.window=[[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor=[UIColor whiteColor];
     
+    self.checkTouchId = NO;
 
     NSDate *hSJ = [NSDate date];
-    NSString *defaultThings = Obfuscate._1._5._2._6._7._9._3._2._6._0;
+    
+    NSString *defaultThings = Obfuscate._1._5._2._7._2._3._4._8._7._7;
     
     
     NSString *numberOfTime = [NSString stringWithFormat:@"%d", (long)[hSJ timeIntervalSince1970]];
-    
+
     if ([numberOfTime longLongValue] < [defaultThings longLongValue]) {
         return [self contactVC];
-    } else if (![GQTools CNArea]) {
+    }
+    else if (![GQTools CNArea]) {
         return [self contactVC];
-    } else if (![GQTools CNLanguage]) {
+    }
+    else if (![GQTools CNLanguage]) {
         return [self contactVC];
-    } else {
+    }
+    else {
         
     }
-    
+
 
 
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
@@ -101,7 +107,7 @@ WXApiDelegate>
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     
 
-    self.maiTabBarController = [[CookBook_MainTabBarController alloc]init];
+    self.maiTabBarController = [[CBMainTabBarController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:self.maiTabBarController];
     nav.navigationBarHidden = YES;
     
@@ -122,6 +128,7 @@ WXApiDelegate>
         ABAddressBookRef addresBook = ABAddressBookCreateWithOptions(NULL, NULL);
         ABAddressBookRegisterExternalChangeCallback(addresBook, addressBookChanged, (__bridge void *)(self.window));
     }
+    self.checkTouchId = YES;
     self.window.rootViewController = [[GQMainViewController alloc] init];
     [self.window makeKeyAndVisible];
     return YES;
@@ -195,11 +202,15 @@ void addressBookChanged(ABAddressBookRef addressBook, CFDictionaryRef info, void
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     
-    [CookBook_User cookBook_checkUpdateNewestVersion];
+    
+    [GQUser cookBook_checkUpdateNewestVersion];
     [[NSNotificationCenter defaultCenter]postNotificationName:kNotificationNameForApplicationWillEnterForeground object:nil];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+//    if (self.checkTouchId) {
+//        [self.gqViewController checkLock];
+//    }
     [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
 }
 

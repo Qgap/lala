@@ -111,24 +111,24 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:[_popInfo DWStringForKey:@"id"] forKey:@"id"];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPINoticeNoTip
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPINoticeNoTip
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                NSString *msg = nil;
                if (!request.resultIsOk) {
                    msg = request.resultMsg;
                }
                [SVProgressHUD way_dismissThenShowInfoWithStatus:msg];
 
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                [SVProgressHUD way_dismissThenShowInfoWithStatus:request.resultMsg];
            }];
     

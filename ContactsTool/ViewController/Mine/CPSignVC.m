@@ -8,7 +8,7 @@
 
 #import "CPSignVC.h"
 #import "CPSignRecordVC.h"
-#import "CPSelectedOptionsView.h"
+#import "SelectedOptionsView.h"
 
 @interface CPSignVC ()
 {
@@ -47,7 +47,7 @@
     [super viewDidLoad];
     self.title = @"签到";
     
-    CPVoiceButton *finishedButton = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+    VoiceButton *finishedButton = [VoiceButton buttonWithType:UIButtonTypeCustom];
     finishedButton.frame = CGRectMake(0, 0, 65, 65);
     [finishedButton addTarget:self action:@selector(signRecordAction) forControlEvents:UIControlEventTouchUpInside];
     [finishedButton setTitle:@"签到记录" forState:UIControlStateNormal];
@@ -128,13 +128,13 @@
 -(void)querySignInfo
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserCheckin
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserCheckin
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -152,7 +152,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                [self.navigationController popViewControllerAnimated:YES];
@@ -163,13 +163,13 @@
 -(void)querySign
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUsercheckinSubmit
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUsercheckinSubmit
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -181,7 +181,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                

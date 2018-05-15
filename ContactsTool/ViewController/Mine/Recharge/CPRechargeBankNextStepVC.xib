@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -252,7 +248,7 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pUN-Ar-YMo" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pUN-Ar-YMo" customClass="VoiceButton">
                                     <rect key="frame" x="10" y="10" width="95" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -267,7 +263,7 @@
                                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="aI1-EY-c1O"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="617-12-d0O" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="617-12-d0O" customClass="VoiceButton">
                                     <rect key="frame" x="155" y="10" width="130" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -282,7 +278,7 @@
                                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="WaJ-Fs-mYa"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xtw-ot-pCM" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xtw-ot-pCM" customClass="VoiceButton">
                                     <rect key="frame" x="10" y="45" width="120" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -297,7 +293,7 @@
                                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="gZ7-qF-GXn"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FzE-ke-HD9" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="FzE-ke-HD9" customClass="VoiceButton">
                                     <rect key="frame" x="155" y="45" width="115" height="25"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -312,7 +308,7 @@
                                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="nBO-bz-mfX"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dyt-o7-UlM" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="5" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dyt-o7-UlM" customClass="VoiceButton">
                                     <rect key="frame" x="13" y="80" width="115" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -327,7 +323,7 @@
                                         <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="aj8-tH-4xp"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CSC-eN-3Zt" customClass="CPVoiceButton">
+                                <button opaque="NO" tag="10" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CSC-eN-3Zt" customClass="VoiceButton">
                                     <rect key="frame" x="155" y="80" width="65" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -345,7 +341,7 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <button opaque="NO" tag="55" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZWA-bL-T6g" customClass="CPVoiceButton">
+                        <button opaque="NO" tag="55" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZWA-bL-T6g" customClass="VoiceButton">
                             <rect key="frame" x="10" y="475" width="145" height="40"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.91372549020000005" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -357,7 +353,7 @@
                                 <action selector="buttonAction:" destination="-1" eventType="touchUpInside" id="0TH-QV-HLb"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="66" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dTK-cg-2tQ" customClass="CPVoiceButton">
+                        <button opaque="NO" tag="66" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dTK-cg-2tQ" customClass="VoiceButton">
                             <rect key="frame" x="165" y="475" width="145" height="40"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.91372549020000005" green="0.16862745100000001" blue="0.19215686269999999" alpha="1" colorSpace="calibratedRGB"/>

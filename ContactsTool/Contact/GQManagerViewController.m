@@ -185,7 +185,7 @@
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
@@ -194,25 +194,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NSArray *array = self.totalArray[indexPath.row];
-    if (array.count == 0) {
-       
-        [SVProgressHUD way_dismissThenShowInfoWithStatus:NSLocalizedString(@"noContactToClean", @"")];
-        
-    } else {
-        
-        if (indexPath.row == 2) {
-            NoPhoneViewController *vc = [[NoPhoneViewController alloc] initWithData:self.noPhoneArray];
-            vc.hidesBottomBarWhenPushed = YES;
-            [self.navigationController pushViewController:vc animated:YES];
-        } else {
-            NSArray *typeArray = @[@"0",@"1",@"2"];
-            GQSortViewController *viewController = [[GQSortViewController alloc] initWithType:[typeArray[indexPath.row] integerValue] data:self.totalArray[indexPath.row]];
-            viewController.hidesBottomBarWhenPushed = YES;
+    if (indexPath.section == 0) {
+        NSArray *array = self.totalArray[indexPath.row];
+        if (array.count == 0) {
+           
+            [SVProgressHUD way_dismissThenShowInfoWithStatus:NSLocalizedString(@"noContactToClean", @"")];
             
-            [self.navigationController pushViewController:viewController animated:YES];
+        } else {
+            
+            if (indexPath.row == 2) {
+                NoPhoneViewController *vc = [[NoPhoneViewController alloc] initWithData:self.noPhoneArray];
+                vc.hidesBottomBarWhenPushed = YES;
+                [self.navigationController pushViewController:vc animated:YES];
+            } else {
+                NSArray *typeArray = @[@"0",@"1",@"2"];
+                GQSortViewController *viewController = [[GQSortViewController alloc] initWithType:[typeArray[indexPath.row] integerValue] data:self.totalArray[indexPath.row]];
+                viewController.hidesBottomBarWhenPushed = YES;
+                
+                [self.navigationController pushViewController:viewController animated:YES];
+            }
+            
         }
-        
     }
 
 }

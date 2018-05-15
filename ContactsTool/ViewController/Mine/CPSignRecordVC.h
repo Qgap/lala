@@ -6,8 +6,8 @@
 //  Copyright © 2017年 施冬伟. All rights reserved.
 //
 
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
-@interface CPSignRecordVC : CookBook_BaseViewController
+@interface CPSignRecordVC : GQBaseViewController
 
 @end

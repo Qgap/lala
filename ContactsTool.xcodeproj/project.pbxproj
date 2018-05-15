@@ -16,87 +16,89 @@
 		3A0C9BD320A58E92008B7FA1 /* GQMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BBC20A58E92008B7FA1 /* GQMainViewController.m */; };
 		3A0C9BD520A58E92008B7FA1 /* GQSortViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BC020A58E92008B7FA1 /* GQSortViewController.m */; };
 		3A0C9BD620A58E92008B7FA1 /* GQManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BC220A58E92008B7FA1 /* GQManagerViewController.m */; };
-		3A0C9BD820A58E92008B7FA1 /* GQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BC520A58E92008B7FA1 /* GQAppDelegate.m */; };
 		3A0C9BD920A58E92008B7FA1 /* GQContactModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BC720A58E92008B7FA1 /* GQContactModel.m */; };
 		3A0C9BDA20A58E92008B7FA1 /* GQTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BC820A58E92008B7FA1 /* GQTools.m */; };
 		3A0C9BDC20A58E92008B7FA1 /* ContactsObjc.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BCD20A58E92008B7FA1 /* ContactsObjc.m */; };
 		3A0C9BDD20A58E92008B7FA1 /* GQContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A0C9BCE20A58E92008B7FA1 /* GQContactViewController.m */; };
+		3A43734720AAC95200AED14F /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A43734620AAC95200AED14F /* MainController.swift */; };
+		3A43734920AAC97900AED14F /* UIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A43734820AAC97900AED14F /* UIConstants.swift */; };
+		3A43734B20AAC98C00AED14F /* SmartAskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A43734A20AAC98C00AED14F /* SmartAskViewController.swift */; };
 		3A6C294220A6BCA70010C34A /* libUMessage_Sdk_1.5.0a.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683791B320909F100092AB54 /* libUMessage_Sdk_1.5.0a.a */; };
 		3A6C294320A6BCB10010C34A /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 683791CF20909F100092AB54 /* libWeChatSDK.a */; };
 		3AEAFEB220A702B200AB1373 /* UAObfuscatedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEAFEB120A702B200AB1373 /* UAObfuscatedString.m */; };
 		6837907520909E6D0092AB54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6837907420909E6D0092AB54 /* Assets.xcassets */; };
 		6837907B20909E6D0092AB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837907A20909E6D0092AB54 /* main.m */; };
-		6837920320909F110092AB54 /* CookBook_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908520909F100092AB54 /* CookBook_BaseViewController.m */; };
-		6837920420909F110092AB54 /* CookBook_BuyCustomLotteryConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908820909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.m */; };
-		6837920520909F110092AB54 /* CookBook_BuyCustomLotteryConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837908920909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.xib */; };
-		6837920620909F110092AB54 /* CookBook_BuyFastLotteryConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908B20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.m */; };
-		6837920720909F110092AB54 /* CookBook_BuyFastLotteryConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837908C20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.xib */; };
-		6837920820909F110092AB54 /* CookBook_BuyLotteryRoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908E20909F100092AB54 /* CookBook_BuyLotteryRoomVC.m */; };
-		6837920920909F110092AB54 /* CookBook_BuyLotteryRoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837908F20909F100092AB54 /* CookBook_BuyLotteryRoomVC.xib */; };
-		6837920A20909F110092AB54 /* CPBuyLotteryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909120909F100092AB54 /* CPBuyLotteryDetailVC.m */; };
-		6837920B20909F110092AB54 /* CPBuyLotteryDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837909220909F100092AB54 /* CPBuyLotteryDetailVC.xib */; };
-		6837920C20909F110092AB54 /* CPBuyLotteryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909420909F100092AB54 /* CPBuyLotteryVC.m */; };
-		6837920D20909F110092AB54 /* CPBuyLotteryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837909520909F100092AB54 /* CPBuyLotteryVC.xib */; };
-		6837920E20909F110092AB54 /* CookBook_BuyLotteryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909820909F100092AB54 /* CookBook_BuyLotteryManager.m */; };
-		6837920F20909F110092AB54 /* CookBook_TimeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909A20909F100092AB54 /* CookBook_TimeManager.m */; };
-		6837921020909F110092AB54 /* CookBook_BuyLetterLotterySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909D20909F100092AB54 /* CookBook_BuyLetterLotterySectionView.m */; };
-		6837921120909F110092AB54 /* CookBook_BuyLotteryCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909F20909F100092AB54 /* CookBook_BuyLotteryCollectionCell.m */; };
-		6837921220909F110092AB54 /* CookBook_BuyLotteryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790A020909F100092AB54 /* CookBook_BuyLotteryCollectionCell.xib */; };
-		6837921320909F110092AB54 /* CookBook_BuyLotteryCustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A220909F100092AB54 /* CookBook_BuyLotteryCustomItem.m */; };
-		6837921420909F110092AB54 /* CookBook_BuyLotteryFastItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A420909F100092AB54 /* CookBook_BuyLotteryFastItem.m */; };
-		6837921520909F110092AB54 /* CookBook_BuyLotterySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A620909F100092AB54 /* CookBook_BuyLotterySectionView.m */; };
-		6837921620909F110092AB54 /* CookBook_BuyLotteryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A820909F100092AB54 /* CookBook_BuyLotteryTableCell.m */; };
-		6837921720909F110092AB54 /* CookBook_BuyLotteryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790A920909F100092AB54 /* CookBook_BuyLotteryTableCell.xib */; };
-		6837921820909F110092AB54 /* CookBook_LotteryShowResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790AB20909F100092AB54 /* CookBook_LotteryShowResultView.m */; };
-		6837921920909F110092AB54 /* CookBook_HomepageCaijinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790AE20909F100092AB54 /* CookBook_HomepageCaijinVC.m */; };
-		6837921A20909F110092AB54 /* CookBook_HomepageCaijinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790AF20909F100092AB54 /* CookBook_HomepageCaijinVC.xib */; };
-		6837921B20909F110092AB54 /* CookBook_PresentWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790B120909F100092AB54 /* CookBook_PresentWebVC.m */; };
-		6837921C20909F110092AB54 /* CookBook_WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790B320909F100092AB54 /* CookBook_WebViewController.m */; };
+		6837920320909F110092AB54 /* GQBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908520909F100092AB54 /* GQBaseViewController.m */; };
+		6837920420909F110092AB54 /* CookBookBuyCustomConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908820909F100092AB54 /* CookBookBuyCustomConfirmView.m */; };
+		6837920520909F110092AB54 /* CookBookBuyCustomConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837908920909F100092AB54 /* CookBookBuyCustomConfirmView.xib */; };
+		6837920620909F110092AB54 /* CBBuyKuaiCConfirmView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908B20909F100092AB54 /* CBBuyKuaiCConfirmView.m */; };
+		6837920720909F110092AB54 /* CBBuyKuaiCConfirmView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837908C20909F100092AB54 /* CBBuyKuaiCConfirmView.xib */; };
+		6837920820909F110092AB54 /* GQBuyLotteryRoomVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837908E20909F100092AB54 /* GQBuyLotteryRoomVC.m */; };
+		6837920920909F110092AB54 /* GQBuyLotteryRoomVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837908F20909F100092AB54 /* GQBuyLotteryRoomVC.xib */; };
+		6837920A20909F110092AB54 /* BuyLyDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909120909F100092AB54 /* BuyLyDetailVC.m */; };
+		6837920B20909F110092AB54 /* BuyLyDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837909220909F100092AB54 /* BuyLyDetailVC.xib */; };
+		6837920C20909F110092AB54 /* BuyLyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909420909F100092AB54 /* BuyLyVC.m */; };
+		6837920D20909F110092AB54 /* BuyLyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837909520909F100092AB54 /* BuyLyVC.xib */; };
+		6837920E20909F110092AB54 /* CBBuyLyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909820909F100092AB54 /* CBBuyLyManager.m */; };
+		6837920F20909F110092AB54 /* ShiJianManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909A20909F100092AB54 /* ShiJianManager.m */; };
+		6837921020909F110092AB54 /* GQBuyLetterLotterySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909D20909F100092AB54 /* GQBuyLetterLotterySectionView.m */; };
+		6837921120909F110092AB54 /* GQBuyLotteryCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837909F20909F100092AB54 /* GQBuyLotteryCollectionCell.m */; };
+		6837921220909F110092AB54 /* GQBuyLotteryCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790A020909F100092AB54 /* GQBuyLotteryCollectionCell.xib */; };
+		6837921320909F110092AB54 /* GQBuyLotteryCustomItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A220909F100092AB54 /* GQBuyLotteryCustomItem.m */; };
+		6837921420909F110092AB54 /* GQBuyLotteryFastItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A420909F100092AB54 /* GQBuyLotteryFastItem.m */; };
+		6837921520909F110092AB54 /* GQBuyLotterySectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A620909F100092AB54 /* GQBuyLotterySectionView.m */; };
+		6837921620909F110092AB54 /* GQBuyLotteryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790A820909F100092AB54 /* GQBuyLotteryTableCell.m */; };
+		6837921720909F110092AB54 /* GQBuyLotteryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790A920909F100092AB54 /* GQBuyLotteryTableCell.xib */; };
+		6837921820909F110092AB54 /* GQLotteryShowResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790AB20909F100092AB54 /* GQLotteryShowResultView.m */; };
+		6837921920909F110092AB54 /* GQHomepageCaijinVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790AE20909F100092AB54 /* GQHomepageCaijinVC.m */; };
+		6837921A20909F110092AB54 /* GQHomepageCaijinVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790AF20909F100092AB54 /* GQHomepageCaijinVC.xib */; };
+		6837921B20909F110092AB54 /* GQPresentWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790B120909F100092AB54 /* GQPresentWebVC.m */; };
+		6837921C20909F110092AB54 /* GQWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790B320909F100092AB54 /* GQWebViewController.m */; };
 		6837921D20909F110092AB54 /* CPHomePageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790B520909F100092AB54 /* CPHomePageVC.m */; };
 		6837921E20909F110092AB54 /* CPHomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790B620909F100092AB54 /* CPHomePageVC.xib */; };
-		6837922020909F110092AB54 /* CookBook_HomepageActivityCaijin.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790BA20909F100092AB54 /* CookBook_HomepageActivityCaijin.m */; };
-		6837922120909F110092AB54 /* CookBook_LotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790BC20909F100092AB54 /* CookBook_LotteryModel.m */; };
+		6837922020909F110092AB54 /* GQHomepageActivityCaijin.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790BA20909F100092AB54 /* GQHomepageActivityCaijin.m */; };
+		6837922120909F110092AB54 /* GQLotteryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790BC20909F100092AB54 /* GQLotteryModel.m */; };
 		6837922220909F110092AB54 /* CPHomeNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790BF20909F100092AB54 /* CPHomeNoticeView.m */; };
 		6837922320909F110092AB54 /* CPHomeNoticeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790C020909F100092AB54 /* CPHomeNoticeView.xib */; };
 		6837922420909F110092AB54 /* CPHomePageHotLotteryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790C220909F100092AB54 /* CPHomePageHotLotteryItem.m */; };
 		6837922520909F110092AB54 /* CPMultiRowTextScrollCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790C420909F100092AB54 /* CPMultiRowTextScrollCell.m */; };
 		6837922620909F110092AB54 /* CPMultiRowTextScrollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790C520909F100092AB54 /* CPMultiRowTextScrollCell.xib */; };
 		6837922720909F110092AB54 /* CPMultiRowTextScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790C720909F100092AB54 /* CPMultiRowTextScrollView.m */; };
-		6837922820909F110092AB54 /* CookBook_LookForPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790CA20909F100092AB54 /* CookBook_LookForPasswordVC.m */; };
-		6837922920909F110092AB54 /* CookBook_LookForPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790CB20909F100092AB54 /* CookBook_LookForPasswordVC.xib */; };
-		6837922A20909F110092AB54 /* CookBook_RegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790CD20909F100092AB54 /* CookBook_RegistViewController.m */; };
-		6837922B20909F110092AB54 /* CookBook_RegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790CE20909F100092AB54 /* CookBook_RegistViewController.xib */; };
+		6837922820909F110092AB54 /* GQLookForPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790CA20909F100092AB54 /* GQLookForPasswordVC.m */; };
+		6837922920909F110092AB54 /* GQLookForPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790CB20909F100092AB54 /* GQLookForPasswordVC.xib */; };
+		6837922A20909F110092AB54 /* GQRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790CD20909F100092AB54 /* GQRegistViewController.m */; };
+		6837922B20909F110092AB54 /* GQRegistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790CE20909F100092AB54 /* GQRegistViewController.xib */; };
 		6837922C20909F110092AB54 /* CPLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790D020909F100092AB54 /* CPLoginViewController.m */; };
 		6837922D20909F110092AB54 /* CPLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790D120909F100092AB54 /* CPLoginViewController.xib */; };
 		6837922E20909F110092AB54 /* CPResetPasswordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790D320909F100092AB54 /* CPResetPasswordVC.m */; };
 		6837922F20909F110092AB54 /* CPResetPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790D420909F100092AB54 /* CPResetPasswordVC.xib */; };
 		6837923020909F110092AB54 /* CPTryPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790D620909F100092AB54 /* CPTryPlayViewController.m */; };
 		6837923120909F110092AB54 /* CPTryPlayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790D720909F100092AB54 /* CPTryPlayViewController.xib */; };
-		6837923220909F110092AB54 /* CookBook_LotteryResultDetailWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790DA20909F100092AB54 /* CookBook_LotteryResultDetailWebVC.m */; };
-		6837923320909F110092AB54 /* CookBook_LotteryResultDetailWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790DB20909F100092AB54 /* CookBook_LotteryResultDetailWebVC.xib */; };
+		6837923220909F110092AB54 /* GQLotteryResultDetailWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790DA20909F100092AB54 /* GQLotteryResultDetailWebVC.m */; };
+		6837923320909F110092AB54 /* GQLotteryResultDetailWebVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790DB20909F100092AB54 /* GQLotteryResultDetailWebVC.xib */; };
 		6837923420909F110092AB54 /* CPLotteryResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790DD20909F100092AB54 /* CPLotteryResultVC.m */; };
 		6837923520909F110092AB54 /* CPLotteryResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790DE20909F100092AB54 /* CPLotteryResultVC.xib */; };
-		6837923620909F110092AB54 /* CookBook_LotteryResultMainCellStyle0.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E120909F100092AB54 /* CookBook_LotteryResultMainCellStyle0.m */; };
-		6837923720909F110092AB54 /* CookBook_LotteryResultMainCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E320909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.m */; };
-		6837923820909F110092AB54 /* CookBook_LotteryResultMainCellStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790E420909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.xib */; };
-		6837923920909F110092AB54 /* CookBook_LotteryResultMainCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E620909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.m */; };
-		6837923A20909F110092AB54 /* CookBook_LotteryResultMainCellStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790E720909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.xib */; };
-		6837923B20909F110092AB54 /* CookBook_LotteryResultMainCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E920909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.m */; };
-		6837923C20909F110092AB54 /* CookBook_LotteryResultMainCellStyle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790EA20909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.xib */; };
-		6837923D20909F110092AB54 /* CookBook_LotteryResultMainCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790EC20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.m */; };
-		6837923E20909F110092AB54 /* CookBook_LotteryResultMainCellStyle4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790ED20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.xib */; };
-		6837923F20909F110092AB54 /* CookBook_LotteryResultMainCellStyle5.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790EF20909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.m */; };
-		6837924020909F110092AB54 /* CookBook_LotteryResultMainCellStyle5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F020909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.xib */; };
-		6837924120909F110092AB54 /* CookBook_LotteryResultMainCellStyle6.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790F220909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.m */; };
-		6837924220909F110092AB54 /* CookBook_LotteryResultMainCellStyle6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F320909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.xib */; };
-		6837924320909F110092AB54 /* CookBook_LotteryResultMainCellStyle7.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790F520909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.m */; };
-		6837924420909F110092AB54 /* CookBook_LotteryResultMainCellStyle7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F620909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.xib */; };
-		6837924520909F110092AB54 /* CookBook_LotteryResultMainCellStyle8.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790F820909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.m */; };
-		6837924620909F110092AB54 /* CookBook_LotteryResultMainCellStyle8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F920909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.xib */; };
+		6837923620909F110092AB54 /* GQLotteryResultMainCellStyle0.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E120909F100092AB54 /* GQLotteryResultMainCellStyle0.m */; };
+		6837923720909F110092AB54 /* GQLotteryResultMainCellStyle1.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E320909F100092AB54 /* GQLotteryResultMainCellStyle1.m */; };
+		6837923820909F110092AB54 /* GQLotteryResultMainCellStyle1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790E420909F100092AB54 /* GQLotteryResultMainCellStyle1.xib */; };
+		6837923920909F110092AB54 /* GQLotteryResultMainCellStyle2.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E620909F100092AB54 /* GQLotteryResultMainCellStyle2.m */; };
+		6837923A20909F110092AB54 /* GQLotteryResultMainCellStyle2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790E720909F100092AB54 /* GQLotteryResultMainCellStyle2.xib */; };
+		6837923B20909F110092AB54 /* GQLotteryResultMainCellStyle3.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790E920909F100092AB54 /* GQLotteryResultMainCellStyle3.m */; };
+		6837923C20909F110092AB54 /* GQLotteryResultMainCellStyle3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790EA20909F100092AB54 /* GQLotteryResultMainCellStyle3.xib */; };
+		6837923D20909F110092AB54 /* GQLotteryResultMainCellStyle4.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790EC20909F100092AB54 /* GQLotteryResultMainCellStyle4.m */; };
+		6837923E20909F110092AB54 /* GQLotteryResultMainCellStyle4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790ED20909F100092AB54 /* GQLotteryResultMainCellStyle4.xib */; };
+		6837923F20909F110092AB54 /* GQLotteryResultMainCellStyle5.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790EF20909F100092AB54 /* GQLotteryResultMainCellStyle5.m */; };
+		6837924020909F110092AB54 /* GQLotteryResultMainCellStyle5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F020909F100092AB54 /* GQLotteryResultMainCellStyle5.xib */; };
+		6837924120909F110092AB54 /* GQLotteryResultMainCellStyle6.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790F220909F100092AB54 /* GQLotteryResultMainCellStyle6.m */; };
+		6837924220909F110092AB54 /* GQLotteryResultMainCellStyle6.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F320909F100092AB54 /* GQLotteryResultMainCellStyle6.xib */; };
+		6837924320909F110092AB54 /* GQLotteryResultMainCellStyle7.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790F520909F100092AB54 /* GQLotteryResultMainCellStyle7.m */; };
+		6837924420909F110092AB54 /* GQLotteryResultMainCellStyle7.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F620909F100092AB54 /* GQLotteryResultMainCellStyle7.xib */; };
+		6837924520909F110092AB54 /* GQLotteryResultMainCellStyle8.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790F820909F100092AB54 /* GQLotteryResultMainCellStyle8.m */; };
+		6837924620909F110092AB54 /* GQLotteryResultMainCellStyle8.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790F920909F100092AB54 /* GQLotteryResultMainCellStyle8.xib */; };
 		6837924720909F110092AB54 /* CPLotteryTrendVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 683790FC20909F100092AB54 /* CPLotteryTrendVC.m */; };
 		6837924820909F110092AB54 /* CPLotteryTrendVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683790FD20909F100092AB54 /* CPLotteryTrendVC.xib */; };
-		6837924920909F110092AB54 /* CookBook_AboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837910020909F100092AB54 /* CookBook_AboutUsVC.m */; };
-		6837924A20909F110092AB54 /* CookBook_AboutUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837910120909F100092AB54 /* CookBook_AboutUsVC.xib */; };
+		6837924920909F110092AB54 /* GQAboutUsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837910020909F100092AB54 /* GQAboutUsVC.m */; };
+		6837924A20909F110092AB54 /* GQAboutUsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837910120909F100092AB54 /* GQAboutUsVC.xib */; };
 		6837924B20909F110092AB54 /* CPAccountRecordVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837910320909F100092AB54 /* CPAccountRecordVC.m */; };
 		6837924C20909F110092AB54 /* CPAccountRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837910420909F100092AB54 /* CPAccountRecordVC.xib */; };
 		6837924D20909F110092AB54 /* CPBankCardInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837910620909F100092AB54 /* CPBankCardInfoVC.m */; };
@@ -133,7 +135,7 @@
 		6837926C20909F110092AB54 /* CPWithdrawRecordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837913420909F100092AB54 /* CPWithdrawRecordVC.xib */; };
 		6837926D20909F110092AB54 /* CPWithdrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837913620909F100092AB54 /* CPWithdrawViewController.m */; };
 		6837926E20909F110092AB54 /* CPWithdrawViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837913720909F100092AB54 /* CPWithdrawViewController.xib */; };
-		6837926F20909F110092AB54 /* CookBook_MineActionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837913A20909F100092AB54 /* CookBook_MineActionModel.m */; };
+		6837926F20909F110092AB54 /* GQMineActionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837913A20909F100092AB54 /* GQMineActionModel.m */; };
 		6837927020909F110092AB54 /* CPAddFriendRechargeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837913D20909F100092AB54 /* CPAddFriendRechargeVC.m */; };
 		6837927120909F110092AB54 /* CPAddFriendRechargeVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6837913E20909F100092AB54 /* CPAddFriendRechargeVC.xib */; };
 		6837927220909F110092AB54 /* CPRechargeAlipayToBankVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837914020909F100092AB54 /* CPRechargeAlipayToBankVC.m */; };
@@ -171,13 +173,13 @@
 		6837929220909F110092AB54 /* CPRechargePayTypeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917220909F100092AB54 /* CPRechargePayTypeButton.m */; };
 		6837929320909F110092AB54 /* chik.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6837917520909F100092AB54 /* chik.mp3 */; };
 		6837929420909F110092AB54 /* weico_click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6837917620909F100092AB54 /* weico_click.wav */; };
-		6837929520909F110092AB54 /* CookBook_BusinessControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917920909F100092AB54 /* CookBook_BusinessControllerManager.m */; };
-		6837929620909F110092AB54 /* CookBook_GlobalDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917B20909F100092AB54 /* CookBook_GlobalDataManager.m */; };
-		6837929720909F110092AB54 /* CookBook_GlobalSettingStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917D20909F100092AB54 /* CookBook_GlobalSettingStore.m */; };
-		6837929820909F110092AB54 /* CookBook_Request.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917F20909F100092AB54 /* CookBook_Request.m */; };
-		6837929920909F110092AB54 /* CookBook_ServerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918120909F100092AB54 /* CookBook_ServerAPIManager.m */; };
-		6837929A20909F110092AB54 /* CookBook_User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918320909F100092AB54 /* CookBook_User.m */; };
-		6837929B20909F110092AB54 /* CookBook_MainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918420909F100092AB54 /* CookBook_MainTabBarController.m */; };
+		6837929520909F110092AB54 /* GQBusinessControllerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917920909F100092AB54 /* GQBusinessControllerManager.m */; };
+		6837929620909F110092AB54 /* DataCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917B20909F100092AB54 /* DataCenter.m */; };
+		6837929720909F110092AB54 /* GQGlobalSettingStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917D20909F100092AB54 /* GQGlobalSettingStore.m */; };
+		6837929820909F110092AB54 /* GQRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837917F20909F100092AB54 /* GQRequest.m */; };
+		6837929920909F110092AB54 /* GQServerAPIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918120909F100092AB54 /* GQServerAPIManager.m */; };
+		6837929A20909F110092AB54 /* GQUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918320909F100092AB54 /* GQUser.m */; };
+		6837929B20909F110092AB54 /* CBMainTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918420909F100092AB54 /* CBMainTabBarController.m */; };
 		6837929C20909F110092AB54 /* DDUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918820909F100092AB54 /* DDUncaughtExceptionHandler.m */; };
 		6837929D20909F110092AB54 /* DWExtensionUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918A20909F100092AB54 /* DWExtensionUtils.m */; };
 		6837929E20909F110092AB54 /* DWParsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837918C20909F100092AB54 /* DWParsers.m */; };
@@ -210,25 +212,25 @@
 		683792BB20909F110092AB54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791D520909F100092AB54 /* AppDelegate.m */; };
 		683792BC20909F110092AB54 /* NSString+WayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791D920909F100092AB54 /* NSString+WayExtension.m */; };
 		683792BD20909F110092AB54 /* SVProgressHUD+WayExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791DB20909F100092AB54 /* SVProgressHUD+WayExtension.m */; };
-		683792BE20909F110092AB54 /* CPBackgroundCornerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791DE20909F100092AB54 /* CPBackgroundCornerLabel.m */; };
-		683792BF20909F110092AB54 /* CPFixedValueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E020909F100092AB54 /* CPFixedValueButton.m */; };
-		683792C020909F110092AB54 /* CPLineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E220909F100092AB54 /* CPLineLabel.m */; };
-		683792C120909F110092AB54 /* CPLocalCodeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E420909F100092AB54 /* CPLocalCodeLabel.m */; };
-		683792C220909F110092AB54 /* CPLongPressSaveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E620909F100092AB54 /* CPLongPressSaveImageView.m */; };
-		683792C320909F110092AB54 /* CPVoiceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E820909F100092AB54 /* CPVoiceButton.m */; };
-		683792C420909F110092AB54 /* CPSelectedOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791EB20909F100092AB54 /* CPSelectedOptionsCell.m */; };
-		683792C520909F110092AB54 /* CPSelectedOptionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791EC20909F100092AB54 /* CPSelectedOptionsCell.xib */; };
-		683792C620909F110092AB54 /* CPSelectedOptionsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791EE20909F100092AB54 /* CPSelectedOptionsCollectionCell.m */; };
-		683792C720909F110092AB54 /* CPSelectedOptionsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791EF20909F100092AB54 /* CPSelectedOptionsCollectionCell.xib */; };
-		683792C820909F110092AB54 /* CPSelectedOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791F120909F100092AB54 /* CPSelectedOptionsView.m */; };
-		683792C920909F110092AB54 /* CPSelectedOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791F220909F100092AB54 /* CPSelectedOptionsView.xib */; };
-		683792CA20909F110092AB54 /* CPSelectedOptionsAgoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791F520909F100092AB54 /* CPSelectedOptionsAgoCell.m */; };
-		683792CB20909F110092AB54 /* CPSelectedOptionsAgoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791F620909F100092AB54 /* CPSelectedOptionsAgoCell.xib */; };
-		683792CC20909F110092AB54 /* CPSelectedOptionsAgoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791F820909F100092AB54 /* CPSelectedOptionsAgoView.m */; };
-		683792CD20909F110092AB54 /* CPSelectedOptionsAgoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791F920909F100092AB54 /* CPSelectedOptionsAgoView.xib */; };
+		683792BE20909F110092AB54 /* BackgroundCornerLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791DE20909F100092AB54 /* BackgroundCornerLabel.m */; };
+		683792BF20909F110092AB54 /* FixedValueButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E020909F100092AB54 /* FixedValueButton.m */; };
+		683792C020909F110092AB54 /* LineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E220909F100092AB54 /* LineLabel.m */; };
+		683792C120909F110092AB54 /* LocalCodeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E420909F100092AB54 /* LocalCodeLabel.m */; };
+		683792C220909F110092AB54 /* LongPressToSaveImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E620909F100092AB54 /* LongPressToSaveImageView.m */; };
+		683792C320909F110092AB54 /* VoiceButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791E820909F100092AB54 /* VoiceButton.m */; };
+		683792C420909F110092AB54 /* SelectedOptionsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791EB20909F100092AB54 /* SelectedOptionsCell.m */; };
+		683792C520909F110092AB54 /* SelectedOptionsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791EC20909F100092AB54 /* SelectedOptionsCell.xib */; };
+		683792C620909F110092AB54 /* SelectedOptionsCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791EE20909F100092AB54 /* SelectedOptionsCollectionCell.m */; };
+		683792C720909F110092AB54 /* SelectedOptionsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791EF20909F100092AB54 /* SelectedOptionsCollectionCell.xib */; };
+		683792C820909F110092AB54 /* SelectedOptionsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791F120909F100092AB54 /* SelectedOptionsView.m */; };
+		683792C920909F110092AB54 /* SelectedOptionsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791F220909F100092AB54 /* SelectedOptionsView.xib */; };
+		683792CA20909F110092AB54 /* SelectedOptionsAgoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791F520909F100092AB54 /* SelectedOptionsAgoCell.m */; };
+		683792CB20909F110092AB54 /* SelectedOptionsAgoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791F620909F100092AB54 /* SelectedOptionsAgoCell.xib */; };
+		683792CC20909F110092AB54 /* SelectedOptionsAgoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791F820909F100092AB54 /* SelectedOptionsAgoView.m */; };
+		683792CD20909F110092AB54 /* SelectedOptionsAgoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683791F920909F100092AB54 /* SelectedOptionsAgoView.xib */; };
 		683792CE20909F110092AB54 /* UIBarButtonItem+DWBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791FB20909F100092AB54 /* UIBarButtonItem+DWBarButtonItem.m */; };
 		683792CF20909F110092AB54 /* WMDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 683791FE20909F100092AB54 /* WMDragView.m */; };
-		683792D020909F110092AB54 /* UIViewController+CPViewControllerExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837920120909F100092AB54 /* UIViewController+CPViewControllerExtension.m */; };
+		683792D020909F110092AB54 /* UIViewController+ViewControllerExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6837920120909F100092AB54 /* UIViewController+ViewControllerExtension.m */; };
 		683792D220909FFA0092AB54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683792D120909FFA0092AB54 /* SystemConfiguration.framework */; };
 		683792D42090A00B0092AB54 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683792D32090A00A0092AB54 /* CoreTelephony.framework */; };
 		683792D62090A0150092AB54 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 683792D52090A0150092AB54 /* CoreGraphics.framework */; };
@@ -247,7 +249,6 @@
 		3A0C9BB420A58E92008B7FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		3A0C9BB520A58E92008B7FA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A0C9BB620A58E92008B7FA1 /* GQManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQManagerViewController.h; sourceTree = "<group>"; };
-		3A0C9BB720A58E92008B7FA1 /* GQAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQAppDelegate.h; sourceTree = "<group>"; };
 		3A0C9BB820A58E92008B7FA1 /* MergeSamePhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MergeSamePhoneViewController.m; sourceTree = "<group>"; };
 		3A0C9BB920A58E92008B7FA1 /* NoPhoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NoPhoneViewController.m; sourceTree = "<group>"; };
 		3A0C9BBA20A58E92008B7FA1 /* GQTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQTools.h; sourceTree = "<group>"; };
@@ -259,7 +260,6 @@
 		3A0C9BC120A58E92008B7FA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A0C9BC220A58E92008B7FA1 /* GQManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQManagerViewController.m; sourceTree = "<group>"; };
 		3A0C9BC420A58E92008B7FA1 /* MergeSamePhoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MergeSamePhoneViewController.h; sourceTree = "<group>"; };
-		3A0C9BC520A58E92008B7FA1 /* GQAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQAppDelegate.m; sourceTree = "<group>"; };
 		3A0C9BC620A58E92008B7FA1 /* GQMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQMainViewController.h; sourceTree = "<group>"; };
 		3A0C9BC720A58E92008B7FA1 /* GQContactModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQContactModel.m; sourceTree = "<group>"; };
 		3A0C9BC820A58E92008B7FA1 /* GQTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQTools.m; sourceTree = "<group>"; };
@@ -268,6 +268,10 @@
 		3A0C9BCB20A58E92008B7FA1 /* GQSortViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQSortViewController.h; sourceTree = "<group>"; };
 		3A0C9BCD20A58E92008B7FA1 /* ContactsObjc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContactsObjc.m; sourceTree = "<group>"; };
 		3A0C9BCE20A58E92008B7FA1 /* GQContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQContactViewController.m; sourceTree = "<group>"; };
+		3A43734320AAC91F00AED14F /* ContactsTool-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContactsTool-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A43734620AAC95200AED14F /* MainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		3A43734820AAC97900AED14F /* UIConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIConstants.swift; sourceTree = "<group>"; };
+		3A43734A20AAC98C00AED14F /* SmartAskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartAskViewController.swift; sourceTree = "<group>"; };
 		3A6C294120A6BA9C0010C34A /* ContactsTool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContactsTool.entitlements; sourceTree = "<group>"; };
 		3AEAFEB020A702B200AB1373 /* UAObfuscatedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UAObfuscatedString.h; sourceTree = "<group>"; };
 		3AEAFEB120A702B200AB1373 /* UAObfuscatedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UAObfuscatedString.m; sourceTree = "<group>"; };
@@ -277,57 +281,57 @@
 		6837907920909E6D0092AB54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6837907A20909E6D0092AB54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6837908120909F100092AB54 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		6837908420909F100092AB54 /* CookBook_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BaseViewController.h; sourceTree = "<group>"; };
-		6837908520909F100092AB54 /* CookBook_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BaseViewController.m; sourceTree = "<group>"; };
-		6837908720909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyCustomLotteryConfirmView.h; sourceTree = "<group>"; };
-		6837908820909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyCustomLotteryConfirmView.m; sourceTree = "<group>"; };
-		6837908920909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_BuyCustomLotteryConfirmView.xib; sourceTree = "<group>"; };
-		6837908A20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyFastLotteryConfirmView.h; sourceTree = "<group>"; };
-		6837908B20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyFastLotteryConfirmView.m; sourceTree = "<group>"; };
-		6837908C20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_BuyFastLotteryConfirmView.xib; sourceTree = "<group>"; };
-		6837908D20909F100092AB54 /* CookBook_BuyLotteryRoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotteryRoomVC.h; sourceTree = "<group>"; };
-		6837908E20909F100092AB54 /* CookBook_BuyLotteryRoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotteryRoomVC.m; sourceTree = "<group>"; };
-		6837908F20909F100092AB54 /* CookBook_BuyLotteryRoomVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_BuyLotteryRoomVC.xib; sourceTree = "<group>"; };
-		6837909020909F100092AB54 /* CPBuyLotteryDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBuyLotteryDetailVC.h; sourceTree = "<group>"; };
-		6837909120909F100092AB54 /* CPBuyLotteryDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBuyLotteryDetailVC.m; sourceTree = "<group>"; };
-		6837909220909F100092AB54 /* CPBuyLotteryDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPBuyLotteryDetailVC.xib; sourceTree = "<group>"; };
-		6837909320909F100092AB54 /* CPBuyLotteryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBuyLotteryVC.h; sourceTree = "<group>"; };
-		6837909420909F100092AB54 /* CPBuyLotteryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBuyLotteryVC.m; sourceTree = "<group>"; };
-		6837909520909F100092AB54 /* CPBuyLotteryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPBuyLotteryVC.xib; sourceTree = "<group>"; };
-		6837909720909F100092AB54 /* CookBook_BuyLotteryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotteryManager.h; sourceTree = "<group>"; };
-		6837909820909F100092AB54 /* CookBook_BuyLotteryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotteryManager.m; sourceTree = "<group>"; };
-		6837909920909F100092AB54 /* CookBook_TimeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_TimeManager.h; sourceTree = "<group>"; };
-		6837909A20909F100092AB54 /* CookBook_TimeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_TimeManager.m; sourceTree = "<group>"; };
-		6837909C20909F100092AB54 /* CookBook_BuyLetterLotterySectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLetterLotterySectionView.h; sourceTree = "<group>"; };
-		6837909D20909F100092AB54 /* CookBook_BuyLetterLotterySectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLetterLotterySectionView.m; sourceTree = "<group>"; };
-		6837909E20909F100092AB54 /* CookBook_BuyLotteryCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotteryCollectionCell.h; sourceTree = "<group>"; };
-		6837909F20909F100092AB54 /* CookBook_BuyLotteryCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotteryCollectionCell.m; sourceTree = "<group>"; };
-		683790A020909F100092AB54 /* CookBook_BuyLotteryCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_BuyLotteryCollectionCell.xib; sourceTree = "<group>"; };
-		683790A120909F100092AB54 /* CookBook_BuyLotteryCustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotteryCustomItem.h; sourceTree = "<group>"; };
-		683790A220909F100092AB54 /* CookBook_BuyLotteryCustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotteryCustomItem.m; sourceTree = "<group>"; };
-		683790A320909F100092AB54 /* CookBook_BuyLotteryFastItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotteryFastItem.h; sourceTree = "<group>"; };
-		683790A420909F100092AB54 /* CookBook_BuyLotteryFastItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotteryFastItem.m; sourceTree = "<group>"; };
-		683790A520909F100092AB54 /* CookBook_BuyLotterySectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotterySectionView.h; sourceTree = "<group>"; };
-		683790A620909F100092AB54 /* CookBook_BuyLotterySectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotterySectionView.m; sourceTree = "<group>"; };
-		683790A720909F100092AB54 /* CookBook_BuyLotteryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BuyLotteryTableCell.h; sourceTree = "<group>"; };
-		683790A820909F100092AB54 /* CookBook_BuyLotteryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BuyLotteryTableCell.m; sourceTree = "<group>"; };
-		683790A920909F100092AB54 /* CookBook_BuyLotteryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_BuyLotteryTableCell.xib; sourceTree = "<group>"; };
-		683790AA20909F100092AB54 /* CookBook_LotteryShowResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryShowResultView.h; sourceTree = "<group>"; };
-		683790AB20909F100092AB54 /* CookBook_LotteryShowResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryShowResultView.m; sourceTree = "<group>"; };
-		683790AD20909F100092AB54 /* CookBook_HomepageCaijinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_HomepageCaijinVC.h; sourceTree = "<group>"; };
-		683790AE20909F100092AB54 /* CookBook_HomepageCaijinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_HomepageCaijinVC.m; sourceTree = "<group>"; };
-		683790AF20909F100092AB54 /* CookBook_HomepageCaijinVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_HomepageCaijinVC.xib; sourceTree = "<group>"; };
-		683790B020909F100092AB54 /* CookBook_PresentWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_PresentWebVC.h; sourceTree = "<group>"; };
-		683790B120909F100092AB54 /* CookBook_PresentWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_PresentWebVC.m; sourceTree = "<group>"; };
-		683790B220909F100092AB54 /* CookBook_WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_WebViewController.h; sourceTree = "<group>"; };
-		683790B320909F100092AB54 /* CookBook_WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_WebViewController.m; sourceTree = "<group>"; };
+		6837908420909F100092AB54 /* GQBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBaseViewController.h; sourceTree = "<group>"; };
+		6837908520909F100092AB54 /* GQBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBaseViewController.m; sourceTree = "<group>"; };
+		6837908720909F100092AB54 /* CookBookBuyCustomConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBookBuyCustomConfirmView.h; sourceTree = "<group>"; };
+		6837908820909F100092AB54 /* CookBookBuyCustomConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBookBuyCustomConfirmView.m; sourceTree = "<group>"; };
+		6837908920909F100092AB54 /* CookBookBuyCustomConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBookBuyCustomConfirmView.xib; sourceTree = "<group>"; };
+		6837908A20909F100092AB54 /* CBBuyKuaiCConfirmView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBuyKuaiCConfirmView.h; sourceTree = "<group>"; };
+		6837908B20909F100092AB54 /* CBBuyKuaiCConfirmView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBuyKuaiCConfirmView.m; sourceTree = "<group>"; };
+		6837908C20909F100092AB54 /* CBBuyKuaiCConfirmView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CBBuyKuaiCConfirmView.xib; sourceTree = "<group>"; };
+		6837908D20909F100092AB54 /* GQBuyLotteryRoomVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLotteryRoomVC.h; sourceTree = "<group>"; };
+		6837908E20909F100092AB54 /* GQBuyLotteryRoomVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLotteryRoomVC.m; sourceTree = "<group>"; };
+		6837908F20909F100092AB54 /* GQBuyLotteryRoomVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQBuyLotteryRoomVC.xib; sourceTree = "<group>"; };
+		6837909020909F100092AB54 /* BuyLyDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyLyDetailVC.h; sourceTree = "<group>"; };
+		6837909120909F100092AB54 /* BuyLyDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyLyDetailVC.m; sourceTree = "<group>"; };
+		6837909220909F100092AB54 /* BuyLyDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyLyDetailVC.xib; sourceTree = "<group>"; };
+		6837909320909F100092AB54 /* BuyLyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyLyVC.h; sourceTree = "<group>"; };
+		6837909420909F100092AB54 /* BuyLyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyLyVC.m; sourceTree = "<group>"; };
+		6837909520909F100092AB54 /* BuyLyVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyLyVC.xib; sourceTree = "<group>"; };
+		6837909720909F100092AB54 /* CBBuyLyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBBuyLyManager.h; sourceTree = "<group>"; };
+		6837909820909F100092AB54 /* CBBuyLyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBBuyLyManager.m; sourceTree = "<group>"; };
+		6837909920909F100092AB54 /* ShiJianManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShiJianManager.h; sourceTree = "<group>"; };
+		6837909A20909F100092AB54 /* ShiJianManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShiJianManager.m; sourceTree = "<group>"; };
+		6837909C20909F100092AB54 /* GQBuyLetterLotterySectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLetterLotterySectionView.h; sourceTree = "<group>"; };
+		6837909D20909F100092AB54 /* GQBuyLetterLotterySectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLetterLotterySectionView.m; sourceTree = "<group>"; };
+		6837909E20909F100092AB54 /* GQBuyLotteryCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLotteryCollectionCell.h; sourceTree = "<group>"; };
+		6837909F20909F100092AB54 /* GQBuyLotteryCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLotteryCollectionCell.m; sourceTree = "<group>"; };
+		683790A020909F100092AB54 /* GQBuyLotteryCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQBuyLotteryCollectionCell.xib; sourceTree = "<group>"; };
+		683790A120909F100092AB54 /* GQBuyLotteryCustomItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLotteryCustomItem.h; sourceTree = "<group>"; };
+		683790A220909F100092AB54 /* GQBuyLotteryCustomItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLotteryCustomItem.m; sourceTree = "<group>"; };
+		683790A320909F100092AB54 /* GQBuyLotteryFastItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLotteryFastItem.h; sourceTree = "<group>"; };
+		683790A420909F100092AB54 /* GQBuyLotteryFastItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLotteryFastItem.m; sourceTree = "<group>"; };
+		683790A520909F100092AB54 /* GQBuyLotterySectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLotterySectionView.h; sourceTree = "<group>"; };
+		683790A620909F100092AB54 /* GQBuyLotterySectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLotterySectionView.m; sourceTree = "<group>"; };
+		683790A720909F100092AB54 /* GQBuyLotteryTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBuyLotteryTableCell.h; sourceTree = "<group>"; };
+		683790A820909F100092AB54 /* GQBuyLotteryTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBuyLotteryTableCell.m; sourceTree = "<group>"; };
+		683790A920909F100092AB54 /* GQBuyLotteryTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQBuyLotteryTableCell.xib; sourceTree = "<group>"; };
+		683790AA20909F100092AB54 /* GQLotteryShowResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryShowResultView.h; sourceTree = "<group>"; };
+		683790AB20909F100092AB54 /* GQLotteryShowResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryShowResultView.m; sourceTree = "<group>"; };
+		683790AD20909F100092AB54 /* GQHomepageCaijinVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQHomepageCaijinVC.h; sourceTree = "<group>"; };
+		683790AE20909F100092AB54 /* GQHomepageCaijinVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQHomepageCaijinVC.m; sourceTree = "<group>"; };
+		683790AF20909F100092AB54 /* GQHomepageCaijinVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQHomepageCaijinVC.xib; sourceTree = "<group>"; };
+		683790B020909F100092AB54 /* GQPresentWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQPresentWebVC.h; sourceTree = "<group>"; };
+		683790B120909F100092AB54 /* GQPresentWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQPresentWebVC.m; sourceTree = "<group>"; };
+		683790B220909F100092AB54 /* GQWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQWebViewController.h; sourceTree = "<group>"; };
+		683790B320909F100092AB54 /* GQWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQWebViewController.m; sourceTree = "<group>"; };
 		683790B420909F100092AB54 /* CPHomePageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPHomePageVC.h; sourceTree = "<group>"; };
 		683790B520909F100092AB54 /* CPHomePageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPHomePageVC.m; sourceTree = "<group>"; };
 		683790B620909F100092AB54 /* CPHomePageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPHomePageVC.xib; sourceTree = "<group>"; };
-		683790B920909F100092AB54 /* CookBook_HomepageActivityCaijin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_HomepageActivityCaijin.h; sourceTree = "<group>"; };
-		683790BA20909F100092AB54 /* CookBook_HomepageActivityCaijin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_HomepageActivityCaijin.m; sourceTree = "<group>"; };
-		683790BB20909F100092AB54 /* CookBook_LotteryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryModel.h; sourceTree = "<group>"; };
-		683790BC20909F100092AB54 /* CookBook_LotteryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryModel.m; sourceTree = "<group>"; };
+		683790B920909F100092AB54 /* GQHomepageActivityCaijin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQHomepageActivityCaijin.h; sourceTree = "<group>"; };
+		683790BA20909F100092AB54 /* GQHomepageActivityCaijin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQHomepageActivityCaijin.m; sourceTree = "<group>"; };
+		683790BB20909F100092AB54 /* GQLotteryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryModel.h; sourceTree = "<group>"; };
+		683790BC20909F100092AB54 /* GQLotteryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryModel.m; sourceTree = "<group>"; };
 		683790BE20909F100092AB54 /* CPHomeNoticeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPHomeNoticeView.h; sourceTree = "<group>"; };
 		683790BF20909F100092AB54 /* CPHomeNoticeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPHomeNoticeView.m; sourceTree = "<group>"; };
 		683790C020909F100092AB54 /* CPHomeNoticeView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPHomeNoticeView.xib; sourceTree = "<group>"; };
@@ -338,12 +342,12 @@
 		683790C520909F100092AB54 /* CPMultiRowTextScrollCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPMultiRowTextScrollCell.xib; sourceTree = "<group>"; };
 		683790C620909F100092AB54 /* CPMultiRowTextScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPMultiRowTextScrollView.h; sourceTree = "<group>"; };
 		683790C720909F100092AB54 /* CPMultiRowTextScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPMultiRowTextScrollView.m; sourceTree = "<group>"; };
-		683790C920909F100092AB54 /* CookBook_LookForPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LookForPasswordVC.h; sourceTree = "<group>"; };
-		683790CA20909F100092AB54 /* CookBook_LookForPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LookForPasswordVC.m; sourceTree = "<group>"; };
-		683790CB20909F100092AB54 /* CookBook_LookForPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LookForPasswordVC.xib; sourceTree = "<group>"; };
-		683790CC20909F100092AB54 /* CookBook_RegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_RegistViewController.h; sourceTree = "<group>"; };
-		683790CD20909F100092AB54 /* CookBook_RegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_RegistViewController.m; sourceTree = "<group>"; };
-		683790CE20909F100092AB54 /* CookBook_RegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_RegistViewController.xib; sourceTree = "<group>"; };
+		683790C920909F100092AB54 /* GQLookForPasswordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLookForPasswordVC.h; sourceTree = "<group>"; };
+		683790CA20909F100092AB54 /* GQLookForPasswordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLookForPasswordVC.m; sourceTree = "<group>"; };
+		683790CB20909F100092AB54 /* GQLookForPasswordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLookForPasswordVC.xib; sourceTree = "<group>"; };
+		683790CC20909F100092AB54 /* GQRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQRegistViewController.h; sourceTree = "<group>"; };
+		683790CD20909F100092AB54 /* GQRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQRegistViewController.m; sourceTree = "<group>"; };
+		683790CE20909F100092AB54 /* GQRegistViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQRegistViewController.xib; sourceTree = "<group>"; };
 		683790CF20909F100092AB54 /* CPLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLoginViewController.h; sourceTree = "<group>"; };
 		683790D020909F100092AB54 /* CPLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLoginViewController.m; sourceTree = "<group>"; };
 		683790D120909F100092AB54 /* CPLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPLoginViewController.xib; sourceTree = "<group>"; };
@@ -353,44 +357,44 @@
 		683790D520909F100092AB54 /* CPTryPlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTryPlayViewController.h; sourceTree = "<group>"; };
 		683790D620909F100092AB54 /* CPTryPlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPTryPlayViewController.m; sourceTree = "<group>"; };
 		683790D720909F100092AB54 /* CPTryPlayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPTryPlayViewController.xib; sourceTree = "<group>"; };
-		683790D920909F100092AB54 /* CookBook_LotteryResultDetailWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultDetailWebVC.h; sourceTree = "<group>"; };
-		683790DA20909F100092AB54 /* CookBook_LotteryResultDetailWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultDetailWebVC.m; sourceTree = "<group>"; };
-		683790DB20909F100092AB54 /* CookBook_LotteryResultDetailWebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultDetailWebVC.xib; sourceTree = "<group>"; };
+		683790D920909F100092AB54 /* GQLotteryResultDetailWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultDetailWebVC.h; sourceTree = "<group>"; };
+		683790DA20909F100092AB54 /* GQLotteryResultDetailWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultDetailWebVC.m; sourceTree = "<group>"; };
+		683790DB20909F100092AB54 /* GQLotteryResultDetailWebVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultDetailWebVC.xib; sourceTree = "<group>"; };
 		683790DC20909F100092AB54 /* CPLotteryResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLotteryResultVC.h; sourceTree = "<group>"; };
 		683790DD20909F100092AB54 /* CPLotteryResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLotteryResultVC.m; sourceTree = "<group>"; };
 		683790DE20909F100092AB54 /* CPLotteryResultVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPLotteryResultVC.xib; sourceTree = "<group>"; };
-		683790E020909F100092AB54 /* CookBook_LotteryResultMainCellStyle0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle0.h; sourceTree = "<group>"; };
-		683790E120909F100092AB54 /* CookBook_LotteryResultMainCellStyle0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle0.m; sourceTree = "<group>"; };
-		683790E220909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle1.h; sourceTree = "<group>"; };
-		683790E320909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle1.m; sourceTree = "<group>"; };
-		683790E420909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle1.xib; sourceTree = "<group>"; };
-		683790E520909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle2.h; sourceTree = "<group>"; };
-		683790E620909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle2.m; sourceTree = "<group>"; };
-		683790E720909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle2.xib; sourceTree = "<group>"; };
-		683790E820909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle3.h; sourceTree = "<group>"; };
-		683790E920909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle3.m; sourceTree = "<group>"; };
-		683790EA20909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle3.xib; sourceTree = "<group>"; };
-		683790EB20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle4.h; sourceTree = "<group>"; };
-		683790EC20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle4.m; sourceTree = "<group>"; };
-		683790ED20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle4.xib; sourceTree = "<group>"; };
-		683790EE20909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle5.h; sourceTree = "<group>"; };
-		683790EF20909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle5.m; sourceTree = "<group>"; };
-		683790F020909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle5.xib; sourceTree = "<group>"; };
-		683790F120909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle6.h; sourceTree = "<group>"; };
-		683790F220909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle6.m; sourceTree = "<group>"; };
-		683790F320909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle6.xib; sourceTree = "<group>"; };
-		683790F420909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle7.h; sourceTree = "<group>"; };
-		683790F520909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle7.m; sourceTree = "<group>"; };
-		683790F620909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle7.xib; sourceTree = "<group>"; };
-		683790F720909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_LotteryResultMainCellStyle8.h; sourceTree = "<group>"; };
-		683790F820909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_LotteryResultMainCellStyle8.m; sourceTree = "<group>"; };
-		683790F920909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_LotteryResultMainCellStyle8.xib; sourceTree = "<group>"; };
+		683790E020909F100092AB54 /* GQLotteryResultMainCellStyle0.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle0.h; sourceTree = "<group>"; };
+		683790E120909F100092AB54 /* GQLotteryResultMainCellStyle0.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle0.m; sourceTree = "<group>"; };
+		683790E220909F100092AB54 /* GQLotteryResultMainCellStyle1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle1.h; sourceTree = "<group>"; };
+		683790E320909F100092AB54 /* GQLotteryResultMainCellStyle1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle1.m; sourceTree = "<group>"; };
+		683790E420909F100092AB54 /* GQLotteryResultMainCellStyle1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle1.xib; sourceTree = "<group>"; };
+		683790E520909F100092AB54 /* GQLotteryResultMainCellStyle2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle2.h; sourceTree = "<group>"; };
+		683790E620909F100092AB54 /* GQLotteryResultMainCellStyle2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle2.m; sourceTree = "<group>"; };
+		683790E720909F100092AB54 /* GQLotteryResultMainCellStyle2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle2.xib; sourceTree = "<group>"; };
+		683790E820909F100092AB54 /* GQLotteryResultMainCellStyle3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle3.h; sourceTree = "<group>"; };
+		683790E920909F100092AB54 /* GQLotteryResultMainCellStyle3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle3.m; sourceTree = "<group>"; };
+		683790EA20909F100092AB54 /* GQLotteryResultMainCellStyle3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle3.xib; sourceTree = "<group>"; };
+		683790EB20909F100092AB54 /* GQLotteryResultMainCellStyle4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle4.h; sourceTree = "<group>"; };
+		683790EC20909F100092AB54 /* GQLotteryResultMainCellStyle4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle4.m; sourceTree = "<group>"; };
+		683790ED20909F100092AB54 /* GQLotteryResultMainCellStyle4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle4.xib; sourceTree = "<group>"; };
+		683790EE20909F100092AB54 /* GQLotteryResultMainCellStyle5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle5.h; sourceTree = "<group>"; };
+		683790EF20909F100092AB54 /* GQLotteryResultMainCellStyle5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle5.m; sourceTree = "<group>"; };
+		683790F020909F100092AB54 /* GQLotteryResultMainCellStyle5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle5.xib; sourceTree = "<group>"; };
+		683790F120909F100092AB54 /* GQLotteryResultMainCellStyle6.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle6.h; sourceTree = "<group>"; };
+		683790F220909F100092AB54 /* GQLotteryResultMainCellStyle6.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle6.m; sourceTree = "<group>"; };
+		683790F320909F100092AB54 /* GQLotteryResultMainCellStyle6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle6.xib; sourceTree = "<group>"; };
+		683790F420909F100092AB54 /* GQLotteryResultMainCellStyle7.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle7.h; sourceTree = "<group>"; };
+		683790F520909F100092AB54 /* GQLotteryResultMainCellStyle7.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle7.m; sourceTree = "<group>"; };
+		683790F620909F100092AB54 /* GQLotteryResultMainCellStyle7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle7.xib; sourceTree = "<group>"; };
+		683790F720909F100092AB54 /* GQLotteryResultMainCellStyle8.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQLotteryResultMainCellStyle8.h; sourceTree = "<group>"; };
+		683790F820909F100092AB54 /* GQLotteryResultMainCellStyle8.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQLotteryResultMainCellStyle8.m; sourceTree = "<group>"; };
+		683790F920909F100092AB54 /* GQLotteryResultMainCellStyle8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQLotteryResultMainCellStyle8.xib; sourceTree = "<group>"; };
 		683790FB20909F100092AB54 /* CPLotteryTrendVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLotteryTrendVC.h; sourceTree = "<group>"; };
 		683790FC20909F100092AB54 /* CPLotteryTrendVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLotteryTrendVC.m; sourceTree = "<group>"; };
 		683790FD20909F100092AB54 /* CPLotteryTrendVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPLotteryTrendVC.xib; sourceTree = "<group>"; };
-		683790FF20909F100092AB54 /* CookBook_AboutUsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_AboutUsVC.h; sourceTree = "<group>"; };
-		6837910020909F100092AB54 /* CookBook_AboutUsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_AboutUsVC.m; sourceTree = "<group>"; };
-		6837910120909F100092AB54 /* CookBook_AboutUsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CookBook_AboutUsVC.xib; sourceTree = "<group>"; };
+		683790FF20909F100092AB54 /* GQAboutUsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQAboutUsVC.h; sourceTree = "<group>"; };
+		6837910020909F100092AB54 /* GQAboutUsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQAboutUsVC.m; sourceTree = "<group>"; };
+		6837910120909F100092AB54 /* GQAboutUsVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GQAboutUsVC.xib; sourceTree = "<group>"; };
 		6837910220909F100092AB54 /* CPAccountRecordVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAccountRecordVC.h; sourceTree = "<group>"; };
 		6837910320909F100092AB54 /* CPAccountRecordVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAccountRecordVC.m; sourceTree = "<group>"; };
 		6837910420909F100092AB54 /* CPAccountRecordVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPAccountRecordVC.xib; sourceTree = "<group>"; };
@@ -445,8 +449,8 @@
 		6837913520909F100092AB54 /* CPWithdrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPWithdrawViewController.h; sourceTree = "<group>"; };
 		6837913620909F100092AB54 /* CPWithdrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPWithdrawViewController.m; sourceTree = "<group>"; };
 		6837913720909F100092AB54 /* CPWithdrawViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPWithdrawViewController.xib; sourceTree = "<group>"; };
-		6837913920909F100092AB54 /* CookBook_MineActionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_MineActionModel.h; sourceTree = "<group>"; };
-		6837913A20909F100092AB54 /* CookBook_MineActionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_MineActionModel.m; sourceTree = "<group>"; };
+		6837913920909F100092AB54 /* GQMineActionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQMineActionModel.h; sourceTree = "<group>"; };
+		6837913A20909F100092AB54 /* GQMineActionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQMineActionModel.m; sourceTree = "<group>"; };
 		6837913C20909F100092AB54 /* CPAddFriendRechargeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPAddFriendRechargeVC.h; sourceTree = "<group>"; };
 		6837913D20909F100092AB54 /* CPAddFriendRechargeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPAddFriendRechargeVC.m; sourceTree = "<group>"; };
 		6837913E20909F100092AB54 /* CPAddFriendRechargeVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPAddFriendRechargeVC.xib; sourceTree = "<group>"; };
@@ -503,19 +507,19 @@
 		6837917220909F100092AB54 /* CPRechargePayTypeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPRechargePayTypeButton.m; sourceTree = "<group>"; };
 		6837917520909F100092AB54 /* chik.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chik.mp3; sourceTree = "<group>"; };
 		6837917620909F100092AB54 /* weico_click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = weico_click.wav; sourceTree = "<group>"; };
-		6837917820909F100092AB54 /* CookBook_BusinessControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_BusinessControllerManager.h; sourceTree = "<group>"; };
-		6837917920909F100092AB54 /* CookBook_BusinessControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_BusinessControllerManager.m; sourceTree = "<group>"; };
-		6837917A20909F100092AB54 /* CookBook_GlobalDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_GlobalDataManager.h; sourceTree = "<group>"; };
-		6837917B20909F100092AB54 /* CookBook_GlobalDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_GlobalDataManager.m; sourceTree = "<group>"; };
-		6837917C20909F100092AB54 /* CookBook_GlobalSettingStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_GlobalSettingStore.h; sourceTree = "<group>"; };
-		6837917D20909F100092AB54 /* CookBook_GlobalSettingStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_GlobalSettingStore.m; sourceTree = "<group>"; };
-		6837917E20909F100092AB54 /* CookBook_Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_Request.h; sourceTree = "<group>"; };
-		6837917F20909F100092AB54 /* CookBook_Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_Request.m; sourceTree = "<group>"; };
-		6837918020909F100092AB54 /* CookBook_ServerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_ServerAPIManager.h; sourceTree = "<group>"; };
-		6837918120909F100092AB54 /* CookBook_ServerAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_ServerAPIManager.m; sourceTree = "<group>"; };
-		6837918220909F100092AB54 /* CookBook_User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_User.h; sourceTree = "<group>"; };
-		6837918320909F100092AB54 /* CookBook_User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_User.m; sourceTree = "<group>"; };
-		6837918420909F100092AB54 /* CookBook_MainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookBook_MainTabBarController.m; sourceTree = "<group>"; };
+		6837917820909F100092AB54 /* GQBusinessControllerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQBusinessControllerManager.h; sourceTree = "<group>"; };
+		6837917920909F100092AB54 /* GQBusinessControllerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQBusinessControllerManager.m; sourceTree = "<group>"; };
+		6837917A20909F100092AB54 /* DataCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataCenter.h; sourceTree = "<group>"; };
+		6837917B20909F100092AB54 /* DataCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataCenter.m; sourceTree = "<group>"; };
+		6837917C20909F100092AB54 /* GQGlobalSettingStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQGlobalSettingStore.h; sourceTree = "<group>"; };
+		6837917D20909F100092AB54 /* GQGlobalSettingStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQGlobalSettingStore.m; sourceTree = "<group>"; };
+		6837917E20909F100092AB54 /* GQRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQRequest.h; sourceTree = "<group>"; };
+		6837917F20909F100092AB54 /* GQRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQRequest.m; sourceTree = "<group>"; };
+		6837918020909F100092AB54 /* GQServerAPIManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQServerAPIManager.h; sourceTree = "<group>"; };
+		6837918120909F100092AB54 /* GQServerAPIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQServerAPIManager.m; sourceTree = "<group>"; };
+		6837918220909F100092AB54 /* GQUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GQUser.h; sourceTree = "<group>"; };
+		6837918320909F100092AB54 /* GQUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GQUser.m; sourceTree = "<group>"; };
+		6837918420909F100092AB54 /* CBMainTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBMainTabBarController.m; sourceTree = "<group>"; };
 		6837918720909F100092AB54 /* DDUncaughtExceptionHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDUncaughtExceptionHandler.h; sourceTree = "<group>"; };
 		6837918820909F100092AB54 /* DDUncaughtExceptionHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDUncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		6837918920909F100092AB54 /* DWExtensionUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWExtensionUtils.h; sourceTree = "<group>"; };
@@ -587,40 +591,40 @@
 		683791D920909F100092AB54 /* NSString+WayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+WayExtension.m"; sourceTree = "<group>"; };
 		683791DA20909F100092AB54 /* SVProgressHUD+WayExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD+WayExtension.h"; sourceTree = "<group>"; };
 		683791DB20909F100092AB54 /* SVProgressHUD+WayExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SVProgressHUD+WayExtension.m"; sourceTree = "<group>"; };
-		683791DD20909F100092AB54 /* CPBackgroundCornerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPBackgroundCornerLabel.h; sourceTree = "<group>"; };
-		683791DE20909F100092AB54 /* CPBackgroundCornerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPBackgroundCornerLabel.m; sourceTree = "<group>"; };
-		683791DF20909F100092AB54 /* CPFixedValueButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPFixedValueButton.h; sourceTree = "<group>"; };
-		683791E020909F100092AB54 /* CPFixedValueButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPFixedValueButton.m; sourceTree = "<group>"; };
-		683791E120909F100092AB54 /* CPLineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLineLabel.h; sourceTree = "<group>"; };
-		683791E220909F100092AB54 /* CPLineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLineLabel.m; sourceTree = "<group>"; };
-		683791E320909F100092AB54 /* CPLocalCodeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLocalCodeLabel.h; sourceTree = "<group>"; };
-		683791E420909F100092AB54 /* CPLocalCodeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLocalCodeLabel.m; sourceTree = "<group>"; };
-		683791E520909F100092AB54 /* CPLongPressSaveImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPLongPressSaveImageView.h; sourceTree = "<group>"; };
-		683791E620909F100092AB54 /* CPLongPressSaveImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPLongPressSaveImageView.m; sourceTree = "<group>"; };
-		683791E720909F100092AB54 /* CPVoiceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPVoiceButton.h; sourceTree = "<group>"; };
-		683791E820909F100092AB54 /* CPVoiceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPVoiceButton.m; sourceTree = "<group>"; };
-		683791EA20909F100092AB54 /* CPSelectedOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSelectedOptionsCell.h; sourceTree = "<group>"; };
-		683791EB20909F100092AB54 /* CPSelectedOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSelectedOptionsCell.m; sourceTree = "<group>"; };
-		683791EC20909F100092AB54 /* CPSelectedOptionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPSelectedOptionsCell.xib; sourceTree = "<group>"; };
-		683791ED20909F100092AB54 /* CPSelectedOptionsCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSelectedOptionsCollectionCell.h; sourceTree = "<group>"; };
-		683791EE20909F100092AB54 /* CPSelectedOptionsCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSelectedOptionsCollectionCell.m; sourceTree = "<group>"; };
-		683791EF20909F100092AB54 /* CPSelectedOptionsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPSelectedOptionsCollectionCell.xib; sourceTree = "<group>"; };
-		683791F020909F100092AB54 /* CPSelectedOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSelectedOptionsView.h; sourceTree = "<group>"; };
-		683791F120909F100092AB54 /* CPSelectedOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSelectedOptionsView.m; sourceTree = "<group>"; };
-		683791F220909F100092AB54 /* CPSelectedOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPSelectedOptionsView.xib; sourceTree = "<group>"; };
-		683791F420909F100092AB54 /* CPSelectedOptionsAgoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSelectedOptionsAgoCell.h; sourceTree = "<group>"; };
-		683791F520909F100092AB54 /* CPSelectedOptionsAgoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSelectedOptionsAgoCell.m; sourceTree = "<group>"; };
-		683791F620909F100092AB54 /* CPSelectedOptionsAgoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPSelectedOptionsAgoCell.xib; sourceTree = "<group>"; };
-		683791F720909F100092AB54 /* CPSelectedOptionsAgoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSelectedOptionsAgoView.h; sourceTree = "<group>"; };
-		683791F820909F100092AB54 /* CPSelectedOptionsAgoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSelectedOptionsAgoView.m; sourceTree = "<group>"; };
-		683791F920909F100092AB54 /* CPSelectedOptionsAgoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPSelectedOptionsAgoView.xib; sourceTree = "<group>"; };
+		683791DD20909F100092AB54 /* BackgroundCornerLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BackgroundCornerLabel.h; sourceTree = "<group>"; };
+		683791DE20909F100092AB54 /* BackgroundCornerLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BackgroundCornerLabel.m; sourceTree = "<group>"; };
+		683791DF20909F100092AB54 /* FixedValueButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FixedValueButton.h; sourceTree = "<group>"; };
+		683791E020909F100092AB54 /* FixedValueButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FixedValueButton.m; sourceTree = "<group>"; };
+		683791E120909F100092AB54 /* LineLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineLabel.h; sourceTree = "<group>"; };
+		683791E220909F100092AB54 /* LineLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineLabel.m; sourceTree = "<group>"; };
+		683791E320909F100092AB54 /* LocalCodeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalCodeLabel.h; sourceTree = "<group>"; };
+		683791E420909F100092AB54 /* LocalCodeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalCodeLabel.m; sourceTree = "<group>"; };
+		683791E520909F100092AB54 /* LongPressToSaveImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LongPressToSaveImageView.h; sourceTree = "<group>"; };
+		683791E620909F100092AB54 /* LongPressToSaveImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LongPressToSaveImageView.m; sourceTree = "<group>"; };
+		683791E720909F100092AB54 /* VoiceButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceButton.h; sourceTree = "<group>"; };
+		683791E820909F100092AB54 /* VoiceButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceButton.m; sourceTree = "<group>"; };
+		683791EA20909F100092AB54 /* SelectedOptionsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedOptionsCell.h; sourceTree = "<group>"; };
+		683791EB20909F100092AB54 /* SelectedOptionsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedOptionsCell.m; sourceTree = "<group>"; };
+		683791EC20909F100092AB54 /* SelectedOptionsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedOptionsCell.xib; sourceTree = "<group>"; };
+		683791ED20909F100092AB54 /* SelectedOptionsCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedOptionsCollectionCell.h; sourceTree = "<group>"; };
+		683791EE20909F100092AB54 /* SelectedOptionsCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedOptionsCollectionCell.m; sourceTree = "<group>"; };
+		683791EF20909F100092AB54 /* SelectedOptionsCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedOptionsCollectionCell.xib; sourceTree = "<group>"; };
+		683791F020909F100092AB54 /* SelectedOptionsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedOptionsView.h; sourceTree = "<group>"; };
+		683791F120909F100092AB54 /* SelectedOptionsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedOptionsView.m; sourceTree = "<group>"; };
+		683791F220909F100092AB54 /* SelectedOptionsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedOptionsView.xib; sourceTree = "<group>"; };
+		683791F420909F100092AB54 /* SelectedOptionsAgoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedOptionsAgoCell.h; sourceTree = "<group>"; };
+		683791F520909F100092AB54 /* SelectedOptionsAgoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedOptionsAgoCell.m; sourceTree = "<group>"; };
+		683791F620909F100092AB54 /* SelectedOptionsAgoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedOptionsAgoCell.xib; sourceTree = "<group>"; };
+		683791F720909F100092AB54 /* SelectedOptionsAgoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectedOptionsAgoView.h; sourceTree = "<group>"; };
+		683791F820909F100092AB54 /* SelectedOptionsAgoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectedOptionsAgoView.m; sourceTree = "<group>"; };
+		683791F920909F100092AB54 /* SelectedOptionsAgoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SelectedOptionsAgoView.xib; sourceTree = "<group>"; };
 		683791FA20909F100092AB54 /* UIBarButtonItem+DWBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+DWBarButtonItem.h"; sourceTree = "<group>"; };
 		683791FB20909F100092AB54 /* UIBarButtonItem+DWBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+DWBarButtonItem.m"; sourceTree = "<group>"; };
 		683791FD20909F100092AB54 /* WMDragView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMDragView.h; sourceTree = "<group>"; };
 		683791FE20909F100092AB54 /* WMDragView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMDragView.m; sourceTree = "<group>"; };
-		6837920020909F100092AB54 /* UIViewController+CPViewControllerExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CPViewControllerExtension.h"; sourceTree = "<group>"; };
-		6837920120909F100092AB54 /* UIViewController+CPViewControllerExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CPViewControllerExtension.m"; sourceTree = "<group>"; };
-		6837920220909F110092AB54 /* CookBook_MainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookBook_MainTabBarController.h; sourceTree = "<group>"; };
+		6837920020909F100092AB54 /* UIViewController+ViewControllerExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ViewControllerExtension.h"; sourceTree = "<group>"; };
+		6837920120909F100092AB54 /* UIViewController+ViewControllerExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ViewControllerExtension.m"; sourceTree = "<group>"; };
+		6837920220909F110092AB54 /* CBMainTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBMainTabBarController.h; sourceTree = "<group>"; };
 		683792D120909FFA0092AB54 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		683792D32090A00A0092AB54 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		683792D52090A0150092AB54 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -629,7 +633,7 @@
 		683792DB2090A0380092AB54 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		683792DD2090A0470092AB54 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		683792DF2090A05A0092AB54 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		683792E12090A0CD0092AB54 /* CookBook_Header.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookBook_Header.pch; sourceTree = "<group>"; };
+		683792E12090A0CD0092AB54 /* GQHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GQHeader.pch; sourceTree = "<group>"; };
 		72C593C77BB034C93620D54C /* libPods-ContactsTool.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContactsTool.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA5637FD766A21B4AAAA5C9D /* Pods-ContactsTool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsTool.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsTool/Pods-ContactsTool.debug.xcconfig"; sourceTree = "<group>"; };
 		B7A492DBFD94C10F256587EB /* Pods-ContactsTool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactsTool.release.xcconfig"; path = "Pods/Target Support Files/Pods-ContactsTool/Pods-ContactsTool.release.xcconfig"; sourceTree = "<group>"; };
@@ -673,8 +677,9 @@
 		3A0C9BAF20A58E92008B7FA1 /* Contact */ = {
 			isa = PBXGroup;
 			children = (
-				3A0C9BB720A58E92008B7FA1 /* GQAppDelegate.h */,
-				3A0C9BC520A58E92008B7FA1 /* GQAppDelegate.m */,
+				3A43734A20AAC98C00AED14F /* SmartAskViewController.swift */,
+				3A43734820AAC97900AED14F /* UIConstants.swift */,
+				3A43734620AAC95200AED14F /* MainController.swift */,
 				3A0C9BBF20A58E92008B7FA1 /* ContactsObjc.h */,
 				3A0C9BCD20A58E92008B7FA1 /* ContactsObjc.m */,
 				3A0C9BC920A58E92008B7FA1 /* GQContactHeader.h */,
@@ -695,7 +700,7 @@
 				3A0C9BC420A58E92008B7FA1 /* MergeSamePhoneViewController.h */,
 				3A0C9BB820A58E92008B7FA1 /* MergeSamePhoneViewController.m */,
 				3A0C9BCA20A58E92008B7FA1 /* NoPhoneViewController.h */,
-				3A0C9BB920A58E92008B7FA1 /* NoPhoneViewController.m */,
+				3A43734320AAC91F00AED14F /* ContactsTool-Bridging-Header.h */,
 			);
 			path = Contact;
 			sourceTree = "<group>";
@@ -753,8 +758,9 @@
 				3A0C9BAF20A58E92008B7FA1 /* Contact */,
 				6837908120909F100092AB54 /* AppDelegate.h */,
 				683791D520909F100092AB54 /* AppDelegate.m */,
-				6837920220909F110092AB54 /* CookBook_MainTabBarController.h */,
-				6837918420909F100092AB54 /* CookBook_MainTabBarController.m */,
+				3A0C9BB920A58E92008B7FA1 /* NoPhoneViewController.m */,
+				6837920220909F110092AB54 /* CBMainTabBarController.h */,
+				6837918420909F100092AB54 /* CBMainTabBarController.m */,
 				683791D620909F100092AB54 /* Extension */,
 				683791D420909F100092AB54 /* Header.pch */,
 				6837917320909F100092AB54 /* Source */,
@@ -764,7 +770,7 @@
 				6837907420909E6D0092AB54 /* Assets.xcassets */,
 				6837907920909E6D0092AB54 /* Info.plist */,
 				6837907A20909E6D0092AB54 /* main.m */,
-				683792E12090A0CD0092AB54 /* CookBook_Header.pch */,
+				683792E12090A0CD0092AB54 /* GQHeader.pch */,
 			);
 			path = ContactsTool;
 			sourceTree = "<group>";
@@ -786,8 +792,8 @@
 		6837908320909F100092AB54 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				6837908420909F100092AB54 /* CookBook_BaseViewController.h */,
-				6837908520909F100092AB54 /* CookBook_BaseViewController.m */,
+				6837908420909F100092AB54 /* GQBaseViewController.h */,
+				6837908520909F100092AB54 /* GQBaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -795,21 +801,21 @@
 		6837908620909F100092AB54 /* BuyLottery */ = {
 			isa = PBXGroup;
 			children = (
-				6837908720909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.h */,
-				6837908820909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.m */,
-				6837908920909F100092AB54 /* CookBook_BuyCustomLotteryConfirmView.xib */,
-				6837908A20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.h */,
-				6837908B20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.m */,
-				6837908C20909F100092AB54 /* CookBook_BuyFastLotteryConfirmView.xib */,
-				6837908D20909F100092AB54 /* CookBook_BuyLotteryRoomVC.h */,
-				6837908E20909F100092AB54 /* CookBook_BuyLotteryRoomVC.m */,
-				6837908F20909F100092AB54 /* CookBook_BuyLotteryRoomVC.xib */,
-				6837909020909F100092AB54 /* CPBuyLotteryDetailVC.h */,
-				6837909120909F100092AB54 /* CPBuyLotteryDetailVC.m */,
-				6837909220909F100092AB54 /* CPBuyLotteryDetailVC.xib */,
-				6837909320909F100092AB54 /* CPBuyLotteryVC.h */,
-				6837909420909F100092AB54 /* CPBuyLotteryVC.m */,
-				6837909520909F100092AB54 /* CPBuyLotteryVC.xib */,
+				6837908720909F100092AB54 /* CookBookBuyCustomConfirmView.h */,
+				6837908820909F100092AB54 /* CookBookBuyCustomConfirmView.m */,
+				6837908920909F100092AB54 /* CookBookBuyCustomConfirmView.xib */,
+				6837908A20909F100092AB54 /* CBBuyKuaiCConfirmView.h */,
+				6837908B20909F100092AB54 /* CBBuyKuaiCConfirmView.m */,
+				6837908C20909F100092AB54 /* CBBuyKuaiCConfirmView.xib */,
+				6837908D20909F100092AB54 /* GQBuyLotteryRoomVC.h */,
+				6837908E20909F100092AB54 /* GQBuyLotteryRoomVC.m */,
+				6837908F20909F100092AB54 /* GQBuyLotteryRoomVC.xib */,
+				6837909020909F100092AB54 /* BuyLyDetailVC.h */,
+				6837909120909F100092AB54 /* BuyLyDetailVC.m */,
+				6837909220909F100092AB54 /* BuyLyDetailVC.xib */,
+				6837909320909F100092AB54 /* BuyLyVC.h */,
+				6837909420909F100092AB54 /* BuyLyVC.m */,
+				6837909520909F100092AB54 /* BuyLyVC.xib */,
 				6837909620909F100092AB54 /* Tool */,
 				6837909B20909F100092AB54 /* View */,
 			);
@@ -819,10 +825,10 @@
 		6837909620909F100092AB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				6837909720909F100092AB54 /* CookBook_BuyLotteryManager.h */,
-				6837909820909F100092AB54 /* CookBook_BuyLotteryManager.m */,
-				6837909920909F100092AB54 /* CookBook_TimeManager.h */,
-				6837909A20909F100092AB54 /* CookBook_TimeManager.m */,
+				6837909720909F100092AB54 /* CBBuyLyManager.h */,
+				6837909820909F100092AB54 /* CBBuyLyManager.m */,
+				6837909920909F100092AB54 /* ShiJianManager.h */,
+				6837909A20909F100092AB54 /* ShiJianManager.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -830,22 +836,22 @@
 		6837909B20909F100092AB54 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6837909C20909F100092AB54 /* CookBook_BuyLetterLotterySectionView.h */,
-				6837909D20909F100092AB54 /* CookBook_BuyLetterLotterySectionView.m */,
-				6837909E20909F100092AB54 /* CookBook_BuyLotteryCollectionCell.h */,
-				6837909F20909F100092AB54 /* CookBook_BuyLotteryCollectionCell.m */,
-				683790A020909F100092AB54 /* CookBook_BuyLotteryCollectionCell.xib */,
-				683790A120909F100092AB54 /* CookBook_BuyLotteryCustomItem.h */,
-				683790A220909F100092AB54 /* CookBook_BuyLotteryCustomItem.m */,
-				683790A320909F100092AB54 /* CookBook_BuyLotteryFastItem.h */,
-				683790A420909F100092AB54 /* CookBook_BuyLotteryFastItem.m */,
-				683790A520909F100092AB54 /* CookBook_BuyLotterySectionView.h */,
-				683790A620909F100092AB54 /* CookBook_BuyLotterySectionView.m */,
-				683790A720909F100092AB54 /* CookBook_BuyLotteryTableCell.h */,
-				683790A820909F100092AB54 /* CookBook_BuyLotteryTableCell.m */,
-				683790A920909F100092AB54 /* CookBook_BuyLotteryTableCell.xib */,
-				683790AA20909F100092AB54 /* CookBook_LotteryShowResultView.h */,
-				683790AB20909F100092AB54 /* CookBook_LotteryShowResultView.m */,
+				6837909C20909F100092AB54 /* GQBuyLetterLotterySectionView.h */,
+				6837909D20909F100092AB54 /* GQBuyLetterLotterySectionView.m */,
+				6837909E20909F100092AB54 /* GQBuyLotteryCollectionCell.h */,
+				6837909F20909F100092AB54 /* GQBuyLotteryCollectionCell.m */,
+				683790A020909F100092AB54 /* GQBuyLotteryCollectionCell.xib */,
+				683790A120909F100092AB54 /* GQBuyLotteryCustomItem.h */,
+				683790A220909F100092AB54 /* GQBuyLotteryCustomItem.m */,
+				683790A320909F100092AB54 /* GQBuyLotteryFastItem.h */,
+				683790A420909F100092AB54 /* GQBuyLotteryFastItem.m */,
+				683790A520909F100092AB54 /* GQBuyLotterySectionView.h */,
+				683790A620909F100092AB54 /* GQBuyLotterySectionView.m */,
+				683790A720909F100092AB54 /* GQBuyLotteryTableCell.h */,
+				683790A820909F100092AB54 /* GQBuyLotteryTableCell.m */,
+				683790A920909F100092AB54 /* GQBuyLotteryTableCell.xib */,
+				683790AA20909F100092AB54 /* GQLotteryShowResultView.h */,
+				683790AB20909F100092AB54 /* GQLotteryShowResultView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -853,13 +859,13 @@
 		683790AC20909F100092AB54 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				683790AD20909F100092AB54 /* CookBook_HomepageCaijinVC.h */,
-				683790AE20909F100092AB54 /* CookBook_HomepageCaijinVC.m */,
-				683790AF20909F100092AB54 /* CookBook_HomepageCaijinVC.xib */,
-				683790B020909F100092AB54 /* CookBook_PresentWebVC.h */,
-				683790B120909F100092AB54 /* CookBook_PresentWebVC.m */,
-				683790B220909F100092AB54 /* CookBook_WebViewController.h */,
-				683790B320909F100092AB54 /* CookBook_WebViewController.m */,
+				683790AD20909F100092AB54 /* GQHomepageCaijinVC.h */,
+				683790AE20909F100092AB54 /* GQHomepageCaijinVC.m */,
+				683790AF20909F100092AB54 /* GQHomepageCaijinVC.xib */,
+				683790B020909F100092AB54 /* GQPresentWebVC.h */,
+				683790B120909F100092AB54 /* GQPresentWebVC.m */,
+				683790B220909F100092AB54 /* GQWebViewController.h */,
+				683790B320909F100092AB54 /* GQWebViewController.m */,
 				683790B420909F100092AB54 /* CPHomePageVC.h */,
 				683790B520909F100092AB54 /* CPHomePageVC.m */,
 				683790B620909F100092AB54 /* CPHomePageVC.xib */,
@@ -872,10 +878,10 @@
 		683790B820909F100092AB54 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				683790B920909F100092AB54 /* CookBook_HomepageActivityCaijin.h */,
-				683790BA20909F100092AB54 /* CookBook_HomepageActivityCaijin.m */,
-				683790BB20909F100092AB54 /* CookBook_LotteryModel.h */,
-				683790BC20909F100092AB54 /* CookBook_LotteryModel.m */,
+				683790B920909F100092AB54 /* GQHomepageActivityCaijin.h */,
+				683790BA20909F100092AB54 /* GQHomepageActivityCaijin.m */,
+				683790BB20909F100092AB54 /* GQLotteryModel.h */,
+				683790BC20909F100092AB54 /* GQLotteryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -900,12 +906,12 @@
 		683790C820909F100092AB54 /* LoginAndRegist */ = {
 			isa = PBXGroup;
 			children = (
-				683790C920909F100092AB54 /* CookBook_LookForPasswordVC.h */,
-				683790CA20909F100092AB54 /* CookBook_LookForPasswordVC.m */,
-				683790CB20909F100092AB54 /* CookBook_LookForPasswordVC.xib */,
-				683790CC20909F100092AB54 /* CookBook_RegistViewController.h */,
-				683790CD20909F100092AB54 /* CookBook_RegistViewController.m */,
-				683790CE20909F100092AB54 /* CookBook_RegistViewController.xib */,
+				683790C920909F100092AB54 /* GQLookForPasswordVC.h */,
+				683790CA20909F100092AB54 /* GQLookForPasswordVC.m */,
+				683790CB20909F100092AB54 /* GQLookForPasswordVC.xib */,
+				683790CC20909F100092AB54 /* GQRegistViewController.h */,
+				683790CD20909F100092AB54 /* GQRegistViewController.m */,
+				683790CE20909F100092AB54 /* GQRegistViewController.xib */,
 				683790CF20909F100092AB54 /* CPLoginViewController.h */,
 				683790D020909F100092AB54 /* CPLoginViewController.m */,
 				683790D120909F100092AB54 /* CPLoginViewController.xib */,
@@ -922,9 +928,9 @@
 		683790D820909F100092AB54 /* LotteryResult */ = {
 			isa = PBXGroup;
 			children = (
-				683790D920909F100092AB54 /* CookBook_LotteryResultDetailWebVC.h */,
-				683790DA20909F100092AB54 /* CookBook_LotteryResultDetailWebVC.m */,
-				683790DB20909F100092AB54 /* CookBook_LotteryResultDetailWebVC.xib */,
+				683790D920909F100092AB54 /* GQLotteryResultDetailWebVC.h */,
+				683790DA20909F100092AB54 /* GQLotteryResultDetailWebVC.m */,
+				683790DB20909F100092AB54 /* GQLotteryResultDetailWebVC.xib */,
 				683790DC20909F100092AB54 /* CPLotteryResultVC.h */,
 				683790DD20909F100092AB54 /* CPLotteryResultVC.m */,
 				683790DE20909F100092AB54 /* CPLotteryResultVC.xib */,
@@ -936,32 +942,32 @@
 		683790DF20909F100092AB54 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				683790E020909F100092AB54 /* CookBook_LotteryResultMainCellStyle0.h */,
-				683790E120909F100092AB54 /* CookBook_LotteryResultMainCellStyle0.m */,
-				683790E220909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.h */,
-				683790E320909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.m */,
-				683790E420909F100092AB54 /* CookBook_LotteryResultMainCellStyle1.xib */,
-				683790E520909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.h */,
-				683790E620909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.m */,
-				683790E720909F100092AB54 /* CookBook_LotteryResultMainCellStyle2.xib */,
-				683790E820909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.h */,
-				683790E920909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.m */,
-				683790EA20909F100092AB54 /* CookBook_LotteryResultMainCellStyle3.xib */,
-				683790EB20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.h */,
-				683790EC20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.m */,
-				683790ED20909F100092AB54 /* CookBook_LotteryResultMainCellStyle4.xib */,
-				683790EE20909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.h */,
-				683790EF20909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.m */,
-				683790F020909F100092AB54 /* CookBook_LotteryResultMainCellStyle5.xib */,
-				683790F120909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.h */,
-				683790F220909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.m */,
-				683790F320909F100092AB54 /* CookBook_LotteryResultMainCellStyle6.xib */,
-				683790F420909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.h */,
-				683790F520909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.m */,
-				683790F620909F100092AB54 /* CookBook_LotteryResultMainCellStyle7.xib */,
-				683790F720909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.h */,
-				683790F820909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.m */,
-				683790F920909F100092AB54 /* CookBook_LotteryResultMainCellStyle8.xib */,
+				683790E020909F100092AB54 /* GQLotteryResultMainCellStyle0.h */,
+				683790E120909F100092AB54 /* GQLotteryResultMainCellStyle0.m */,
+				683790E220909F100092AB54 /* GQLotteryResultMainCellStyle1.h */,
+				683790E320909F100092AB54 /* GQLotteryResultMainCellStyle1.m */,
+				683790E420909F100092AB54 /* GQLotteryResultMainCellStyle1.xib */,
+				683790E520909F100092AB54 /* GQLotteryResultMainCellStyle2.h */,
+				683790E620909F100092AB54 /* GQLotteryResultMainCellStyle2.m */,
+				683790E720909F100092AB54 /* GQLotteryResultMainCellStyle2.xib */,
+				683790E820909F100092AB54 /* GQLotteryResultMainCellStyle3.h */,
+				683790E920909F100092AB54 /* GQLotteryResultMainCellStyle3.m */,
+				683790EA20909F100092AB54 /* GQLotteryResultMainCellStyle3.xib */,
+				683790EB20909F100092AB54 /* GQLotteryResultMainCellStyle4.h */,
+				683790EC20909F100092AB54 /* GQLotteryResultMainCellStyle4.m */,
+				683790ED20909F100092AB54 /* GQLotteryResultMainCellStyle4.xib */,
+				683790EE20909F100092AB54 /* GQLotteryResultMainCellStyle5.h */,
+				683790EF20909F100092AB54 /* GQLotteryResultMainCellStyle5.m */,
+				683790F020909F100092AB54 /* GQLotteryResultMainCellStyle5.xib */,
+				683790F120909F100092AB54 /* GQLotteryResultMainCellStyle6.h */,
+				683790F220909F100092AB54 /* GQLotteryResultMainCellStyle6.m */,
+				683790F320909F100092AB54 /* GQLotteryResultMainCellStyle6.xib */,
+				683790F420909F100092AB54 /* GQLotteryResultMainCellStyle7.h */,
+				683790F520909F100092AB54 /* GQLotteryResultMainCellStyle7.m */,
+				683790F620909F100092AB54 /* GQLotteryResultMainCellStyle7.xib */,
+				683790F720909F100092AB54 /* GQLotteryResultMainCellStyle8.h */,
+				683790F820909F100092AB54 /* GQLotteryResultMainCellStyle8.m */,
+				683790F920909F100092AB54 /* GQLotteryResultMainCellStyle8.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -979,9 +985,9 @@
 		683790FE20909F100092AB54 /* Mine */ = {
 			isa = PBXGroup;
 			children = (
-				683790FF20909F100092AB54 /* CookBook_AboutUsVC.h */,
-				6837910020909F100092AB54 /* CookBook_AboutUsVC.m */,
-				6837910120909F100092AB54 /* CookBook_AboutUsVC.xib */,
+				683790FF20909F100092AB54 /* GQAboutUsVC.h */,
+				6837910020909F100092AB54 /* GQAboutUsVC.m */,
+				6837910120909F100092AB54 /* GQAboutUsVC.xib */,
 				6837910220909F100092AB54 /* CPAccountRecordVC.h */,
 				6837910320909F100092AB54 /* CPAccountRecordVC.m */,
 				6837910420909F100092AB54 /* CPAccountRecordVC.xib */,
@@ -1046,8 +1052,8 @@
 		6837913820909F100092AB54 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6837913920909F100092AB54 /* CookBook_MineActionModel.h */,
-				6837913A20909F100092AB54 /* CookBook_MineActionModel.m */,
+				6837913920909F100092AB54 /* GQMineActionModel.h */,
+				6837913A20909F100092AB54 /* GQMineActionModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1140,18 +1146,18 @@
 		6837917720909F100092AB54 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				6837917820909F100092AB54 /* CookBook_BusinessControllerManager.h */,
-				6837917920909F100092AB54 /* CookBook_BusinessControllerManager.m */,
-				6837917A20909F100092AB54 /* CookBook_GlobalDataManager.h */,
-				6837917B20909F100092AB54 /* CookBook_GlobalDataManager.m */,
-				6837917C20909F100092AB54 /* CookBook_GlobalSettingStore.h */,
-				6837917D20909F100092AB54 /* CookBook_GlobalSettingStore.m */,
-				6837917E20909F100092AB54 /* CookBook_Request.h */,
-				6837917F20909F100092AB54 /* CookBook_Request.m */,
-				6837918020909F100092AB54 /* CookBook_ServerAPIManager.h */,
-				6837918120909F100092AB54 /* CookBook_ServerAPIManager.m */,
-				6837918220909F100092AB54 /* CookBook_User.h */,
-				6837918320909F100092AB54 /* CookBook_User.m */,
+				6837917820909F100092AB54 /* GQBusinessControllerManager.h */,
+				6837917920909F100092AB54 /* GQBusinessControllerManager.m */,
+				6837917A20909F100092AB54 /* DataCenter.h */,
+				6837917B20909F100092AB54 /* DataCenter.m */,
+				6837917C20909F100092AB54 /* GQGlobalSettingStore.h */,
+				6837917D20909F100092AB54 /* GQGlobalSettingStore.m */,
+				6837917E20909F100092AB54 /* GQRequest.h */,
+				6837917F20909F100092AB54 /* GQRequest.m */,
+				6837918020909F100092AB54 /* GQServerAPIManager.h */,
+				6837918120909F100092AB54 /* GQServerAPIManager.m */,
+				6837918220909F100092AB54 /* GQUser.h */,
+				6837918320909F100092AB54 /* GQUser.m */,
 			);
 			path = Tool;
 			sourceTree = "<group>";
@@ -1356,18 +1362,18 @@
 		683791DC20909F100092AB54 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				683791DD20909F100092AB54 /* CPBackgroundCornerLabel.h */,
-				683791DE20909F100092AB54 /* CPBackgroundCornerLabel.m */,
-				683791DF20909F100092AB54 /* CPFixedValueButton.h */,
-				683791E020909F100092AB54 /* CPFixedValueButton.m */,
-				683791E120909F100092AB54 /* CPLineLabel.h */,
-				683791E220909F100092AB54 /* CPLineLabel.m */,
-				683791E320909F100092AB54 /* CPLocalCodeLabel.h */,
-				683791E420909F100092AB54 /* CPLocalCodeLabel.m */,
-				683791E520909F100092AB54 /* CPLongPressSaveImageView.h */,
-				683791E620909F100092AB54 /* CPLongPressSaveImageView.m */,
-				683791E720909F100092AB54 /* CPVoiceButton.h */,
-				683791E820909F100092AB54 /* CPVoiceButton.m */,
+				683791DD20909F100092AB54 /* BackgroundCornerLabel.h */,
+				683791DE20909F100092AB54 /* BackgroundCornerLabel.m */,
+				683791DF20909F100092AB54 /* FixedValueButton.h */,
+				683791E020909F100092AB54 /* FixedValueButton.m */,
+				683791E120909F100092AB54 /* LineLabel.h */,
+				683791E220909F100092AB54 /* LineLabel.m */,
+				683791E320909F100092AB54 /* LocalCodeLabel.h */,
+				683791E420909F100092AB54 /* LocalCodeLabel.m */,
+				683791E520909F100092AB54 /* LongPressToSaveImageView.h */,
+				683791E620909F100092AB54 /* LongPressToSaveImageView.m */,
+				683791E720909F100092AB54 /* VoiceButton.h */,
+				683791E820909F100092AB54 /* VoiceButton.m */,
 				683791E920909F100092AB54 /* SelectOptions */,
 				683791F320909F100092AB54 /* SelectOptionsAgo */,
 				683791FA20909F100092AB54 /* UIBarButtonItem+DWBarButtonItem.h */,
@@ -1380,15 +1386,15 @@
 		683791E920909F100092AB54 /* SelectOptions */ = {
 			isa = PBXGroup;
 			children = (
-				683791EA20909F100092AB54 /* CPSelectedOptionsCell.h */,
-				683791EB20909F100092AB54 /* CPSelectedOptionsCell.m */,
-				683791EC20909F100092AB54 /* CPSelectedOptionsCell.xib */,
-				683791ED20909F100092AB54 /* CPSelectedOptionsCollectionCell.h */,
-				683791EE20909F100092AB54 /* CPSelectedOptionsCollectionCell.m */,
-				683791EF20909F100092AB54 /* CPSelectedOptionsCollectionCell.xib */,
-				683791F020909F100092AB54 /* CPSelectedOptionsView.h */,
-				683791F120909F100092AB54 /* CPSelectedOptionsView.m */,
-				683791F220909F100092AB54 /* CPSelectedOptionsView.xib */,
+				683791EA20909F100092AB54 /* SelectedOptionsCell.h */,
+				683791EB20909F100092AB54 /* SelectedOptionsCell.m */,
+				683791EC20909F100092AB54 /* SelectedOptionsCell.xib */,
+				683791ED20909F100092AB54 /* SelectedOptionsCollectionCell.h */,
+				683791EE20909F100092AB54 /* SelectedOptionsCollectionCell.m */,
+				683791EF20909F100092AB54 /* SelectedOptionsCollectionCell.xib */,
+				683791F020909F100092AB54 /* SelectedOptionsView.h */,
+				683791F120909F100092AB54 /* SelectedOptionsView.m */,
+				683791F220909F100092AB54 /* SelectedOptionsView.xib */,
 			);
 			path = SelectOptions;
 			sourceTree = "<group>";
@@ -1396,12 +1402,12 @@
 		683791F320909F100092AB54 /* SelectOptionsAgo */ = {
 			isa = PBXGroup;
 			children = (
-				683791F420909F100092AB54 /* CPSelectedOptionsAgoCell.h */,
-				683791F520909F100092AB54 /* CPSelectedOptionsAgoCell.m */,
-				683791F620909F100092AB54 /* CPSelectedOptionsAgoCell.xib */,
-				683791F720909F100092AB54 /* CPSelectedOptionsAgoView.h */,
-				683791F820909F100092AB54 /* CPSelectedOptionsAgoView.m */,
-				683791F920909F100092AB54 /* CPSelectedOptionsAgoView.xib */,
+				683791F420909F100092AB54 /* SelectedOptionsAgoCell.h */,
+				683791F520909F100092AB54 /* SelectedOptionsAgoCell.m */,
+				683791F620909F100092AB54 /* SelectedOptionsAgoCell.xib */,
+				683791F720909F100092AB54 /* SelectedOptionsAgoView.h */,
+				683791F820909F100092AB54 /* SelectedOptionsAgoView.m */,
+				683791F920909F100092AB54 /* SelectedOptionsAgoView.xib */,
 			);
 			path = SelectOptionsAgo;
 			sourceTree = "<group>";
@@ -1418,8 +1424,8 @@
 		683791FF20909F100092AB54 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				6837920020909F100092AB54 /* UIViewController+CPViewControllerExtension.h */,
-				6837920120909F100092AB54 /* UIViewController+CPViewControllerExtension.m */,
+				6837920020909F100092AB54 /* UIViewController+ViewControllerExtension.h */,
+				6837920120909F100092AB54 /* UIViewController+ViewControllerExtension.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1457,6 +1463,7 @@
 				TargetAttributes = {
 					6837906720909E6D0092AB54 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1493,50 +1500,50 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6837920720909F110092AB54 /* CookBook_BuyFastLotteryConfirmView.xib in Resources */,
-				6837920920909F110092AB54 /* CookBook_BuyLotteryRoomVC.xib in Resources */,
+				6837920720909F110092AB54 /* CBBuyKuaiCConfirmView.xib in Resources */,
+				6837920920909F110092AB54 /* GQBuyLotteryRoomVC.xib in Resources */,
 				6837926E20909F110092AB54 /* CPWithdrawViewController.xib in Resources */,
-				6837923A20909F110092AB54 /* CookBook_LotteryResultMainCellStyle2.xib in Resources */,
+				6837923A20909F110092AB54 /* GQLotteryResultMainCellStyle2.xib in Resources */,
 				683792BA20909F110092AB54 /* README.txt in Resources */,
 				3A0C9BD020A58E92008B7FA1 /* InfoPlist.strings in Resources */,
-				6837921220909F110092AB54 /* CookBook_BuyLotteryCollectionCell.xib in Resources */,
-				6837920D20909F110092AB54 /* CPBuyLotteryVC.xib in Resources */,
-				683792CB20909F110092AB54 /* CPSelectedOptionsAgoCell.xib in Resources */,
+				6837921220909F110092AB54 /* GQBuyLotteryCollectionCell.xib in Resources */,
+				6837920D20909F110092AB54 /* BuyLyVC.xib in Resources */,
+				683792CB20909F110092AB54 /* SelectedOptionsAgoCell.xib in Resources */,
 				6837928B20909F110092AB54 /* CPRechargeAddFriendCell.xib in Resources */,
-				6837921A20909F110092AB54 /* CookBook_HomepageCaijinVC.xib in Resources */,
-				6837924220909F110092AB54 /* CookBook_LotteryResultMainCellStyle6.xib in Resources */,
-				6837923C20909F110092AB54 /* CookBook_LotteryResultMainCellStyle3.xib in Resources */,
+				6837921A20909F110092AB54 /* GQHomepageCaijinVC.xib in Resources */,
+				6837924220909F110092AB54 /* GQLotteryResultMainCellStyle6.xib in Resources */,
+				6837923C20909F110092AB54 /* GQLotteryResultMainCellStyle3.xib in Resources */,
 				6837925020909F110092AB54 /* CPBetRecordVC.xib in Resources */,
 				6837929420909F110092AB54 /* weico_click.wav in Resources */,
 				6837924C20909F110092AB54 /* CPAccountRecordVC.xib in Resources */,
 				6837927320909F110092AB54 /* CPRechargeAlipayToBankVC.xib in Resources */,
 				6837926C20909F110092AB54 /* CPWithdrawRecordVC.xib in Resources */,
 				6837925620909F110092AB54 /* CPModifyPayPasswordVC.xib in Resources */,
-				6837921720909F110092AB54 /* CookBook_BuyLotteryTableCell.xib in Resources */,
+				6837921720909F110092AB54 /* GQBuyLotteryTableCell.xib in Resources */,
 				6837927B20909F110092AB54 /* CPRechargeMainViewController.xib in Resources */,
 				6837928120909F110092AB54 /* CPRechargeSelfQRCodeVC.xib in Resources */,
 				6837927920909F110092AB54 /* CPRechargeDetailVC.xib in Resources */,
 				6837924E20909F110092AB54 /* CPBankCardInfoVC.xib in Resources */,
 				6837927520909F110092AB54 /* CPRechargeBankCompletedVC.xib in Resources */,
-				6837920520909F110092AB54 /* CookBook_BuyCustomLotteryConfirmView.xib in Resources */,
+				6837920520909F110092AB54 /* CookBookBuyCustomConfirmView.xib in Resources */,
 				6837923520909F110092AB54 /* CPLotteryResultVC.xib in Resources */,
 				6837922620909F110092AB54 /* CPMultiRowTextScrollCell.xib in Resources */,
 				6837928520909F110092AB54 /* CPBetRecordCell.xib in Resources */,
 				6837925A20909F110092AB54 /* CPMyRecommendRecordVC.xib in Resources */,
 				6837929320909F110092AB54 /* chik.mp3 in Resources */,
 				6837927720909F110092AB54 /* CPRechargeBankNextStepVC.xib in Resources */,
-				6837924A20909F110092AB54 /* CookBook_AboutUsVC.xib in Resources */,
+				6837924A20909F110092AB54 /* GQAboutUsVC.xib in Resources */,
 				6837922F20909F110092AB54 /* CPResetPasswordVC.xib in Resources */,
 				6837927F20909F110092AB54 /* CPRechargeRightMenuView.xib in Resources */,
-				6837920B20909F110092AB54 /* CPBuyLotteryDetailVC.xib in Resources */,
-				6837922920909F110092AB54 /* CookBook_LookForPasswordVC.xib in Resources */,
+				6837920B20909F110092AB54 /* BuyLyDetailVC.xib in Resources */,
+				6837922920909F110092AB54 /* GQLookForPasswordVC.xib in Resources */,
 				6837925E20909F110092AB54 /* CPPersonalMessageDetailVC.xib in Resources */,
 				6837922D20909F110092AB54 /* CPLoginViewController.xib in Resources */,
 				6837907520909E6D0092AB54 /* Assets.xcassets in Resources */,
-				683792C720909F110092AB54 /* CPSelectedOptionsCollectionCell.xib in Resources */,
-				683792C920909F110092AB54 /* CPSelectedOptionsView.xib in Resources */,
+				683792C720909F110092AB54 /* SelectedOptionsCollectionCell.xib in Resources */,
+				683792C920909F110092AB54 /* SelectedOptionsView.xib in Resources */,
 				6837928920909F110092AB54 /* CPPersonalMessageCell.xib in Resources */,
-				6837922B20909F110092AB54 /* CookBook_RegistViewController.xib in Resources */,
+				6837922B20909F110092AB54 /* GQRegistViewController.xib in Resources */,
 				6837925C20909F110092AB54 /* CPMyRecommendVC.xib in Resources */,
 				6837929120909F110092AB54 /* CPRechargeNormalCell.xib in Resources */,
 				6837925420909F110092AB54 /* CPModifyLoginPasswordVC.xib in Resources */,
@@ -1544,23 +1551,23 @@
 				6837926420909F110092AB54 /* CPSettingVC.xib in Resources */,
 				6837926620909F110092AB54 /* CPSignRecordVC.xib in Resources */,
 				6837927D20909F110092AB54 /* CPRechargeRecordVC.xib in Resources */,
-				6837923320909F110092AB54 /* CookBook_LotteryResultDetailWebVC.xib in Resources */,
-				6837923820909F110092AB54 /* CookBook_LotteryResultMainCellStyle1.xib in Resources */,
+				6837923320909F110092AB54 /* GQLotteryResultDetailWebVC.xib in Resources */,
+				6837923820909F110092AB54 /* GQLotteryResultMainCellStyle1.xib in Resources */,
 				6837928320909F110092AB54 /* CPRechargeThirdQRCodeVC.xib in Resources */,
 				6837921E20909F110092AB54 /* CPHomePageVC.xib in Resources */,
-				6837924020909F110092AB54 /* CookBook_LotteryResultMainCellStyle5.xib in Resources */,
-				683792CD20909F110092AB54 /* CPSelectedOptionsAgoView.xib in Resources */,
-				6837923E20909F110092AB54 /* CookBook_LotteryResultMainCellStyle4.xib in Resources */,
+				6837924020909F110092AB54 /* GQLotteryResultMainCellStyle5.xib in Resources */,
+				683792CD20909F110092AB54 /* SelectedOptionsAgoView.xib in Resources */,
+				6837923E20909F110092AB54 /* GQLotteryResultMainCellStyle4.xib in Resources */,
 				6837928F20909F110092AB54 /* CPRechargeNetBankCell.xib in Resources */,
-				683792C520909F110092AB54 /* CPSelectedOptionsCell.xib in Resources */,
-				6837924620909F110092AB54 /* CookBook_LotteryResultMainCellStyle8.xib in Resources */,
+				683792C520909F110092AB54 /* SelectedOptionsCell.xib in Resources */,
+				6837924620909F110092AB54 /* GQLotteryResultMainCellStyle8.xib in Resources */,
 				6837922320909F110092AB54 /* CPHomeNoticeView.xib in Resources */,
 				6837924820909F110092AB54 /* CPLotteryTrendVC.xib in Resources */,
 				6837928720909F110092AB54 /* CPCPSignRecordCell.xib in Resources */,
 				6837927120909F110092AB54 /* CPAddFriendRechargeVC.xib in Resources */,
 				6837926820909F110092AB54 /* CPSignVC.xib in Resources */,
 				6837926220909F110092AB54 /* CPSetQAMessageVC.xib in Resources */,
-				6837924420909F110092AB54 /* CookBook_LotteryResultMainCellStyle7.xib in Resources */,
+				6837924420909F110092AB54 /* GQLotteryResultMainCellStyle7.xib in Resources */,
 				6837926020909F110092AB54 /* CPPersonalMessageVC.xib in Resources */,
 				6837923120909F110092AB54 /* CPTryPlayViewController.xib in Resources */,
 				3A0C9BCF20A58E92008B7FA1 /* Localizable.strings in Resources */,
@@ -1625,34 +1632,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				6837924D20909F110092AB54 /* CPBankCardInfoVC.m in Sources */,
-				6837923B20909F110092AB54 /* CookBook_LotteryResultMainCellStyle3.m in Sources */,
+				6837923B20909F110092AB54 /* GQLotteryResultMainCellStyle3.m in Sources */,
 				6837926720909F110092AB54 /* CPSignVC.m in Sources */,
+				3A43734920AAC97900AED14F /* UIConstants.swift in Sources */,
 				6837927A20909F110092AB54 /* CPRechargeMainViewController.m in Sources */,
 				683792CE20909F110092AB54 /* UIBarButtonItem+DWBarButtonItem.m in Sources */,
-				6837926F20909F110092AB54 /* CookBook_MineActionModel.m in Sources */,
+				6837926F20909F110092AB54 /* GQMineActionModel.m in Sources */,
 				6837926920909F110092AB54 /* CPWithdrawDetailVC.m in Sources */,
 				683792A320909F110092AB54 /* JSONModelError.m in Sources */,
-				6837923620909F110092AB54 /* CookBook_LotteryResultMainCellStyle0.m in Sources */,
+				6837923620909F110092AB54 /* GQLotteryResultMainCellStyle0.m in Sources */,
 				683792B320909F110092AB54 /* TAAnimatedDotView.m in Sources */,
-				683792C020909F110092AB54 /* CPLineLabel.m in Sources */,
-				6837921620909F110092AB54 /* CookBook_BuyLotteryTableCell.m in Sources */,
+				683792C020909F110092AB54 /* LineLabel.m in Sources */,
+				6837921620909F110092AB54 /* GQBuyLotteryTableCell.m in Sources */,
 				6837929D20909F110092AB54 /* DWExtensionUtils.m in Sources */,
 				683792B220909F110092AB54 /* TAAbstractDotView.m in Sources */,
 				6837926320909F110092AB54 /* CPSettingVC.m in Sources */,
 				683792BC20909F110092AB54 /* NSString+WayExtension.m in Sources */,
 				6837925B20909F110092AB54 /* CPMyRecommendVC.m in Sources */,
 				6837928020909F110092AB54 /* CPRechargeSelfQRCodeVC.m in Sources */,
-				6837929620909F110092AB54 /* CookBook_GlobalDataManager.m in Sources */,
+				6837929620909F110092AB54 /* DataCenter.m in Sources */,
 				6837925520909F110092AB54 /* CPModifyPayPasswordVC.m in Sources */,
-				6837924920909F110092AB54 /* CookBook_AboutUsVC.m in Sources */,
+				6837924920909F110092AB54 /* GQAboutUsVC.m in Sources */,
 				683792B620909F110092AB54 /* SDCollectionViewCell.m in Sources */,
 				683792AA20909F110092AB54 /* NSData+CommonCrypto.m in Sources */,
 				683792A920909F110092AB54 /* JSONValueTransformer.m in Sources */,
 				6837926120909F110092AB54 /* CPSetQAMessageVC.m in Sources */,
 				6837928220909F110092AB54 /* CPRechargeThirdQRCodeVC.m in Sources */,
 				6837929F20909F110092AB54 /* DYView+DYExtension.m in Sources */,
-				683792CA20909F110092AB54 /* CPSelectedOptionsAgoCell.m in Sources */,
-				6837921920909F110092AB54 /* CookBook_HomepageCaijinVC.m in Sources */,
+				683792CA20909F110092AB54 /* SelectedOptionsAgoCell.m in Sources */,
+				6837921920909F110092AB54 /* GQHomepageCaijinVC.m in Sources */,
 				3A0C9BD320A58E92008B7FA1 /* GQMainViewController.m in Sources */,
 				683792A620909F110092AB54 /* JSONHTTPClient.m in Sources */,
 				683792A520909F110092AB54 /* JSONAPI.m in Sources */,
@@ -1660,32 +1668,33 @@
 				6837926B20909F110092AB54 /* CPWithdrawRecordVC.m in Sources */,
 				683792A120909F110092AB54 /* JSONModelArray.m in Sources */,
 				6837927020909F110092AB54 /* CPAddFriendRechargeVC.m in Sources */,
-				6837929720909F110092AB54 /* CookBook_GlobalSettingStore.m in Sources */,
-				6837929520909F110092AB54 /* CookBook_BusinessControllerManager.m in Sources */,
-				6837922A20909F110092AB54 /* CookBook_RegistViewController.m in Sources */,
+				6837929720909F110092AB54 /* GQGlobalSettingStore.m in Sources */,
+				6837929520909F110092AB54 /* GQBusinessControllerManager.m in Sources */,
+				6837922A20909F110092AB54 /* GQRegistViewController.m in Sources */,
 				6837922C20909F110092AB54 /* CPLoginViewController.m in Sources */,
-				6837929A20909F110092AB54 /* CookBook_User.m in Sources */,
+				6837929A20909F110092AB54 /* GQUser.m in Sources */,
+				3A43734B20AAC98C00AED14F /* SmartAskViewController.swift in Sources */,
 				683792B420909F110092AB54 /* TADotView.m in Sources */,
-				6837921020909F110092AB54 /* CookBook_BuyLetterLotterySectionView.m in Sources */,
+				6837921020909F110092AB54 /* GQBuyLetterLotterySectionView.m in Sources */,
 				683792BD20909F110092AB54 /* SVProgressHUD+WayExtension.m in Sources */,
 				3AEAFEB220A702B200AB1373 /* UAObfuscatedString.m in Sources */,
 				6837929C20909F110092AB54 /* DDUncaughtExceptionHandler.m in Sources */,
 				6837928A20909F110092AB54 /* CPRechargeAddFriendCell.m in Sources */,
-				6837920320909F110092AB54 /* CookBook_BaseViewController.m in Sources */,
-				6837921420909F110092AB54 /* CookBook_BuyLotteryFastItem.m in Sources */,
+				6837920320909F110092AB54 /* GQBaseViewController.m in Sources */,
+				6837921420909F110092AB54 /* GQBuyLotteryFastItem.m in Sources */,
 				683792A020909F110092AB54 /* JSONModel.m in Sources */,
-				6837922820909F110092AB54 /* CookBook_LookForPasswordVC.m in Sources */,
+				6837922820909F110092AB54 /* GQLookForPasswordVC.m in Sources */,
 				6837922520909F110092AB54 /* CPMultiRowTextScrollCell.m in Sources */,
-				6837920F20909F110092AB54 /* CookBook_TimeManager.m in Sources */,
+				6837920F20909F110092AB54 /* ShiJianManager.m in Sources */,
 				6837928820909F110092AB54 /* CPPersonalMessageCell.m in Sources */,
 				6837925320909F110092AB54 /* CPModifyLoginPasswordVC.m in Sources */,
 				3A0C9BDD20A58E92008B7FA1 /* GQContactViewController.m in Sources */,
 				6837922220909F110092AB54 /* CPHomeNoticeView.m in Sources */,
 				3A0C9BD220A58E92008B7FA1 /* NoPhoneViewController.m in Sources */,
-				6837920420909F110092AB54 /* CookBook_BuyCustomLotteryConfirmView.m in Sources */,
+				6837920420909F110092AB54 /* CookBookBuyCustomConfirmView.m in Sources */,
 				6837924F20909F110092AB54 /* CPBetRecordVC.m in Sources */,
 				3A0C9BD120A58E92008B7FA1 /* MergeSamePhoneViewController.m in Sources */,
-				683792BE20909F110092AB54 /* CPBackgroundCornerLabel.m in Sources */,
+				683792BE20909F110092AB54 /* BackgroundCornerLabel.m in Sources */,
 				6837923420909F110092AB54 /* CPLotteryResultVC.m in Sources */,
 				683792AF20909F110092AB54 /* CLProgressHUD.m in Sources */,
 				683792AB20909F110092AB54 /* NSData+MKBase64.m in Sources */,
@@ -1693,80 +1702,80 @@
 				6837927620909F110092AB54 /* CPRechargeBankNextStepVC.m in Sources */,
 				6837928620909F110092AB54 /* CPCPSignRecordCell.m in Sources */,
 				3A0C9BD620A58E92008B7FA1 /* GQManagerViewController.m in Sources */,
+				3A43734720AAC95200AED14F /* MainController.swift in Sources */,
 				6837926520909F110092AB54 /* CPSignRecordVC.m in Sources */,
 				683792BB20909F110092AB54 /* AppDelegate.m in Sources */,
 				3A0C9BD520A58E92008B7FA1 /* GQSortViewController.m in Sources */,
-				6837929820909F110092AB54 /* CookBook_Request.m in Sources */,
+				6837929820909F110092AB54 /* GQRequest.m in Sources */,
 				6837929020909F110092AB54 /* CPRechargeNormalCell.m in Sources */,
-				6837920E20909F110092AB54 /* CookBook_BuyLotteryManager.m in Sources */,
-				6837923720909F110092AB54 /* CookBook_LotteryResultMainCellStyle1.m in Sources */,
-				6837920C20909F110092AB54 /* CPBuyLotteryVC.m in Sources */,
-				6837923220909F110092AB54 /* CookBook_LotteryResultDetailWebVC.m in Sources */,
-				683792C420909F110092AB54 /* CPSelectedOptionsCell.m in Sources */,
-				6837923F20909F110092AB54 /* CookBook_LotteryResultMainCellStyle5.m in Sources */,
-				6837920620909F110092AB54 /* CookBook_BuyFastLotteryConfirmView.m in Sources */,
-				683792C820909F110092AB54 /* CPSelectedOptionsView.m in Sources */,
+				6837920E20909F110092AB54 /* CBBuyLyManager.m in Sources */,
+				6837923720909F110092AB54 /* GQLotteryResultMainCellStyle1.m in Sources */,
+				6837920C20909F110092AB54 /* BuyLyVC.m in Sources */,
+				6837923220909F110092AB54 /* GQLotteryResultDetailWebVC.m in Sources */,
+				683792C420909F110092AB54 /* SelectedOptionsCell.m in Sources */,
+				6837923F20909F110092AB54 /* GQLotteryResultMainCellStyle5.m in Sources */,
+				6837920620909F110092AB54 /* CBBuyKuaiCConfirmView.m in Sources */,
+				683792C820909F110092AB54 /* SelectedOptionsView.m in Sources */,
 				6837925D20909F110092AB54 /* CPPersonalMessageDetailVC.m in Sources */,
-				6837922120909F110092AB54 /* CookBook_LotteryModel.m in Sources */,
-				6837924520909F110092AB54 /* CookBook_LotteryResultMainCellStyle8.m in Sources */,
+				6837922120909F110092AB54 /* GQLotteryModel.m in Sources */,
+				6837924520909F110092AB54 /* GQLotteryResultMainCellStyle8.m in Sources */,
 				3A0C9BD920A58E92008B7FA1 /* GQContactModel.m in Sources */,
 				6837921D20909F110092AB54 /* CPHomePageVC.m in Sources */,
 				6837922420909F110092AB54 /* CPHomePageHotLotteryItem.m in Sources */,
-				6837920820909F110092AB54 /* CookBook_BuyLotteryRoomVC.m in Sources */,
+				6837920820909F110092AB54 /* GQBuyLotteryRoomVC.m in Sources */,
 				683792B020909F110092AB54 /* LCLoadingHUD.m in Sources */,
 				6837927420909F110092AB54 /* CPRechargeBankCompletedVC.m in Sources */,
-				683792C620909F110092AB54 /* CPSelectedOptionsCollectionCell.m in Sources */,
-				6837921B20909F110092AB54 /* CookBook_PresentWebVC.m in Sources */,
+				683792C620909F110092AB54 /* SelectedOptionsCollectionCell.m in Sources */,
+				6837921B20909F110092AB54 /* GQPresentWebVC.m in Sources */,
 				6837925920909F110092AB54 /* CPMyRecommendRecordVC.m in Sources */,
 				683792A420909F110092AB54 /* NSArray+JSONModel.m in Sources */,
 				6837928420909F110092AB54 /* CPBetRecordCell.m in Sources */,
 				6837922E20909F110092AB54 /* CPResetPasswordVC.m in Sources */,
-				6837924320909F110092AB54 /* CookBook_LotteryResultMainCellStyle7.m in Sources */,
-				6837924120909F110092AB54 /* CookBook_LotteryResultMainCellStyle6.m in Sources */,
-				6837923920909F110092AB54 /* CookBook_LotteryResultMainCellStyle2.m in Sources */,
+				6837924320909F110092AB54 /* GQLotteryResultMainCellStyle7.m in Sources */,
+				6837924120909F110092AB54 /* GQLotteryResultMainCellStyle6.m in Sources */,
+				6837923920909F110092AB54 /* GQLotteryResultMainCellStyle2.m in Sources */,
 				6837928E20909F110092AB54 /* CPRechargeNetBankCell.m in Sources */,
 				6837927820909F110092AB54 /* CPRechargeDetailVC.m in Sources */,
 				683792CF20909F110092AB54 /* WMDragView.m in Sources */,
 				683792B820909F110092AB54 /* UIView+SDExtension.m in Sources */,
 				6837927220909F110092AB54 /* CPRechargeAlipayToBankVC.m in Sources */,
 				6837929E20909F110092AB54 /* DWParsers.m in Sources */,
-				3A0C9BD820A58E92008B7FA1 /* GQAppDelegate.m in Sources */,
 				6837924B20909F110092AB54 /* CPAccountRecordVC.m in Sources */,
-				683792C220909F110092AB54 /* CPLongPressSaveImageView.m in Sources */,
+				683792C220909F110092AB54 /* LongPressToSaveImageView.m in Sources */,
 				6837925720909F110092AB54 /* CPModifyQAMessageVC.m in Sources */,
-				683792D020909F110092AB54 /* UIViewController+CPViewControllerExtension.m in Sources */,
+				683792D020909F110092AB54 /* UIViewController+ViewControllerExtension.m in Sources */,
 				6837922720909F110092AB54 /* CPMultiRowTextScrollView.m in Sources */,
-				6837921520909F110092AB54 /* CookBook_BuyLotterySectionView.m in Sources */,
+				6837921520909F110092AB54 /* GQBuyLotterySectionView.m in Sources */,
 				683792B520909F110092AB54 /* TAPageControl.m in Sources */,
 				6837925F20909F110092AB54 /* CPPersonalMessageVC.m in Sources */,
-				6837929920909F110092AB54 /* CookBook_ServerAPIManager.m in Sources */,
-				683792BF20909F110092AB54 /* CPFixedValueButton.m in Sources */,
+				6837929920909F110092AB54 /* GQServerAPIManager.m in Sources */,
+				683792BF20909F110092AB54 /* FixedValueButton.m in Sources */,
 				3A0C9BDC20A58E92008B7FA1 /* ContactsObjc.m in Sources */,
 				683792AD20909F110092AB54 /* NSString+XDJEncrypt.m in Sources */,
 				6837927C20909F110092AB54 /* CPRechargeRecordVC.m in Sources */,
-				6837921C20909F110092AB54 /* CookBook_WebViewController.m in Sources */,
-				6837921320909F110092AB54 /* CookBook_BuyLotteryCustomItem.m in Sources */,
+				6837921C20909F110092AB54 /* GQWebViewController.m in Sources */,
+				6837921320909F110092AB54 /* GQBuyLotteryCustomItem.m in Sources */,
 				6837925120909F110092AB54 /* CPMineVC.m in Sources */,
 				3A0C9BDA20A58E92008B7FA1 /* GQTools.m in Sources */,
 				6837924720909F110092AB54 /* CPLotteryTrendVC.m in Sources */,
 				683792B120909F110092AB54 /* ORCycleLabel.m in Sources */,
-				6837929B20909F110092AB54 /* CookBook_MainTabBarController.m in Sources */,
+				6837929B20909F110092AB54 /* CBMainTabBarController.m in Sources */,
 				6837923020909F110092AB54 /* CPTryPlayViewController.m in Sources */,
-				6837923D20909F110092AB54 /* CookBook_LotteryResultMainCellStyle4.m in Sources */,
+				6837923D20909F110092AB54 /* GQLotteryResultMainCellStyle4.m in Sources */,
 				683792AC20909F110092AB54 /* NSDate+Calendar.m in Sources */,
-				6837920A20909F110092AB54 /* CPBuyLotteryDetailVC.m in Sources */,
-				6837921820909F110092AB54 /* CookBook_LotteryShowResultView.m in Sources */,
+				6837920A20909F110092AB54 /* BuyLyDetailVC.m in Sources */,
+				6837921820909F110092AB54 /* GQLotteryShowResultView.m in Sources */,
 				683792A220909F110092AB54 /* JSONModelClassProperty.m in Sources */,
-				6837921120909F110092AB54 /* CookBook_BuyLotteryCollectionCell.m in Sources */,
-				6837922020909F110092AB54 /* CookBook_HomepageActivityCaijin.m in Sources */,
-				683792CC20909F110092AB54 /* CPSelectedOptionsAgoView.m in Sources */,
+				6837921120909F110092AB54 /* GQBuyLotteryCollectionCell.m in Sources */,
+				6837922020909F110092AB54 /* GQHomepageActivityCaijin.m in Sources */,
+				683792CC20909F110092AB54 /* SelectedOptionsAgoView.m in Sources */,
 				683792A820909F110092AB54 /* JSONKeyMapper.m in Sources */,
-				683792C320909F110092AB54 /* CPVoiceButton.m in Sources */,
+				683792C320909F110092AB54 /* VoiceButton.m in Sources */,
 				6837927E20909F110092AB54 /* CPRechargeRightMenuView.m in Sources */,
 				6837928C20909F110092AB54 /* CPRechargeBankCell.m in Sources */,
 				6837929220909F110092AB54 /* CPRechargePayTypeButton.m in Sources */,
 				6837926D20909F110092AB54 /* CPWithdrawViewController.m in Sources */,
-				683792C120909F110092AB54 /* CPLocalCodeLabel.m in Sources */,
+				683792C120909F110092AB54 /* LocalCodeLabel.m in Sources */,
 				683792A720909F110092AB54 /* JSONModel+networking.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1912,12 +1921,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ContactsTool/ContactsTool.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 987SH42H34;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ContactsTool/CookBook_Header.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ContactsTool/GQHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ContactsTool/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1930,6 +1940,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContactsTool/Contact/ContactsTool-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1940,12 +1953,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ContactsTool/ContactsTool.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 987SH42H34;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/ContactsTool/CookBook_Header.pch";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/ContactsTool/GQHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/ContactsTool/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1959,6 +1973,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.gap.contacts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "ContactsTool/Contact/ContactsTool-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

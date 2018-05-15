@@ -8,16 +8,16 @@
 
 #import "CPLotteryResultVC.h"
 
-#import "CookBook_LotteryResultMainCellStyle1.h"
-#import "CookBook_LotteryResultMainCellStyle2.h"
-#import "CookBook_LotteryResultMainCellStyle3.h"
-#import "CookBook_LotteryResultMainCellStyle4.h"
-#import "CookBook_LotteryResultMainCellStyle5.h"
-#import "CookBook_LotteryResultMainCellStyle6.h"
-#import "CookBook_LotteryResultMainCellStyle7.h"
-#import "CookBook_LotteryResultMainCellStyle8.h"
+#import "GQLotteryResultMainCellStyle1.h"
+#import "GQLotteryResultMainCellStyle2.h"
+#import "GQLotteryResultMainCellStyle3.h"
+#import "GQLotteryResultMainCellStyle4.h"
+#import "GQLotteryResultMainCellStyle5.h"
+#import "GQLotteryResultMainCellStyle6.h"
+#import "GQLotteryResultMainCellStyle7.h"
+#import "GQLotteryResultMainCellStyle8.h"
 
-#import "CookBook_LotteryResultDetailWebVC.h"
+#import "GQLotteryResultDetailWebVC.h"
 
 
 @interface CPLotteryResultVC ()<UITableViewDelegate,UITableViewDataSource,UIWebViewDelegate>
@@ -42,22 +42,22 @@
         [self queryLotteryResultInfo];
     }];
     
-    [_tableView registerClass:[CookBook_LotteryResultMainCellStyle0 class] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle0 class])];
+    [_tableView registerClass:[GQLotteryResultMainCellStyle0 class] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle0 class])];
     
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle1" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle1 class])];
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle2" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle2 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle1" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle1 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle2" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle2 class])];
 
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle3" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle3 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle3" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle3 class])];
 
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle4" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle4 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle4" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle4 class])];
 
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle5" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle5 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle5" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle5 class])];
 
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle6" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle6 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle6" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle6 class])];
 
-    [_tableView registerNib:[UINib nibWithNibName:@"CookBook_LotteryResultMainCellStyle7" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle7 class])];
+    [_tableView registerNib:[UINib nibWithNibName:@"GQLotteryResultMainCellStyle7" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle7 class])];
 
-    [_tableView registerNib:[UINib  nibWithNibName:@"CookBook_LotteryResultMainCellStyle8" bundle:nil] forCellReuseIdentifier:NSStringFromClass([CookBook_LotteryResultMainCellStyle8 class])];
+    [_tableView registerNib:[UINib  nibWithNibName:@"GQLotteryResultMainCellStyle8" bundle:nil] forCellReuseIdentifier:NSStringFromClass([GQLotteryResultMainCellStyle8 class])];
 
     
     [_tableView.mj_header beginRefreshing];
@@ -92,8 +92,8 @@
             isShowPushAnimated:(BOOL)animated
 {
 
-    NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent: [NSString stringWithFormat:@"/api/draw/single?gid=%@",gid]];
-    CookBook_LotteryResultDetailWebVC *vc = [[CookBook_LotteryResultDetailWebVC alloc]init];
+    NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent: [NSString stringWithFormat:@"/api/draw/single?gid=%@",gid]];
+    GQLotteryResultDetailWebVC *vc = [[GQLotteryResultDetailWebVC alloc]init];
     vc.urlString = urlString;
     vc.dayType = dayType;
     [self.navigationController pushViewController:vc animated:animated];
@@ -104,7 +104,7 @@
 
 -(void)reloadWebViewData
 {
-    NSString *urlString = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/draw1"];
+    NSString *urlString = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/draw1"];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
@@ -113,7 +113,7 @@
     NSString *urlString = request.URL.absoluteString;
     if ([urlString rangeOfString:@"draw/single"].length>0) {
         
-        CookBook_LotteryResultDetailWebVC *vc = [[CookBook_LotteryResultDetailWebVC alloc]init];
+        GQLotteryResultDetailWebVC *vc = [[GQLotteryResultDetailWebVC alloc]init];
         vc.urlString = urlString;
         vc.dayType = 99;
         [self.navigationController pushViewController:vc animated:YES];
@@ -143,14 +143,14 @@
 
 -(void)queryLotteryResultInfo
 {
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIDraw
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIDraw
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                if (_tableView.mj_header.isRefreshing) {
                    [_tableView.mj_header endRefreshing];
@@ -158,7 +158,7 @@
                
                if (request.resultIsOk) {
                    
-                   _dataList = [DWParsers getObjectListByName:@"CookBook_LotteryModel" fromArray:request.businessDataArray];
+                   _dataList = [DWParsers getObjectListByName:@"GQLotteryModel" fromArray:request.businessDataArray];
                    [_tableView reloadData];
                    
                }else{
@@ -166,7 +166,7 @@
                    [WSProgressHUD showErrorWithStatus:request.requestDescription];
                }
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                if (_tableView.mj_header.isRefreshing) {
                    [_tableView.mj_header endRefreshing];
@@ -200,12 +200,12 @@
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    CookBook_LotteryModel *model = [_dataList objectAtIndex:indexPath.row];
+    GQLotteryModel *model = [_dataList objectAtIndex:indexPath.row];
     
-    NSString *reusedString = NSStringFromClass([CookBook_LotteryResultMainCellStyle1 class]);
-    reusedString = [NSString stringWithFormat:@"CookBook_LotteryResultMainCellStyle%d",model.mainResultCellStyle];
+    NSString *reusedString = NSStringFromClass([GQLotteryResultMainCellStyle1 class]);
+    reusedString = [NSString stringWithFormat:@"GQLotteryResultMainCellStyle%d",model.mainResultCellStyle];
     
-    CookBook_LotteryResultMainCellStyle0 *cell = [tableView dequeueReusableCellWithIdentifier:reusedString];
+    GQLotteryResultMainCellStyle0 *cell = [tableView dequeueReusableCellWithIdentifier:reusedString];
     
     [cell addTitle:model.name content:model.noteDes result:model.resultArray];
     return cell;
@@ -213,7 +213,7 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [CookBook_GlobalDataManager cookBook_playButtonClickVoice];
+    [DataCenter cookBook_playButtonClickVoice];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     /*

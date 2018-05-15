@@ -7,8 +7,8 @@
 // 128 42 
 
 #import <UIKit/UIKit.h>
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
-@interface CPHomePageVC : CookBook_BaseViewController
+@interface CPHomePageVC : GQBaseViewController
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "CPTryPlayViewController.h"
-#import "CookBook_LookForPasswordVC.h"
+#import "GQLookForPasswordVC.h"
 
 
 @interface CPTryPlayViewController ()
@@ -39,7 +39,7 @@
 
 -(void)loadKefuWebView
 {
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].kefuUrlString]];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[DataCenter shareGlobalData].kefuUrlString]];
     toWebVC.title = @"客服";
     toWebVC.showPageTitles = NO;
     toWebVC.showActionButton = NO;
@@ -53,7 +53,7 @@
         case 101:
         {
             //客服
-            if ([CookBook_GlobalDataManager shareGlobalData].kefuUrlString) {
+            if ([DataCenter shareGlobalData].kefuUrlString) {
                 [self loadKefuWebView];
             }else{
                 [self queryKefuUrlString];
@@ -63,7 +63,7 @@
         case 102:
         {
             //忘记密码
-            CookBook_LookForPasswordVC *registVC = [CookBook_LookForPasswordVC new];
+            GQLookForPasswordVC *registVC = [GQLookForPasswordVC new];
             [self.navigationController pushViewController:registVC animated:YES];
         }break;
         case 103:
@@ -91,20 +91,20 @@
 -(void)queryKefuUrlString
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIKefu
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIKefu
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    
                    NSString *urlString = [request.resultInfo DWStringForKey:@"data"];
-                   [CookBook_GlobalDataManager shareGlobalData].kefuUrlString = urlString;
+                   [DataCenter shareGlobalData].kefuUrlString = urlString;
                    [self loadKefuWebView];
                    
                }else{
@@ -113,7 +113,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                [self.navigationController popViewControllerAnimated:YES];
@@ -126,13 +126,13 @@
 {
     
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIFreeUserCode
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIFreeUserCode
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -146,7 +146,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];
@@ -156,20 +156,20 @@
                      password:(NSString *)password
 {
     [SVProgressHUD way_showLoadingCanNotTouchClearBackground];
-    NSDictionary *paramsDic = @{@"userName":userName,@"password":password,@"token":[CookBook_User shareUser].token,@"deviceType":@"2"};
+    NSDictionary *paramsDic = @{@"userName":userName,@"password":password,@"token":[GQUser shareUser].token,@"deviceType":@"2"};
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIFreeUserSubmit
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIFreeUserSubmit
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
 
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    NSString *token = [request.resultInfo DWStringForKey:@"token"];
-                   [[CookBook_User shareUser]cookBook_addToken:token];
+                   [[GQUser shareUser]cookBook_addToken:token];
                    [self.navigationController dismissViewControllerAnimated:YES completion:nil];
                    alertMsg = @"登录成功";
                    [[NSNotificationCenter defaultCenter]postNotificationName:kNotificationNameForLoginSucceed object:nil];
@@ -180,7 +180,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];

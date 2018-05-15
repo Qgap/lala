@@ -14,6 +14,7 @@
 @interface GQMainViewController ()
 
 @property (nonatomic, assign)BOOL lock;
+@property (nonatomic, strong)UIView *lockView;
 
 @end
 
@@ -22,6 +23,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -37,16 +39,37 @@
     manageVC.tabBarItem.image = [[UIImage imageNamed:@"manage_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     self.viewControllers = @[contactVC,manageVC];
     
+//    self.lockView = [[UIView alloc] initWithFrame:self.view.frame];
+//    self.lockView.backgroundColor = [UIColor whiteColor];
+//    self.lockView.hidden = YES;
+//    [self.view addSubview:self.lockView];
+//    
+//    [self checkLock];
+
+    
+}
+
+- (void)checkLock {
     self.lock = [[NSUserDefaults standardUserDefaults] boolForKey:kPrivateContact];
     
     if (self.lock) {
+        self.lockView.hidden = NO;
+    
         LAContext *context = [[LAContext alloc] init];
         NSError *error;
+        
+        [self.tabBarController presentViewController:[[GQManagerViewController alloc] init] animated:YES completion:^{
+            
+        }];
         
         if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
             [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"Touch Id Test" reply:^(BOOL success, NSError * _Nullable error) {
                 if (success) {
                     NSLog(@"success to evaluate");
+                    dispatch_main_sync_safe(^{
+                        self.lockView.hidden = YES;
+                    });
+                    
                 }
                 if (error) {
                     NSLog(@"---failed to evaluate---error: %@---", error.description);
@@ -58,7 +81,6 @@
     } else {
         
     }
-    
 }
 
 

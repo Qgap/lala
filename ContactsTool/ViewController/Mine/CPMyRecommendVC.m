@@ -36,7 +36,7 @@
     [super viewDidLoad];
     self.title = @"我的推荐";
     
-    CPVoiceButton *finishedButton = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+    VoiceButton *finishedButton = [VoiceButton buttonWithType:UIButtonTypeCustom];
     finishedButton.frame = CGRectMake(0, 0, 65, 65);
     [finishedButton addTarget:self action:@selector(collectionRecordAction) forControlEvents:UIControlEventTouchUpInside];
     [finishedButton setTitle:@"收益记录" forState:UIControlStateNormal];
@@ -80,10 +80,10 @@
     _memberList = mList;
     */
 
-    NSInteger memberId = [[CookBook_User shareUser].tokenInfo.memberId integerValue];
+    NSInteger memberId = [[GQUser shareUser].tokenInfo.memberId integerValue];
     memberId = memberId+100000;
     _myRecommendIdLabel.text = [NSString stringWithFormat:@"%ld",memberId];
-    _myRecommendAddressTv.text = [[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:[NSString stringWithFormat:@"/common/register?tjr=%ld",memberId]];
+    _myRecommendAddressTv.text = [[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:[NSString stringWithFormat:@"/common/register?tjr=%ld",memberId]];
 
     _monthCollectionLabel.text = [_myInfo DWStringForKey:@"spreadIn"];
     _rateLabel.text = [NSString stringWithFormat:@"说明：每天的7点更新收益，如3号7点，会计算2号0点-24点之间所有数据，然后增加您的收益。您的收益=推荐会员的有效投注额度总和÷100 x %@(转换率),小数部分四舍五入！",[_info DWStringForKey:@"spread"]];
@@ -156,14 +156,14 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIUserSpread
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIUserSpread
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
@@ -180,7 +180,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                [self.navigationController popViewControllerAnimated:YES];

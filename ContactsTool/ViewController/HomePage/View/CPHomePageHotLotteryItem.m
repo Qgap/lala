@@ -10,12 +10,12 @@
 
 @interface CPHomePageHotLotteryItem ()
 {
-    CPVoiceButton *_acionButton;
+    VoiceButton *_acionButton;
     UIImageView *_iconImageView;
     UILabel *_nameLabel;
 }
 @property(nonatomic,copy)CPHomePageHotLotteryItemClickAction clickAction;
-@property(nonatomic,retain)CookBook_LotteryModel *lottery;
+@property(nonatomic,retain)GQLotteryModel *lottery;
 
 @property(nonatomic,retain)UILabel *bottomLine;
 @property(nonatomic,retain)UILabel *rightLine;
@@ -26,7 +26,7 @@
 @implementation CPHomePageHotLotteryItem
 
 -(instancetype)initWithFrame:(CGRect)frame
-                     lottery:(CookBook_LotteryModel*)lottery
+                     lottery:(GQLotteryModel*)lottery
                  clickAction:(CPHomePageHotLotteryItemClickAction)action
 {
     self = [super initWithFrame:frame];
@@ -69,7 +69,7 @@
 
 -(void)addSubviews
 {
-    _acionButton = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+    _acionButton = [VoiceButton buttonWithType:UIButtonTypeCustom];
     _acionButton.frame = CGRectMake(0, 0, self.width, self.height);
     [_acionButton addTarget:self action:@selector(buttonClickAction) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_acionButton];

@@ -7,9 +7,9 @@
 //
 
 #import "CPLotteryTrendVC.h"
-#import "CPSelectedOptionsAgoView.h"
-#import "CPBuyLotteryDetailVC.h"
-#import "CookBook_BuyLotteryRoomVC.h"
+#import "SelectedOptionsAgoView.h"
+#import "BuyLyDetailVC.h"
+#import "GQBuyLotteryRoomVC.h"
 
 @interface CPLotteryTrendVC ()<UIWebViewDelegate>
 {
@@ -89,7 +89,7 @@
 -(void)loadRightItem
 {
     UIImage *rightItemImage = [UIImage imageNamed:@"zoushi_you_anniu_03"];
-    CPVoiceButton *btn = [CPVoiceButton buttonWithType:UIButtonTypeCustom];
+    VoiceButton *btn = [VoiceButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, rightItemImage.size.width, rightItemImage.size.height);
     [btn addTarget:self action:@selector(rightItemAction) forControlEvents:UIControlEventTouchUpInside];
     [btn setImage:rightItemImage forState:UIControlStateNormal];
@@ -99,7 +99,7 @@
 -(void)rightItemAction
 {
     AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    [CPSelectedOptionsAgoView showWithOnView:app.window title:@"选择彩票类型" options:_typeNameList selectedIndex:self.selectedTypeIndex selected:^(NSInteger index) {
+    [SelectedOptionsAgoView showWithOnView:app.window title:@"选择彩票类型" options:_typeNameList selectedIndex:self.selectedTypeIndex selected:^(NSInteger index) {
         
         if (index != self.selectedTypeIndex) {
             self.selectedTypeIndex = index;
@@ -118,7 +118,7 @@
 
 -(void)loadWebViewWithGid:(NSString *)gid
 {
-    NSString *urlString = [NSString stringWithFormat:@"%@%@",[[CookBook_GlobalDataManager shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/trend?gid="],gid];
+    NSString *urlString = [NSString stringWithFormat:@"%@%@",[[DataCenter shareGlobalData].domainUrlString wayStringByAppendingPathComponent:@"/api/trend?gid="],gid];
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlString]]];
 }
 
@@ -158,31 +158,31 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
     
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
     [paramsDic setObject:gid forKey:@"gid"];
     
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIBuy
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIBuy
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                if (request.resultIsOk) {
                    NSLog(@"%@",request.businessData);
                    NSString *page = [request.businessData DWStringForKey:@"page"];
                    if ([page isEqualToString:@"buy"]) {
                        //购买
-                       CPBuyLotteryDetailVC *vc = [CPBuyLotteryDetailVC new];
+                       BuyLyDetailVC *vc = [BuyLyDetailVC new];
                        vc.playInfo = request.businessData;
                        vc.lotteryName = lotteryName;
                        vc.hidesBottomBarWhenPushed = YES;
                        [self.navigationController pushViewController:vc animated:YES];
                    }else{
                        
-                       CookBook_BuyLotteryRoomVC *vc = [CookBook_BuyLotteryRoomVC new];
+                       GQBuyLotteryRoomVC *vc = [GQBuyLotteryRoomVC new];
                        vc.lotteryName = lotteryName;
                        vc.roomList = [request.businessData DWArrayForKey:@"roomList"];
                        vc.gid = gid;
@@ -196,7 +196,7 @@
                    
                }
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                [SVProgressHUD way_dismissThenShowInfoWithStatus:request.requestDescription];
                
            }];
@@ -207,15 +207,15 @@
 {
     NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"type":@"0"}];
     
-    [paramsDic setObject:[CookBook_User shareUser].token forKey:@"token"];
+    [paramsDic setObject:[GQUser shareUser].token forKey:@"token"];
     [paramsDic setObject:@"2" forKey:@"deviceType"];
 
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPITrendTypeList
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPITrendTypeList
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                if (_webView.scrollView.mj_header.isRefreshing) {
                    [_webView.scrollView.mj_header endRefreshing];
@@ -247,7 +247,7 @@
                }
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                if (_webView.scrollView.mj_header.isRefreshing) {
                    [_webView.scrollView.mj_header endRefreshing];

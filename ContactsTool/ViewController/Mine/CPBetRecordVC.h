@@ -6,9 +6,9 @@
 //  Copyright © 2017年 施冬伟. All rights reserved.
 //
 
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
-@interface CPBetRecordVC : CookBook_BaseViewController
+@interface CPBetRecordVC : GQBaseViewController
 
 @property(nonatomic,assign)BOOL onlyShowWinRecord;
 

@@ -7,9 +7,9 @@
 //
 
 #import "CPLoginViewController.h"
-#import "CookBook_RegistViewController.h"
+#import "GQRegistViewController.h"
 #import "CPTryPlayViewController.h"
-#import "CookBook_LookForPasswordVC.h"
+#import "GQLookForPasswordVC.h"
 #import "WXApi.h"
 
 @interface CPLoginViewController ()
@@ -36,13 +36,13 @@
     [btn addTarget:self action:@selector(dismissAction) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:btn];
     
-    if ([CookBook_GlobalDataManager shareGlobalData].isReviewVersion) {
+    if ([DataCenter shareGlobalData].isReviewVersion) {
         _tryPlayButton.hidden = YES;
     }
     
     if (self.isPushToRegistViewController) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            CookBook_RegistViewController *registVC = [CookBook_RegistViewController new];
+            GQRegistViewController *registVC = [GQRegistViewController new];
             [self.navigationController pushViewController:registVC animated:NO];
         });
     }
@@ -62,7 +62,7 @@
 {
     
    
-    CookBook_WebViewController *toWebVC = [[CookBook_WebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[CookBook_GlobalDataManager shareGlobalData].kefuUrlString]];
+    GQWebViewController *toWebVC = [[GQWebViewController alloc] cookBook_WebWithURLString:[[NSString alloc]initWithString:[DataCenter shareGlobalData].kefuUrlString]];
     
     toWebVC.title = @"客服";
     toWebVC.showPageTitles = NO;
@@ -84,7 +84,7 @@
         case 101:
         {
             //客服
-            if ([CookBook_GlobalDataManager shareGlobalData].kefuUrlString) {
+            if ([DataCenter shareGlobalData].kefuUrlString) {
                 [self loadKefuWebView];
             }else{
                 [self queryKefuUrlString];
@@ -93,7 +93,7 @@
         case 102:
         {
             //忘记密码
-            CookBook_LookForPasswordVC *registVC = [CookBook_LookForPasswordVC new];
+            GQLookForPasswordVC *registVC = [GQLookForPasswordVC new];
             [self.navigationController pushViewController:registVC animated:YES];
             
         }break;
@@ -115,7 +115,7 @@
         case 104:
         {
             //注册
-            CookBook_RegistViewController *registVC = [CookBook_RegistViewController new];
+            GQRegistViewController *registVC = [GQRegistViewController new];
             [self.navigationController pushViewController:registVC animated:YES];
             
         }break;
@@ -146,20 +146,20 @@
 {
     [SVProgressHUD way_showLoadingCanNotTouchBlackBackground];
 
-    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[CookBook_User shareUser].token}];
+    NSMutableDictionary *paramsDic =[[NSMutableDictionary alloc]initWithDictionary:@{@"token":[GQUser shareUser].token}];
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPIKefu
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPIKefu
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    
                    NSString *urlString = [request.resultInfo DWStringForKey:@"data"];
-                   [CookBook_GlobalDataManager shareGlobalData].kefuUrlString = urlString;
+                   [DataCenter shareGlobalData].kefuUrlString = urlString;
                    [self loadKefuWebView];
                    
                }else{
@@ -168,7 +168,7 @@
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
                
                
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
                [self.navigationController popViewControllerAnimated:YES];
@@ -184,16 +184,16 @@
     NSDictionary *paramsDic = @{@"userName":userName,@"password":password,@"deviceType":@"2"};
     NSString *paramsString = [NSString encryptedByGBKAES:[paramsDic JSONString]];
     
-    [CookBook_Request cookBook_startWithDomainString:[CookBook_GlobalDataManager shareGlobalData].domainUrlString
-                              apiName:CookBook_SerVerAPINameForAPILoginSubmit
+    [GQRequest cookBook_startWithDomainString:[DataCenter shareGlobalData].domainUrlString
+                              apiName:GQSerVerAPINameForAPILoginSubmit
                                params:@{@"data":paramsString}
                          rquestMethod:YTKRequestMethodGET
-           completionBlockWithSuccess:^(__kindof CookBook_Request *request) {
+           completionBlockWithSuccess:^(__kindof GQRequest *request) {
                
                NSString *alertMsg = @"";
                if (request.resultIsOk) {
                    NSString *token = [request.resultInfo DWStringForKey:@"token"];
-                   [[CookBook_User shareUser]cookBook_addToken:token];
+                   [[GQUser shareUser]cookBook_addToken:token];
                    [self dismissAction];
                    alertMsg = @"登录成功";
                    [[NSNotificationCenter defaultCenter]postNotificationName:kNotificationNameForLoginSucceed object:nil];
@@ -204,7 +204,7 @@
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:alertMsg];
 
-           } failure:^(__kindof CookBook_Request *request) {
+           } failure:^(__kindof GQRequest *request) {
                
                [SVProgressHUD way_dismissThenShowInfoWithStatus:@"网络异常"];
            }];

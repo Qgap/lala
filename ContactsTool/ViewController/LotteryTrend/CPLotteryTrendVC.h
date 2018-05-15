@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CookBook_BaseViewController.h"
+#import "GQBaseViewController.h"
 
 
-@interface CPLotteryTrendVC : CookBook_BaseViewController
+@interface CPLotteryTrendVC : GQBaseViewController
 
 //-(void)showLoad
 
